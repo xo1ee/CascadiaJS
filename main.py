@@ -83,11 +83,15 @@ def analyze_venues(req: AnalyzeVenuesRequest):
         venue_key = f"venue_{chr(ord('a') + i)}"  # venue_a, venue_b, ...
         geo = run_geo_pipeline(venue.address, venue_key)
 
-        # Scrape nearby POI via Apify using coordinates from geo pipeline
-        try:
-            scrape_and_store(geo["lat"], geo["lon"], venue_key=venue_key)
-        except Exception as e:
-            print(f"[main] Apify scrape failed for {venue_key}: {e}")
+        # Scrape nearby POI via Apify (skip if cached)
+        cached = APIFY_DATA_DIR / f"{venue_key}_scraped.json"
+        if cached.exists():
+            print(f"[main] Using cached POI for {venue_key}")
+        else:
+            try:
+                scrape_and_store(geo["lat"], geo["lon"], venue_key=venue_key)
+            except Exception as e:
+                print(f"[main] Apify scrape failed for {venue_key}: {e}")
 
         venues.append({
             "name": venue.name or geo["address"],
