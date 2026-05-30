@@ -63,24 +63,56 @@ def _slugify(text: str) -> str:
 # Section renderers
 # ---------------------------------------------------------------------------
 
+def _score_cell(score: Any, rating: str) -> str:
+    """Render one score cell as 'X.X (Rating)' on the shared 0-5 scale."""
+    if score is None or score == "":
+        return rating or "-"
+    try:
+        score = float(score)
+    except (TypeError, ValueError):
+        return rating or "-"
+    return f"{score:.1f} ({rating})" if rating else f"{score:.1f}"
+
+
+def _edge_label(edge: str, a_name: str, b_name: str) -> str:
+    return {"A": a_name, "B": b_name}.get(edge, "Even")
+
+
 def _render_tradeoff_table(decision: Dict[str, Any], venues: List[Dict]) -> str:
     a_name = venues[0]["name"] if len(venues) > 0 else "Venue A"
     b_name = venues[1]["name"] if len(venues) > 1 else "Venue B"
 
+    # All scores are on a single 0-5 scale (5 = best; for Logistics Risk a
+    # higher score means lower risk), so the table stays internally consistent.
     header = (
-        f"| Criterion | {a_name} | {b_name} | Evidence |\n"
-        f"|---|---|---|---|\n"
+        f"| Criterion | {a_name} (0–5) | {b_name} (0–5) | Edge | Evidence |\n"
+        f"|---|---|---|---|---|\n"
     )
     rows = []
     for row in decision.get("tradeoff_matrix", []):
         rows.append(
             f"| {row.get('criterion', '')} "
-            f"| {row.get('venue_a_rating', '-')} "
-            f"| {row.get('venue_b_rating', '-')} "
+            f"| {_score_cell(row.get('venue_a_score'), row.get('venue_a_rating', ''))} "
+            f"| {_score_cell(row.get('venue_b_score'), row.get('venue_b_rating', ''))} "
+            f"| {_edge_label(row.get('edge', 'Tie'), a_name, b_name)} "
             f"| {row.get('evidence', '')} |"
         )
     if not rows:
-        rows.append("| _No comparison data available_ |  |  |  |")
+        return header + "| _No comparison data available_ |  |  |  |  |"
+
+    # Overall row = mean of the five criteria above, same 0-5 scale.
+    a_overall = decision.get("venue_a_overall_score")
+    b_overall = decision.get("venue_b_overall_score")
+    overall_edge = "Tie"
+    if a_overall is not None and b_overall is not None:
+        overall_edge = "A" if a_overall > b_overall else "B" if b_overall > a_overall else "Tie"
+    rows.append(
+        f"| **Overall (0–5)** "
+        f"| **{a_overall if a_overall is not None else '-'}** "
+        f"| **{b_overall if b_overall is not None else '-'}** "
+        f"| **{_edge_label(overall_edge, a_name, b_name)}** "
+        f"| Mean of the five criteria above. |"
+    )
     return header + "\n".join(rows)
 
 
@@ -147,6 +179,15 @@ def generate_comparison_report(
     a_name = venues[0]["name"] if len(venues) > 0 else "Venue A"
     b_name = venues[1]["name"] if len(venues) > 1 else "Venue B"
 
+    a_overall = decision.get("venue_a_overall_score")
+    b_overall = decision.get("venue_b_overall_score")
+    rec_name = decision.get("recommended_venue_name")
+    scores_line = (
+        f"**Overall scores (0–5):** {a_name} {a_overall if a_overall is not None else '-'} · "
+        f"{b_name} {b_overall if b_overall is not None else '-'}"
+        + (f" → **Recommended: {rec_name}**" if rec_name else "")
+    )
+
     return f"""# SiteLens Venue Comparison Report
 
 ## Event
@@ -157,6 +198,8 @@ def generate_comparison_report(
 
 ## Overall Recommendation
 {decision.get("overall_recommendation", "_No recommendation generated._")}
+
+{scores_line}
 
 ## Venue Positioning
 

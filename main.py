@@ -20,10 +20,15 @@ import sys  # noqa: E402
 sys.path.insert(0, str(Path(__file__).parent / "geo_service"))
 sys.path.insert(0, str(Path(__file__).parent / "DataAnalysis"))
 
+import json  # noqa: E402
+
 from services.geo_pipeline import run_geo_pipeline  # noqa: E402
 from agent_service import compare_venues  # noqa: E402
 from report_service import build_packet_files, write_outputs_to_disk  # noqa: E402
+from poi_aggregator import aggregate_pois  # noqa: E402
 import box_service  # noqa: E402
+
+APIFY_DATA_DIR = Path(__file__).parent / "apify_data"
 
 app = FastAPI(title="SiteLens API")
 
@@ -79,7 +84,7 @@ def analyze_venues(req: AnalyzeVenuesRequest):
             "name": venue.name or geo["address"],
             "address": geo["address"],
             "visual_signals": geo["map_signals"],
-            "poi_summary": _mock_poi(venue_key),  # TODO (Kone): live Apify -> poi_aggregator
+            "poi_summary": _load_poi(venue_key),  # Kone's Apify scrape -> poi_aggregator
             "_venue_key": venue_key,
             "_geo": geo,
         })
@@ -113,11 +118,12 @@ def analyze_venues(req: AnalyzeVenuesRequest):
     # 6. Assemble the response for the frontend.
     venue_results = []
     for i, vd in enumerate(venues):
-        positioning_key = f"venue_{chr(ord('a') + i)}_positioning"
+        letter = chr(ord("a") + i)
         venue_results.append({
             "name": vd["name"],
             "address": vd["address"],
-            "summary": decision.get(positioning_key) or _build_summary(vd["_geo"]),
+            "summary": decision.get(f"venue_{letter}_positioning") or _build_summary(vd["_geo"]),
+            "overall_score": decision.get(f"venue_{letter}_overall_score"),
             "visual_signals": vd["visual_signals"],
             "poi_summary": vd["poi_summary"],
             "site_packet_markdown": files.get(f"{vd['_venue_key']}_site_packet.md", ""),
@@ -127,6 +133,8 @@ def analyze_venues(req: AnalyzeVenuesRequest):
 
     return {
         "overall_recommendation": decision.get("overall_recommendation", ""),
+        "recommended_venue": decision.get("recommended_venue"),
+        "recommended_venue_name": decision.get("recommended_venue_name"),
         "venues": venue_results,
         "tradeoff_matrix": decision.get("tradeoff_matrix", []),
         "key_risks": decision.get("key_risks", []),
@@ -209,8 +217,28 @@ def _build_summary(geo: dict) -> str:
 # Helper — mock POI (Kone will replace with live Apify + poi_aggregator)
 # ---------------------------------------------------------------------------
 
+def _load_poi(venue_key: str) -> dict:
+    """
+    Load Kone's cached Apify scrape (apify_data/<venue_key>_scraped.json) and
+    aggregate it into a poi_summary via poi_aggregator. Falls back to mock POI
+    when no scrape file exists yet for this venue.
+    """
+    path = APIFY_DATA_DIR / f"{venue_key}_scraped.json"
+    if path.exists():
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8"))
+            places = raw if isinstance(raw, list) else (
+                raw.get("places") or raw.get("results") or raw.get("data") or []
+            )
+            if places:
+                return aggregate_pois(places)
+        except Exception as e:
+            print(f"[main] POI load failed for {venue_key}, using mock: {e}")
+    return _mock_poi(venue_key)
+
+
 def _mock_poi(venue_key: str) -> dict:
-    # TODO (Kone): replace with live Apify data routed through poi_aggregator
+    # Fallback when a venue has no cached Apify scrape yet.
     if venue_key == "venue_a":
         return {
             "category_counts": {"restaurant": 12, "coffee": 5, "parking": 3,

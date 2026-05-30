@@ -73,6 +73,11 @@ Rules:
 - Produce concrete, actionable organizer actions and a ready-to-send attendee
   logistics email grounded in the evidence.
 
+Score each venue on each criterion from 0 to 5 (one decimal allowed, e.g. 4.6),
+where 5 = excellent and 0 = poor, grounded strictly in the evidence. For
+"Logistics Risk", a HIGHER score means LOWER risk (better). Use the full range
+so a clearly stronger venue scores higher.
+
 Return STRICT JSON only (no markdown, no commentary, no explanation outside JSON.) with exactly this schema:
 
 {
@@ -82,8 +87,8 @@ Return STRICT JSON only (no markdown, no commentary, no explanation outside JSON
   "tradeoff_matrix": [
     {
       "criterion": "Accessibility",
-      "venue_a_rating": "Strong | Medium | Weak",
-      "venue_b_rating": "Strong | Medium | Weak",
+      "venue_a_score": 4.6,
+      "venue_b_score": 3.2,
       "evidence": "Evidence-based explanation referencing the provided signals."
     }
   ],
@@ -141,15 +146,131 @@ def compare_venues(
         Decision dict matching the schema documented in SYSTEM_PROMPT.
     """
     if USE_MOCK_DATA or not os.getenv("ANTHROPIC_API_KEY"):
-        return _mock_decision(venue_a, venue_b)
+        return _finalize(_mock_decision(venue_a, venue_b), venue_a, venue_b)
 
     try:
-        return _decide_with_anthropic(
+        decision = _decide_with_anthropic(
             event_name, use_case, venue_a, venue_b, checklist_text
         )
+        return _finalize(decision, venue_a, venue_b)
     except Exception as e:
         print(f"[agent_service] Decision agent failed, using mock: {e}")
-        return _mock_decision(venue_a, venue_b)
+        return _finalize(_mock_decision(venue_a, venue_b), venue_a, venue_b)
+
+
+# ---------------------------------------------------------------------------
+# Post-processing: derive ratings / edge / overall scores / recommendation
+# from the per-criterion 0-5 scores so the numbers are always consistent,
+# regardless of what the LLM (or mock) produced.
+# ---------------------------------------------------------------------------
+
+def _rating_from_score(score: float) -> str:
+    if score >= 4.0:
+        return "Strong"
+    if score >= 2.5:
+        return "Medium"
+    return "Weak"
+
+
+def _logistics_evidence_score(venue: Dict[str, Any]) -> float:
+    """
+    Evidence-anchored 0-5 logistics score (higher = lower risk), derived from
+    the parking + road-access visual signals. Used only as a sanity reference
+    to detect a flipped Logistics Risk dimension — not as the reported score.
+    """
+    sig = venue.get("visual_signals", {}) or {}
+    parking = {"strong": 4.5, "moderate": 3.5, "limited": 2.2}.get(
+        sig.get("visible_parking"), 3.0
+    )
+    road = {"strong": 4.5, "moderate": 3.3, "weak": 2.0}.get(
+        sig.get("road_access"), 3.0
+    )
+    return (parking + road) / 2
+
+
+def _correct_inverted_logistics(
+    rows: list, venue_a: Dict[str, Any], venue_b: Dict[str, Any]
+) -> None:
+    """
+    Our convention: for "Logistics Risk" a HIGHER score = LOWER risk (better).
+    A live LLM sometimes ignores this and scores risk in the natural direction
+    (higher = more risk). We can't read the model's intent per venue, but a
+    whole-dimension flip shows up as the model ranking the two venues OPPOSITE
+    to what the parking/road evidence implies. Only then — when both the
+    evidence and the model have a clear preference and they disagree — do we
+    flip the row (5 - score). Mutates rows in place; no-op for mock data, whose
+    scores are derived from the same evidence and so never contradict it.
+    """
+    row = next((r for r in rows if r.get("criterion") == "Logistics Risk"), None)
+    if not row:
+        return
+    try:
+        la = float(row.get("venue_a_score"))
+        lb = float(row.get("venue_b_score"))
+    except (TypeError, ValueError):
+        return
+
+    ea = _logistics_evidence_score(venue_a)
+    eb = _logistics_evidence_score(venue_b)
+
+    GAP = 0.8  # both rankings must be clear before we trust the disagreement
+    evidence_clear = abs(ea - eb) >= GAP
+    model_clear = abs(la - lb) >= GAP
+    opposite = (ea - eb) * (la - lb) < 0
+    if evidence_clear and model_clear and opposite:
+        row["venue_a_score"] = round(5 - la, 1)
+        row["venue_b_score"] = round(5 - lb, 1)
+        print(
+            "[agent_service] Logistics Risk appeared inverted vs. evidence "
+            f"(A {la}->{row['venue_a_score']}, B {lb}->{row['venue_b_score']}); flipped."
+        )
+
+
+def _finalize(
+    decision: Dict[str, Any],
+    venue_a: Dict[str, Any],
+    venue_b: Dict[str, Any],
+) -> Dict[str, Any]:
+    rows = decision.get("tradeoff_matrix", []) or []
+
+    # Guard against a flipped Logistics Risk dimension before deriving anything.
+    _correct_inverted_logistics(rows, venue_a, venue_b)
+
+    a_scores, b_scores = [], []
+
+    for row in rows:
+        a = float(row.get("venue_a_score", 0) or 0)
+        b = float(row.get("venue_b_score", 0) or 0)
+        a_scores.append(a)
+        b_scores.append(b)
+        row["venue_a_rating"] = _rating_from_score(a)
+        row["venue_b_rating"] = _rating_from_score(b)
+        if abs(a - b) < 0.3:
+            row["edge"] = "Tie"
+        else:
+            row["edge"] = "A" if a > b else "B"
+
+    # Overall score on the same 0-5 scale as the per-criterion scores
+    # (mean of the criterion scores) so every number in the packet shares
+    # one scale. None when there is no matrix to average.
+    a_overall = round(sum(a_scores) / len(a_scores), 1) if a_scores else None
+    b_overall = round(sum(b_scores) / len(b_scores), 1) if b_scores else None
+    decision["venue_a_overall_score"] = a_overall
+    decision["venue_b_overall_score"] = b_overall
+
+    # Recommend the higher overall. Ties (and the no-matrix case, where both
+    # are None) fall through to A so we always return a concrete pick.
+    if a_overall is None and b_overall is None:
+        decision["recommended_venue"] = None
+        decision["recommended_venue_name"] = None
+    elif b_overall is not None and (a_overall is None or b_overall > a_overall):
+        decision["recommended_venue"] = "B"
+        decision["recommended_venue_name"] = venue_b.get("name", "Venue B")
+    else:
+        decision["recommended_venue"] = "A"
+        decision["recommended_venue_name"] = venue_a.get("name", "Venue A")
+
+    return decision
 
 
 # ---------------------------------------------------------------------------
@@ -228,46 +349,51 @@ def _mock_decision(venue_a: Dict[str, Any], venue_b: Dict[str, Any]) -> Dict[str
     a_poi = venue_a.get("poi_summary", {})
     b_poi = venue_b.get("poi_summary", {})
 
-    def amenities_rating(poi: Dict[str, Any]) -> str:
+    def amenities_score(poi: Dict[str, Any]) -> float:
         cc = poi.get("category_counts") or {}
         total = (cc.get("restaurant", poi.get("restaurants_count", 0))
                  + cc.get("coffee", poi.get("coffee_count", 0))
                  + cc.get("bar", poi.get("bars_count", 0)))
-        return "Strong" if total >= 15 else "Medium" if total >= 6 else "Weak"
+        return 4.6 if total >= 15 else 3.4 if total >= 6 else 2.0
 
-    def access_rating(sig: Dict[str, Any]) -> str:
+    def access_score(sig: Dict[str, Any]) -> float:
         road = sig.get("road_access", "unknown")
-        return {"strong": "Strong", "moderate": "Medium", "weak": "Weak"}.get(road, "Medium")
+        return {"strong": 4.6, "moderate": 3.3, "weak": 2.0}.get(road, 3.0)
+
+    def parking_score(sig: Dict[str, Any]) -> float:
+        # Higher score = lower logistics risk.
+        parking = sig.get("visible_parking", "unknown")
+        return {"strong": 4.5, "moderate": 3.5, "limited": 2.2}.get(parking, 3.0)
 
     matrix = [
         {
             "criterion": "Accessibility",
-            "venue_a_rating": access_rating(a_sig),
-            "venue_b_rating": access_rating(b_sig),
+            "venue_a_score": access_score(a_sig),
+            "venue_b_score": access_score(b_sig),
             "evidence": "Based on road access signals from map imagery.",
         },
         {
             "criterion": "Nearby Amenities",
-            "venue_a_rating": amenities_rating(a_poi),
-            "venue_b_rating": amenities_rating(b_poi),
+            "venue_a_score": amenities_score(a_poi),
+            "venue_b_score": amenities_score(b_poi),
             "evidence": "Based on nearby restaurant, coffee, and bar counts from POI data.",
         },
         {
             "criterion": "Event Atmosphere",
-            "venue_a_rating": "Strong" if a_sig.get("water_nearby") else "Medium",
-            "venue_b_rating": "Strong" if b_sig.get("water_nearby") else "Medium",
+            "venue_a_score": 4.4 if a_sig.get("water_nearby") else 3.3,
+            "venue_b_score": 4.4 if b_sig.get("water_nearby") else 3.3,
             "evidence": "Based on land use context and visible surroundings.",
         },
         {
             "criterion": "Logistics Risk",
-            "venue_a_rating": "Weak" if a_sig.get("visible_parking") == "limited" else "Medium",
-            "venue_b_rating": "Weak" if b_sig.get("visible_parking") == "limited" else "Medium",
+            "venue_a_score": parking_score(a_sig),
+            "venue_b_score": parking_score(b_sig),
             "evidence": "Based on visible parking constraints and road access.",
         },
         {
             "criterion": "Attendee Communication Needs",
-            "venue_a_rating": "Medium",
-            "venue_b_rating": "Medium",
+            "venue_a_score": 3.5,
+            "venue_b_score": 3.5,
             "evidence": "Both venues need clear arrival, parking, and transit guidance.",
         },
     ]

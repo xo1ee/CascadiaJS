@@ -34,6 +34,8 @@ export type VenueAnalysis = {
   name: string;
   address: string;
   summary?: string;
+  /** Overall 0-5 score = mean of the per-criterion scores (null if no matrix) */
+  overall_score?: number | null;
   visual_signals?: VisualSignals;
   poi_summary?: PoiSummary;
   site_packet_markdown?: string;
@@ -43,8 +45,14 @@ export type VenueAnalysis = {
 
 export type TradeoffRow = {
   criterion: string;
+  /** 0-5 per-criterion scores */
+  venue_a_score?: number;
+  venue_b_score?: number;
+  /** Derived rating bands (Strong | Medium | Weak) */
   venue_a_rating?: string;
   venue_b_rating?: string;
+  /** Which venue wins this criterion: "A" | "B" | "Tie" */
+  edge?: string;
   /** Used when comparing N venues */
   venue_ratings?: string[];
   evidence: string;
@@ -66,6 +74,9 @@ export type BoxOutput = {
 /** Full response from POST /api/analyze-venues */
 export type AnalyzeVenuesResponse = {
   overall_recommendation: string;
+  /** "A" | "B" — which venue is recommended */
+  recommended_venue?: string;
+  recommended_venue_name?: string;
   venues: VenueAnalysis[];
   tradeoff_matrix: TradeoffRow[];
   key_risks?: KeyRisk[];
