@@ -1,7 +1,7 @@
-import VenueForm from "./components/VenueForm";
+import WelcomePage from "./welcome/page";
 
 export default function Home() {
   return (
-    <VenueForm />
+    <WelcomePage />
   );
 }
