@@ -1,0 +1,6347 @@
+[
+  {
+    "title": "Museum of History & Industry Parking Lot",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1004 Valley St, Seattle, WA 98109",
+    "neighborhood": "South Lake Union",
+    "street": "1004 Valley St",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://mohai.org/visit/",
+    "phone": "(206) 324-1126",
+    "phoneUnformatted": "+12063241126",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.627209,
+      "lng": -122.3367539
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJi08qxzsVkFQR52bC2gicwkY",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x5490153bc72a4f8b:0x46c29c08dac266e7",
+    "cid": "5098809289980667623",
+    "reviewsCount": 21,
+    "imagesCount": 111,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:15.367Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "10 AM to 5 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "Paid parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Museum%20of%20History%20%26%20Industry%20Parking%20Lot&query_place_id=ChIJi08qxzsVkFQR52bC2gicwkY",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.62821050439731,-122.33150969370523,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGVQwN_KVipAo3ehNpVb_F_kx4gTl1RiR9TO8hpziZq6Ctut0JNcyltmRbm04BtEvn33nxu49QYCZsFqnPf0oGQ2ojfHvzL6rN-kKn-w5ydLa-kDpekXbNCdmIhAtx6clf_EiQyuQomNeQ=w408-h544-k-no",
+    "kgmid": "/g/11sb4v608x"
+  },
+  {
+    "title": "Westlake Ave N & 8th Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63538,
+      "lng": -122.3403201
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJM3AbjxcVkFQRn-Dfl7ZXQyA",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015178f1b7033:0x204357b697dfe09f",
+    "cid": "2324798274397003935",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:18.871Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%208th%20Ave%20N&query_place_id=ChIJM3AbjxcVkFQRn-Dfl7ZXQyA",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=JoNUsjRtwu-W_7REcpuQSg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=80.37714&pitch=0&thumbfov=100",
+    "kgmid": "/g/11g6ww155x"
+  },
+  {
+    "title": "Westlake Ave N & 8th Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.634862,
+      "lng": -122.3405428
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxTYtjhcVkFQRxU1j2IRDyeg",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015178e2d36c5:0xe8c94384d8634dc5",
+    "cid": "16774012524963253701",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:18.871Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%208th%20Ave%20N&query_place_id=ChIJxTYtjhcVkFQRxU1j2IRDyeg",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=YJz6MtoQn09A1pST1KhV-w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=262.7787&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v1vcwz3"
+  },
+  {
+    "title": "Westlake Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6327248,
+      "lng": -122.340706
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDa8WeT0VkFQRCpfbCPGOXqY",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153d7916af0d:0xa65e8ef108db970a",
+    "cid": "11988176423993710346",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:18.871Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJDa8WeT0VkFQRCpfbCPGOXqY",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=bkIDZcH0RFQ37bhMH0qVog&cb_client=search.gws-prod.gps&w=408&h=240&yaw=118.05285&pitch=0&thumbfov=100",
+    "kgmid": "/g/11g6wtlstz"
+  },
+  {
+    "title": "Westlake Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6327331,
+      "lng": -122.3409366
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxWwUeT0VkFQRxBtIFQDz53Q",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153d79146cc5:0x74e7f30015481bc4",
+    "cid": "8423968809702398916",
+    "reviewsCount": null,
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:18.871Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJxWwUeT0VkFQRxBtIFQDz53Q",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEH6a0ebg_vclXlLQAXh-fazb0rX3SwIiwIrXWtbKKuQd4IMonVmORKiyqi42whTpPonxDhoAZIosdp_UEDhrMzSjzzr9WIbp5dltH0Gorg8VVg5j_VanhO3Gxha4NYg81EjmX7=w463-h240-k-no",
+    "kgmid": "/g/1tdgjz6z"
+  },
+  {
+    "title": "Dexter Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63257,
+      "lng": -122.34218
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJF0npiD0VkFQRL16p3CVzhWk",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153d88e94917:0x69857325dca95e2f",
+    "cid": "7603610152338021935",
+    "reviewsCount": 2,
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:18.871Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Passenger loading area": true
+        }
+      ],
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJF0npiD0VkFQRL16p3CVzhWk",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_Wy58MMIinJlK-4KlMZduIghaQUlje3zZcZhDO0Nymq2CDvU8kZJ-GbMDug2iUjKywFNbLO-aEXFpBIehMmnIcL3ksMCImi8GmihPqc2vurg_bzcX0gDhU11-pUnZCyZKa2Y=w408-h306-k-no",
+    "kgmid": "/g/1v6l75q8"
+  },
+  {
+    "title": "Dexter Ave N & Aloha St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.62741,
+      "lng": -122.34222
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJT69dzD4VkFQR_VeeyW2dbcY",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153ecc5daf4f:0xc66d9d6dc99e57fd",
+    "cid": "14298257486830786557",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.011Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Passenger loading area": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Aloha%20St&query_place_id=ChIJT69dzD4VkFQR_VeeyW2dbcY",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=gGCfQKbkM03KabCiWFTw4A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=80.06051&pitch=0&thumbfov=100",
+    "kgmid": "/g/1xgzbgw6"
+  },
+  {
+    "title": "Westlake Ave N & Highland Dr",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6298,
+      "lng": -122.34109
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMUM1LjwVkFQRGO2jnH334Ts",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153c2e354331:0x3be1f77d9ca3ed18",
+    "cid": "4315002036868607256",
+    "reviewsCount": 3,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.011Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Highland%20Dr&query_place_id=ChIJMUM1LjwVkFQRGO2jnH334Ts",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=-WW5rG1KW51gcBueboPIgw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=294.9246&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tlmn07x"
+  },
+  {
+    "title": "Dexter Ave N & Aloha St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6273666,
+      "lng": -122.3424064
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJo41gzT4VkFQRWwn8wY8f_So",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153ecd608da3:0x2afd1f8fc1fc095b",
+    "cid": "3097666820996073819",
+    "reviewsCount": null,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.011Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Aloha%20St&query_place_id=ChIJo41gzT4VkFQRWwn8wY8f_So",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEl7oAGc8a6fe_rIK8oHW1rNl6QDKlH6HMGTwGbtzdiQf6IXUuOQ24yqX4dD1MJ2cWJTohCqAYPeC8SwO6VwYsrmiOH4QkUawj4QLMzt8TZkj450aqW1QzwzB27DD4oOUhLX9k=w408-h462-k-no",
+    "kgmid": "/g/11dxkm8n4_"
+  },
+  {
+    "title": "Westlake Ave N & Highland Dr",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.62995,
+      "lng": -122.3409
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJraqYMTwVkFQRq0--Vtl7gP4",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153c3198aaad:0xfe807bd956be4fab",
+    "cid": "18338793856046092203",
+    "reviewsCount": 1,
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.011Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Highland%20Dr&query_place_id=ChIJraqYMTwVkFQRq0--Vtl7gP4",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFXAZfCyJlAp_sDbRhFL7D-DXbLRJyeRNoswvBLPDo5wcXCik2TZGYOf2L_9R30tKzBE5pQpduluS39gSb1Ne8cVxR3QIpVHPcw7e1maUx0PXDvVDmEhB1soRAGxnispxbxbw5W=w408-h876-k-no",
+    "kgmid": "/g/11c6_ck5pj"
+  },
+  {
+    "title": "Aurora Ave N & Prospect St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.62924,
+      "lng": -122.34335
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJzVICjT4VkFQRH-AYNrjAqOc",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153e8d0252cd:0xe7a8c0b83618e01f",
+    "cid": "16692803916262858783",
+    "reviewsCount": 1,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.011Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Prospect%20St&query_place_id=ChIJzVICjT4VkFQRH-AYNrjAqOc",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFbLNh6fz8qf1yM045gg-QO31Y0kdeHvbD9uIy9EyMH9jwyb4uWElVbG6l5r7o4fsoLx-bZe6a5Fi5IPVeDYJy_36be-y2zjdhBCJkIIqhXyvFwSQl-DzUI_rtWkXstRX35ZAMs=w408-h544-k-no",
+    "kgmid": "/g/1td2tlr9"
+  },
+  {
+    "title": "Aurora Ave N & Prospect St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.62873,
+      "lng": -122.3437
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJTcfm7T4VkFQRyqOCN76PYr0",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153eede6c74d:0xbd628fbe3782a3ca",
+    "cid": "13646627868023890890",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.012Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Prospect%20St&query_place_id=ChIJTcfm7T4VkFQRyqOCN76PYr0",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Liqs3Rd6VD4HdTSJA98tiQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=231.53342&pitch=0&thumbfov=100",
+    "kgmid": "/g/1trsxpxz"
+  },
+  {
+    "title": "Dexter Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63196,
+      "lng": -122.3423799
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJBXugkj0VkFQRxy0wehb_8_Y",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153d92a07b05:0xf6f3ff167a302dc7",
+    "cid": "17794847024675302855",
+    "reviewsCount": null,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:23.012Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Passenger loading area": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJBXugkj0VkFQRxy0wehb_8_Y",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=fJek4SZrdiPFaxPDOR1JLw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=257.55054&pitch=0&thumbfov=100",
+    "kgmid": "/g/1xgzbgw5"
+  },
+  {
+    "title": "WhereiPark Monthly Parking - 1215 Dexter Avenue N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1215 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1215 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.whereipark.com/",
+    "phone": "(415) 480-7275",
+    "phoneUnformatted": "+14154807275",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6303698,
+      "lng": -122.3429507
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJt3x6Z_UVkFQRSVGDqyJg3bY",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x549015f5677a7cb7:0xb6dd6022ab835149",
+    "cid": "13176793786778603849",
+    "reviewsCount": 1,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.100Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=WhereiPark%20Monthly%20Parking%20-%201215%20Dexter%20Avenue%20N&query_place_id=ChIJt3x6Z_UVkFQRSVGDqyJg3bY",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=6T-E2tUnEftU-__00mE-_w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=275.2015&pitch=0&thumbfov=100",
+    "kgmid": "/g/11sg36mks_"
+  },
+  {
+    "title": "656 Howe St Parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "656 Howe St, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "656 Howe St",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6357518,
+      "lng": -122.3426944
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 2.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJI5nEDBcVkFQRX5HoWReoxns",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x549015170cc49923:0x7bc6a81759e8915f",
+    "cid": "8919000930299973983",
+    "reviewsCount": 2,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=656%20Howe%20St%20Parking&query_place_id=ChIJI5nEDBcVkFQRX5HoWReoxns",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=E7eas04n85HXbjGXCQvrvw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=217.65488&pitch=0&thumbfov=100",
+    "kgmid": "/g/11sb4t5_t2"
+  },
+  {
+    "title": "WhereiPark Monthly Parking - 1305 Dexter Avenue North",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1305 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1305 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.whereipark.com/",
+    "phone": "(415) 480-7275",
+    "phoneUnformatted": "+14154807275",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6307027,
+      "lng": -122.3425314
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJy_rvQZcVkFQRS1cDvAbce3Y",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x5490159741effacb:0x767bdc06bc03574b",
+    "cid": "8537659440093157195",
+    "reviewsCount": null,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=WhereiPark%20Monthly%20Parking%20-%201305%20Dexter%20Avenue%20North&query_place_id=ChIJy_rvQZcVkFQRS1cDvAbce3Y",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFOaCPP7EEovPTLk-xU7z6CXQOcE2NFgz9LRuXZC2szfsNmN7PXVt1Yp-E2IAbt50euhiV04DxKP9BIDNVbWdMxWAPz0ztiCBG5tCR4Kr96YOqQm4JJx74Y3y8Twpg45WptzLL0=w426-h240-k-no",
+    "kgmid": "/g/11pdvw_5nf"
+  },
+  {
+    "title": "1920 Dexter Ave N Parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "nnhnbk, 1920 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "nnhnbk, 1920 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "(206) 284-3100",
+    "phoneUnformatted": "+12062843100",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6365122,
+      "lng": -122.3421775
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJVWJHZRcVkFQRymeOketpxVM",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x5490151765476255:0x53c569eb918e67ca",
+    "cid": "6036347336040277962",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=1920%20Dexter%20Ave%20N%20Parking&query_place_id=ChIJVWJHZRcVkFQRymeOketpxVM",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=E7eas04n85HXbjGXCQvrvw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=16.957155&pitch=0&thumbfov=100",
+    "kgmid": "/g/11f_p39tlz"
+  },
+  {
+    "title": "Impark - 1515 Dexter Lot 218",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1515 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1515 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://lots.impark.com/imp?utm_source=google&utm_medium=maps&utm_content=0250218&utm_campaign=local_us#details=25,218",
+    "phone": "(206) 381-1789",
+    "phoneUnformatted": "+12063811789",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6330415,
+      "lng": -122.3426326
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJUaoF2sgVkFQRcS5Ll1XOGuY",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x549015c8da05aa51:0xe61ace55974b2e71",
+    "cid": "16580791845123731057",
+    "reviewsCount": null,
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Impark%20-%201515%20Dexter%20Lot%20218&query_place_id=ChIJUaoF2sgVkFQRcS5Ll1XOGuY",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE4U0uLzDrxEn1RQ7lDSbda9NhFf0HCHzO2GN9S9PPsN03A_xILOrqWzwMEYYXjmMKq22nBODTww3nuSNB78tFlZlEC4z_bImktQrz7ub03bJz7f3TjWvw3mE_Ut1eRg7smJNNORw=w408-h541-k-no",
+    "kgmid": "/g/11fvvs1_qy"
+  },
+  {
+    "title": "Impark Lot #57 - 1000/1100 Dexter Avenue North",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1000 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1000 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6284019,
+      "lng": -122.3419484
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJm5P7vD4VkFQRQJjELe4Ly0o",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x5490153ebcfb939b:0x4acb0bee2dc49840",
+    "cid": "5389414496676911168",
+    "reviewsCount": 20,
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "Paid parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Impark%20Lot%20%2357%20-%201000%2F1100%20Dexter%20Avenue%20North&query_place_id=ChIJm5P7vD4VkFQRQJjELe4Ly0o",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH40aTZYbEJQN3qY4Dukw3gwwheMLozswdU9Rio4QYdbsoPrX14K3g0Khn9hFbre5vU-myepNH8f7jtOJwQ1JLRnbLmW-zi8YVncbFccC4LvJa3bziVI4acZfzab9UX8wwPEvc_=w408-h408-k-no",
+    "kgmid": "/g/1xtf1818"
+  },
+  {
+    "title": "1101 Westlake Ave N parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1101 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1101 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6288874,
+      "lng": -122.341383
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJVRgnJjwVkFQRmP_d4S6HOrE",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x5490153c26271855:0xb13a872ee1ddff98",
+    "cid": "12770668328790130584",
+    "reviewsCount": 2,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=1101%20Westlake%20Ave%20N%20parking&query_place_id=ChIJVRgnJjwVkFQRmP_d4S6HOrE",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=OISQUZRT820YTppsZPGhfA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=230.27882&pitch=0&thumbfov=100",
+    "kgmid": "/g/11hck29tnd"
+  },
+  {
+    "title": "WhereiPark Monthly Parking - 905 Dexter Ave North",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "Union SLU, 905 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "Union SLU, 905 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.whereipark.com/",
+    "phone": "(415) 480-7275",
+    "phoneUnformatted": "+14154807275",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6276307,
+      "lng": -122.342798
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ9YaSaKoVkFQRaUJ93UmFIyE",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x549015aa689286f5:0x21238549dd7d4269",
+    "cid": "2387898779731575401",
+    "reviewsCount": null,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=WhereiPark%20Monthly%20Parking%20-%20905%20Dexter%20Ave%20North&query_place_id=ChIJ9YaSaKoVkFQRaUJ93UmFIyE",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=HF9nBLmXTffKbk-AEeHFzg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=246.4609&pitch=0&thumbfov=100",
+    "kgmid": "/g/11q4d70pcr"
+  },
+  {
+    "title": "Trolley Hill Park",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "City park",
+    "address": "1800 5th Ave N, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "1800 5th Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.seattle.gov/parks/find/parks/trolley-hill-park",
+    "phone": "(206) 684-4075",
+    "phoneUnformatted": "+12066844075",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6349755,
+      "lng": -122.3467715
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJF7-IlhYVkFQR9WZceDqsuVU",
+    "categories": [
+      "City park",
+      "Park",
+      "Tourist attraction"
+    ],
+    "fid": "0x549015169688bf17:0x55b9ac3a785c66f5",
+    "cid": "6177157731042748149",
+    "reviewsCount": 80,
+    "imagesCount": 231,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "4 AM to 11:30 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Highlights": [
+        {
+          "Picnics": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Picnic tables": true
+        }
+      ],
+      "Children": [
+        {
+          "Good for kids": true
+        }
+      ],
+      "Pets": [
+        {
+          "Dogs allowed": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Trolley%20Hill%20Park&query_place_id=ChIJF7-IlhYVkFQR9WZceDqsuVU",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGG6bzK4uy9ok_VXc_osT34dBL6b18DvtnORAtGPPqHUKy3P69PU9cgDjDOs5jClPKFGE2L40w03ADRmcXgsp_kZtJuLdoG-h-CgjLXeH_r-VVqUeCd4_9XbJf--xefpYXtlUkHFw=w408-h306-k-no",
+    "kgmid": "/g/1vc6d2wz"
+  },
+  {
+    "title": "Northeast Queen Anne Greenbelt",
+    "subTitle": null,
+    "description": "10-acre green space with trails & views of the seaplanes arriving & departing on Lake Union.",
+    "price": null,
+    "categoryName": "Park",
+    "address": "Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.seattle.gov/parks/find/parks/northeast-queen-anne-greenbelt",
+    "phone": "(206) 684-4075",
+    "phoneUnformatted": "+12066844075",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.635139,
+      "lng": -122.344397
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJnbj-owUVkFQRIYvkkQHLZeI",
+    "categories": [
+      "Park",
+      "Tourist attraction"
+    ],
+    "fid": "0x54901505a3feb89d:0xe265cb0191e48b21",
+    "cid": "16313668432822569761",
+    "reviewsCount": 172,
+    "imagesCount": 873,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "4 AM to 11:30 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Northeast%20Queen%20Anne%20Greenbelt&query_place_id=ChIJnbj-owUVkFQRIYvkkQHLZeI",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExm6_4nF7mLLrnnkZkX5la8WxH7mGgceReaZbwoUHt5yz5RfZoYrU3o5PVzZM64HyBF-WcvgwSEXRU5DDPdq39rDnx5jfFrJzPvVxAYAdyzR6sCa43cKeNgFk74JQbKFUPw6rxOw=w408-h724-k-no",
+    "kgmid": "/g/11h1cdmk9"
+  },
+  {
+    "title": "Bhy Kracke Park",
+    "subTitle": null,
+    "description": "Sloping residential-area green space offering scenic views from the top, with a playground below.",
+    "price": null,
+    "categoryName": "City park",
+    "address": "1215 5th Ave N, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "1215 5th Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.seattle.gov/parks/find/parks/bhy-kracke-park",
+    "phone": "(206) 684-4075",
+    "phoneUnformatted": "+12066844075",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6304929,
+      "lng": -122.3486605
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJNWOy1j8VkFQR0IxL8FKyVXo",
+    "categories": [
+      "City park",
+      "Park",
+      "Playground",
+      "Scenic spot",
+      "Tourist attraction"
+    ],
+    "fid": "0x5490153fd6b26335:0x7a55b252f04b8cd0",
+    "cid": "8815147914936159440",
+    "reviewsCount": 436,
+    "imagesCount": 1488,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.101Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "4 AM to 11:30 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Highlights": [
+        {
+          "Picnics": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Picnic tables": true
+        }
+      ],
+      "Children": [
+        {
+          "Good for kids": true
+        },
+        {
+          "Playground": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "Free street parking": true
+        }
+      ],
+      "Pets": [
+        {
+          "Dogs allowed": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bhy%20Kracke%20Park&query_place_id=ChIJNWOy1j8VkFQR0IxL8FKyVXo",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAExyOAtSopm9BTRQnWxsjDbnvxOkbfmvlyBaBt908MDO9jVj9qviQlOFJYWqc-g3TCfKYX9m3iIhUqm1KPzTKsGOWsEjMHXEDoQm6Cfh2C2abFlWP0Pl4flD6IYiw-k2iwMhspO=w408-h306-k-no",
+    "kgmid": "/g/1td3r5ww"
+  },
+  {
+    "title": "Impark - 1515Dexter",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1515 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1515 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6328815,
+      "lng": -122.3424879
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf1FZGwAVkFQR2nxPPLnGxyI",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x549015001b59517f:0x22c7c6b93c4f7cda",
+    "cid": "2506190216538062042",
+    "reviewsCount": null,
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.584Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Impark%20-%201515Dexter&query_place_id=ChIJf1FZGwAVkFQR2nxPPLnGxyI",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 21,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAErnDzrxt6ebj_OoBo4GzRnqlkxBdNKfDEJuV1lHPXvsggxMWsHhzbFk0f0_Z4DqK9uHIMUih7DEVxEY1V7ieEfmtT2n3uT8mZKYi0RgL11HEv8dEl4-_6Ecu38TfrDrN3lZre57hC6Vt6B=w408-h306-k-no",
+    "kgmid": "/g/11y0s7_msb"
+  },
+  {
+    "title": "1600 Dexter Ave N Garage",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1600 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1600 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6332755,
+      "lng": -122.3419589
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJg5_gLBYVkFQRQI5U4aaVWWQ",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x549015162ce09f83:0x645995a6e1548e40",
+    "cid": "7230975220697566784",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.584Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=1600%20Dexter%20Ave%20N%20Garage&query_place_id=ChIJg5_gLBYVkFQRQI5U4aaVWWQ",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=UaRVPTY3FdwacwvNitZ-QA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=82.04878&pitch=0&thumbfov=100",
+    "kgmid": "/g/11sb4vjmfw"
+  },
+  {
+    "title": "Diamond Parking Services",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1920 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1920 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.diamondparking.com/",
+    "phone": "(206) 284-4597",
+    "phoneUnformatted": "+12062844597",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6361877,
+      "lng": -122.3421132
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": true,
+    "placeId": "ChIJ-ftp7RkVkFQRT3VXAHv3lfk",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x54901519ed69fbf9:0xf995f77b0057754f",
+    "cid": "17984552794632713551",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.585Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Diamond%20Parking%20Services&query_place_id=ChIJ-ftp7RkVkFQRT3VXAHv3lfk",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 26,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsp3AglvojRaxLOpnBqNEY7053no9Zu-aTYp4jP3LQTOrr2JaAA2gNGldnemDj5FywC9WHPiSJhoZtkiKiLK8Bj7c8AROIsQKqhl4xVRVWl0_47Yr_76GckJUC_qgAZcsDjr4=w408-h306-k-no",
+    "kgmid": "/g/1tfssl7w"
+  },
+  {
+    "title": "Taylor Ave N & 5th Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63461,
+      "lng": -122.34752
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJCQ4KmxYVkFQRHSCqmPEXhDI",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015169b0a0e09:0x328417f198aa201d",
+    "cid": "3640060725238046749",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%205th%20Ave%20N&query_place_id=ChIJCQ4KmxYVkFQRHSCqmPEXhDI",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=tS5NuPyN00rIWSigQYdCeA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=221.70523&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tknk417"
+  },
+  {
+    "title": "Taylor Ave N & 5th Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63421,
+      "lng": -122.34626
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJG1nIiRYVkFQR9iLCrded2lY",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490151689c8591b:0x56da9dd7adc222f6",
+    "cid": "6258488181843436278",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%205th%20Ave%20N&query_place_id=ChIJG1nIiRYVkFQR9iLCrded2lY",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=2IoYnXy4TGACJot2Z8u-Pg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=6.1713243&pitch=0&thumbfov=100",
+    "kgmid": "/g/1vlk182s"
+  },
+  {
+    "title": "Taylor Ave N & Garfield St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63314,
+      "lng": -122.34605
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJH6MxdBYVkFQROACegJ8SyKc",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015167431a31f:0xa7c8129f809e0038",
+    "cid": "12089933675943034936",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Garfield%20St&query_place_id=ChIJH6MxdBYVkFQROACegJ8SyKc",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7_8PYSjZ5iZJ03hl3RUzrQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=286.88446&pitch=0&thumbfov=100",
+    "kgmid": "/g/1vpfj7jt"
+  },
+  {
+    "title": "Taylor Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6325202,
+      "lng": -122.345872
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ8x004hUVkFQRmqIIZWwmaCc",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x54901515e2341df3:0x2768266c6508a29a",
+    "cid": "2839561812050485914",
+    "reviewsCount": null,
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJ8x004hUVkFQRmqIIZWwmaCc",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGxJR6Jcfye_u-0ATgccQBe_lH16DkLxdEkhDhcX1V_v275ywjfPmeUCZV3OTndm9yT7iF0wX3oTy8C2-De-wvn8pPtkvXuhyhNueCxowhcJRyvyTDhqLSSUjJsGaqdh94G21qZ=w408-h306-k-no",
+    "kgmid": "/g/1vm_xl15"
+  },
+  {
+    "title": "5th Ave N & Newton St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6363146,
+      "lng": -122.3472344
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMYU6zBYVkFQRRwKrSHD_BnY",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x54901516cc3a8531:0x7606ff7048ab0247",
+    "cid": "8504765804056347207",
+    "reviewsCount": 1,
+    "imagesCount": 11,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=5th%20Ave%20N%20%26%20Newton%20St&query_place_id=ChIJMYU6zBYVkFQRRwKrSHD_BnY",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFj9VhLEbr2VYbv9XKHQrD9X1xfbFFQRAhPX2M82uGrQGaj84Y9R10LODpQwxKGi0WivQkuAZqxQamH734dDC7D3lNA1RXEDzeZYqnRViVfcCPYQu-auoP0xrucGMVXbk-A-4N7=w408-h544-k-no",
+    "kgmid": "/g/1tk_nzt3"
+  },
+  {
+    "title": "5th Ave N & Newton St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63683,
+      "lng": -122.3470299
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJC23qLBEVkFQROwxGsk3eb88",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015112cea6d0b:0xcf6fde4db2460c3b",
+    "cid": "14947410113550748731",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=5th%20Ave%20N%20%26%20Newton%20St&query_place_id=ChIJC23qLBEVkFQROwxGsk3eb88",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=08OhAEDReQlAMHQWTm8B0A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=104.751945&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tx4p1kj"
+  },
+  {
+    "title": "Taylor Ave N & Lee St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63136,
+      "lng": -122.34618
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJNY9JHj4VkFQRAxSG5XdP7Sw",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153e1e498f35:0x2ced4f77e5861403",
+    "cid": "3237331083519726595",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Lee%20St&query_place_id=ChIJNY9JHj4VkFQRAxSG5XdP7Sw",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=h_24vLjfcgFmYZoJfC7sSg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=205.68074&pitch=0&thumbfov=100",
+    "kgmid": "/g/1v6p3_6_"
+  },
+  {
+    "title": "Taylor Ave N & Lee St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63109,
+      "lng": -122.34638
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJddGRIT4VkFQRs_pWWtJTT20",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153e2191d175:0x6d4f53d25a56fab3",
+    "cid": "7876606436218174131",
+    "reviewsCount": 1,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Lee%20St&query_place_id=ChIJddGRIT4VkFQRs_pWWtJTT20",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=HAq6hTJNx4vgGfLbYjT9wg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=297.69455&pitch=0&thumbfov=100",
+    "kgmid": "/g/11g6wwbtfp"
+  },
+  {
+    "title": "Aurora Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63217,
+      "lng": -122.34367
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJOxSJHRYVkFQRBtJmgZlbzEw",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015161d89143b:0x4ccc5b998166d206",
+    "cid": "5533898756990620166",
+    "reviewsCount": 3,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJOxSJHRYVkFQRBtJmgZlbzEw",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=10oaMcmLsiAyqKjsgyMnkw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=217.83746&pitch=0&thumbfov=100",
+    "kgmid": "/g/1thcs0yk"
+  },
+  {
+    "title": "Aurora Ave N & Galer St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63257,
+      "lng": -122.3433199
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJU4PTHxYVkFQRCRx57G6kEVc",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015161fd38353:0x5711a46eec791c09",
+    "cid": "6273976552224529417",
+    "reviewsCount": 1,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:25.877Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Galer%20St&query_place_id=ChIJU4PTHxYVkFQRCRx57G6kEVc",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGUq_atHb1uJcv37sqsfGua-vGcgRTCd5Jd6mzeJr9_E6B0iaZ2xsqe-FGcAPb9UPMsMYdg8w10zhvy1VRUNuuZ1cIuhl06dN6_ICldMQNMVSp0N07N8L3daGwD74X4v7_2JFFIhw=w408-h306-k-no",
+    "kgmid": "/g/11c6_hl0yk"
+  },
+  {
+    "title": "Premium Parking - P5538",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "1200 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1200 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.premiumparking.com/P5538",
+    "phone": "(844) 236-2011",
+    "phoneUnformatted": "+18442362011",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6300119,
+      "lng": -122.3395899
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ1_vcLvIVkFQRuAzJAOKAMSA",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x549015f22edcfbd7:0x203180e200c90cb8",
+    "cid": "2319776991236656312",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:29.203Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Premium%20Parking%20-%20P5538&query_place_id=ChIJ1_vcLvIVkFQRuAzJAOKAMSA",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=3lpzS_nb9YraIy8-DugZyA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=15.330215&pitch=0&thumbfov=100",
+    "kgmid": "/g/11xtlpdx3m"
+  },
+  {
+    "title": "912 Dexter Ave N Garage",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "912 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "912 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6275446,
+      "lng": -122.3421193
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJjSuvtz4VkFQRB5xkYWpPtUE",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x5490153eb7af2b8d:0x41b54f6a61649c07",
+    "cid": "4734777901569055751",
+    "reviewsCount": 3,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:29.203Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=912%20Dexter%20Ave%20N%20Garage&query_place_id=ChIJjSuvtz4VkFQRB5xkYWpPtUE",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 13,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=So2_MSp-KIWxtRhQOEdY9A&cb_client=search.gws-prod.gps&w=408&h=240&yaw=159.74911&pitch=0&thumbfov=100",
+    "kgmid": "/g/11gd681hrs"
+  },
+  {
+    "title": "Westlake Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63816,
+      "lng": -122.34078
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDbvCjBkVkFQRk2ks8Y3d_Vw",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015198cc2bb0d:0x5cfddd8df12c6993",
+    "cid": "6700755422303512979",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:29.348Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJDbvCjBkVkFQRk2ks8Y3d_Vw",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=Op07f-DzjXCnXqWTdnmKeg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=232.85071&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tctlh35"
+  },
+  {
+    "title": "Westlake Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63807,
+      "lng": -122.34094
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ7xbg8hkVkFQRvU6zCoJYlZI",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x54901519f2e016ef:0x929558820ab34ebd",
+    "cid": "10562445816615882429",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:29.348Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJ7xbg8hkVkFQRvU6zCoJYlZI",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.33150969370523,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ZvtARG1kKvaeQw4gXqd7ew&cb_client=search.gws-prod.gps&w=408&h=240&yaw=289.77664&pitch=0&thumbfov=100",
+    "kgmid": "/g/11dxkf_h6v"
+  },
+  {
+    "title": "1859 Westlake Ave N Parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "2121 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "2121 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6361711,
+      "lng": -122.33997
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgeJz1hkVkFQRGRyj22QPY-8",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x54901519d673e281:0xef630f64dba31c19",
+    "cid": "17249647923615177753",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:29.823Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=1859%20Westlake%20Ave%20N%20Parking&query_place_id=ChIJgeJz1hkVkFQRGRyj22QPY-8",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.63978949560269,-122.33150969370523,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=_nJNk5MeLBvMBxAtyy7uVA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=64.02086&pitch=0&thumbfov=100",
+    "kgmid": "/g/11gd67sn2h"
+  },
+  {
+    "title": "AGC Building Parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Car Park",
+    "address": "1200 Westlake Ave N, Seattle, WA 98109, United States",
+    "neighborhood": "Westlake",
+    "street": "1200 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6292291,
+      "lng": -122.339985
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 1.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": true,
+    "placeId": "ChIJbeDOFzwVkFQRcYTUTRSws0Y",
+    "categories": [
+      "Car Park"
+    ],
+    "fid": "0x5490153c17cee06d:0x46b3b0144dd48471",
+    "cid": "5094609204737770609",
+    "reviewsCount": 6,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 1,
+      "threeStar": 2,
+      "fourStar": 0,
+      "fiveStar": 0
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:30.635Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Parking": [
+        {
+          "Paid parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=AGC%20Building%20Parking&query_place_id=ChIJbeDOFzwVkFQRcYTUTRSws0Y",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.62821050439731,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 40,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=NVdR5kC1scPrpstVuR8FZA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=146.3574&pitch=0&thumbfov=100",
+    "kgmid": "/g/11hblp_yfy"
+  },
+  {
+    "title": "Metropolis",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1505 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1505 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://parking.com/seattle/lot/westlake-union-center?utm_source=Soci&utm_medium=Soci&utm_campaign=Soci-WA",
+    "phone": "(856) 485-9703",
+    "phoneUnformatted": "+18564859703",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6327743,
+      "lng": -122.3412815
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJA_nAN4oVkFQRMbml4nT60IQ",
+    "categories": [
+      "Parking garage",
+      "Public parking space"
+    ],
+    "fid": "0x5490158a37c0f903:0x84d0fa74e2a5b931",
+    "cid": "9570424588087966001",
+    "reviewsCount": 2,
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:32.545Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "6 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "6 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "6 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "6 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "6 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Metropolis&query_place_id=ChIJA_nAN4oVkFQRMbml4nT60IQ",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=SJAIVVzBVcgnjC-tN1jk-w&cb_client=search.gws-prod.gps&w=408&h=240&yaw=265.89197&pitch=0&thumbfov=100",
+    "kgmid": "/g/11wwj71m47"
+  },
+  {
+    "title": "Lake Union Building Garage",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking garage",
+    "address": "1700 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1700 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "(206) 652-5515",
+    "phoneUnformatted": "+12066525515",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6343588,
+      "lng": -122.3396671
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ30Ye8BcVkFQR6BMdpDUr3nI",
+    "categories": [
+      "Parking garage"
+    ],
+    "fid": "0x54901517f01e46df:0x72de2b35a41d13e8",
+    "cid": "8277100674540180456",
+    "reviewsCount": null,
+    "imagesCount": 10,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:32.545Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Thursday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Friday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Open 24 hours"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Open 24 hours"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Assistive hearing loop": false
+        },
+        {
+          "Wheelchair accessible restroom": false
+        },
+        {
+          "Wheelchair accessible seating": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lake%20Union%20Building%20Garage&query_place_id=ChIJ30Ye8BcVkFQR6BMdpDUr3nI",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrKF6t7qxv4Nwe8qZ8NYro6Ponpp2DJybJEvHqGmQPMvWOhGboInvjTN0sTSpKgR3coQDlL_j9bGMjLNreCekzLyHnOO1OIhM0amxmB6ryr0LAKYO8tjnD6FS6dLc4Z8XFPhg=w408-h565-k-no",
+    "kgmid": "/g/11bbrmmq8p"
+  },
+  {
+    "title": "thinkspace SEATTLE",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Coworking space",
+    "address": "1700 Westlake Ave N #200, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1700 Westlake Ave N #200",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://thinkspace.com/contact-us-today-seattle-coworking",
+    "phone": "(206) 299-2320",
+    "phoneUnformatted": "+12062992320",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6343718,
+      "lng": -122.3396589
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJk2wBagEVkFQRNiFTaC8pha4",
+    "categories": [
+      "Coworking space"
+    ],
+    "fid": "0x549015016a016c93:0xae85292f68532136",
+    "cid": "12575502818092458294",
+    "reviewsCount": 85,
+    "imagesCount": 73,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:32.545Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Access": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ]
+    },
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as Asian-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        },
+        {
+          "Wheelchair accessible seating": true
+        },
+        {
+          "Assistive hearing loop": false
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=thinkspace%20SEATTLE&query_place_id=ChIJk2wBagEVkFQRNiFTaC8pha4",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.634,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFymXuQR8SocJKN2xr0QsOp7UiprewnvOlMaPg9PgWBhvXmHDiy340LjmTAxb3l7N-GHxnhFHdTMYCbCYjBAt3FdLj6wXzVWKtlQ-8101H5_uTWCQuFKqYUq7HM5gKsKD-tPT-W=w408-h271-k-no",
+    "kgmid": "/g/1jglykktk"
+  },
+  {
+    "title": "Dexter Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6381,
+      "lng": -122.34351
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJVdfVqxAVkFQRZxKPz68YFzQ",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x54901510abd5d755:0x341718afcf8f1267",
+    "cid": "3753495957817201255",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJVdfVqxAVkFQRZxKPz68YFzQ",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=T-FeZpyl35dUhcEEen6bNw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=76.68196&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tgh2p9c"
+  },
+  {
+    "title": "Dexter Ave N & 6th Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6401793,
+      "lng": -122.3445139
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgSKUYhoVkFQRjBQh8u0ZS0M",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490151a62942281:0x434b19edf221148c",
+    "cid": "4848997933554668684",
+    "reviewsCount": 3,
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%206th%20Ave%20N&query_place_id=ChIJgSKUYhoVkFQRjBQh8u0ZS0M",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGj8qn3NCZjcwBFsqNYPPtteAoCZJF_qYjuqsDtOPQayD8o9fA-s0bHtoXI40ECRM6AgphK6YzU1QjqRIs5To2sBoRxpa03RwD9uq3HEW-OWydZx6gLiU9DltqQd21wa-Sk26OG=w408-h544-k-no",
+    "kgmid": "/g/1ydp2580j"
+  },
+  {
+    "title": "Dexter Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63737,
+      "lng": -122.34332
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJRw_HURcVkFQRDihIu1Uu6rg",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490151751c70f47:0xb8ea2e55bb48280e",
+    "cid": "13324513393278199822",
+    "reviewsCount": 2,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJRw_HURcVkFQRDihIu1Uu6rg",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=4PqGXNlgwBGskp7bbyA14Q&cb_client=search.gws-prod.gps&w=408&h=240&yaw=276.86038&pitch=0&thumbfov=100",
+    "kgmid": "/g/12vsm0r81"
+  },
+  {
+    "title": "Aurora Ave N & Lynn St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6388165,
+      "lng": -122.3451555
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJhXxNmhAVkFQRVehPCRJ7GCk",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015109a4d7c85:0x29187b12094fe855",
+    "cid": "2961252072391960661",
+    "reviewsCount": 1,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Lynn%20St&query_place_id=ChIJhXxNmhAVkFQRVehPCRJ7GCk",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cjL6eKlgHD_xkhON8O8Krg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=81.36035&pitch=0&thumbfov=100",
+    "kgmid": "/g/11c6_gl5xq"
+  },
+  {
+    "title": "Aurora Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6374232,
+      "lng": -122.3442038
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlyV3SxcVkFQRtJ2WHME0P2M",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015174b772597:0x633f34c11c969db4",
+    "cid": "7151492737300602292",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJlyV3SxcVkFQRtJ2WHME0P2M",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=68LF1ZO9JgF4tuFN7welAA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=42.191532&pitch=0&thumbfov=100",
+    "kgmid": "/g/1thlz43p"
+  },
+  {
+    "title": "Aurora Ave N & Lynn St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63891,
+      "lng": -122.3456
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJQzLokBAVkFQRkq-eigd4qiU",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490151090e83243:0x25aa78078a9eaf92",
+    "cid": "2714113699229904786",
+    "reviewsCount": 2,
+    "imagesCount": 5,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Lynn%20St&query_place_id=ChIJQzLokBAVkFQRkq-eigd4qiU",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFT1jiY9uW_f2A_G1gaAQGm4vRFByYYD5yPSqSPyU_zLjdR1X1lu0lLrjAvTvg1B9yCmBW84pGZp4U-btTqmH6MqBIKfrDjybVL7XzOrnOigXWL5ncroCk1-V_9wGi3-j4aEVEN8Q=w408-h306-k-no",
+    "kgmid": "/g/1tj32v1d"
+  },
+  {
+    "title": "Dexter Ave N & Newton St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6362357,
+      "lng": -122.3424772
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJL9kCbhcVkFQRu72EKXc8ckM",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015176e02d92f:0x43723c772984bdbb",
+    "cid": "4860013430381526459",
+    "reviewsCount": null,
+    "imagesCount": 0,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.318Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Newton%20St&query_place_id=ChIJL9kCbhcVkFQRu72EKXc8ckM",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFPcFxcmRSUr5iefFbWzvcs77rcW1eUEzquNmUCadbD_D-LV55YuzDnAje_x_mM7FpJRvcUmJNb5lm4eKQIklZQ2fZ5jePQ2-r_uOkoH1ROPY8rWpei8o-5di4MXNikj7xexzJf=w426-h240-k-no",
+    "kgmid": "/g/1vl5ggqx"
+  },
+  {
+    "title": "2398 Westlake Ave N Parking",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Parking lot",
+    "address": "2398 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "2398 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.638776,
+      "lng": -122.3409716
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJYncJhoVkFQRlzg4EP3h5sM",
+    "categories": [
+      "Parking lot"
+    ],
+    "fid": "0x5490151a26dc8925:0xc3e6e1fd10383897",
+    "cid": "14116218559054493847",
+    "reviewsCount": null,
+    "imagesCount": 37,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.452Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=2398%20Westlake%20Ave%20N%20Parking&query_place_id=ChIJJYncJhoVkFQRlzg4EP3h5sM",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGVDIx1Z1-CnpMKW3ZkHPZiIRcGWInBzSPT8YV7VgCPjXeKOKruqvb0lfCpMI4r5HJk57uRqCuvcbPn-2JTwrWsZjMSkmpehYUMHxIXnu6OcdHQMoIWFzSR2my3cBMA9zo1_T2D7GgBFzs=w408-h544-k-no",
+    "kgmid": "/g/11y64s700m"
+  },
+  {
+    "title": "Westlake Greenbelt",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Park",
+    "address": "Westlake Ave N & Halladay St, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "Westlake Ave N & Halladay St",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "WA",
+    "countryCode": "US",
+    "website": "http://www.seattle.gov/parks/find/parks/westlake-greenbelt",
+    "phone": "(206) 684-4075",
+    "phoneUnformatted": "+12066844075",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6408583,
+      "lng": -122.3427543
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJq5AV4RoVkFQRG1kDFHdBJcs",
+    "categories": [
+      "Park"
+    ],
+    "fid": "0x5490151ae11590ab:0xcb2541771403591b",
+    "cid": "14638178143530342683",
+    "reviewsCount": 26,
+    "imagesCount": 171,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.452Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "4 AM to 11:30 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "4 AM to 11:30 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Westlake%20Greenbelt&query_place_id=ChIJq5AV4RoVkFQRG1kDFHdBJcs",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6NAPXDkXduMFBAWWJW-vpvc5El2FClywp42EuEUCX1ZcdLFngqHDYspH_mliJ2pYF3OjMTwcycP3w_RrTPZHR_AXuVV_bGInFzhWCLikrzuL9Y2ztS4-ujYSZFhgT0J0iOHSh=w408-h306-k-no",
+    "kgmid": "/g/11g_93x1z"
+  },
+  {
+    "title": "Enzo",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Apartment building",
+    "address": "2004 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "2004 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.enzoatlakeunion.com/",
+    "phone": "(425) 466-0982",
+    "phoneUnformatted": "+14254660982",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6370469,
+      "lng": -122.3422377
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJH_155-oVkFQR0AmRklJ7HYE",
+    "categories": [
+      "Apartment building"
+    ],
+    "fid": "0x549015eae779fd1f:0x811d7b52929109d0",
+    "cid": "9303727999793826256",
+    "reviewsCount": 3,
+    "imagesCount": 21,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:35.452Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "additionalOpeningHours": {
+      "Access": [
+        {
+          "day": "Monday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM–5 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM–5 PM"
+        }
+      ]
+    },
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Pets welcome": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free street parking": true
+        },
+        {
+          "On-site parking": true
+        },
+        {
+          "Paid parking lot": true
+        }
+      ],
+      "Pets": [
+        {
+          "Dogs allowed": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Enzo&query_place_id=ChIJH_155-oVkFQR0AmRklJ7HYE",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.63978949560269,-122.3401,17z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEqdr1XA3j_ESDrsdL3DZgysFN7duB0z0n9dBPGst04WvTY0zCa8m-rasja8g2ZJf09K6up0jNHsKazm-fBNll4WHHWKew8gfcR1TmxYz_cIsQrDOhac5Ljic8QIhaxt5HVU9fe7vhmH0v6=w408-h305-k-no",
+    "kgmid": "/g/11yrt9rg9h"
+  },
+  {
+    "title": "Taylor Ave N & Prospect St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.62897,
+      "lng": -122.34634
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJnVPxqz8VkFQRuoJiQzgq5o0",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153fabf1539d:0x8de62a38436282ba",
+    "cid": "10224906425128354490",
+    "reviewsCount": 1,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:38.233Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Passenger loading area": true
+        }
+      ],
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Prospect%20St&query_place_id=ChIJnVPxqz8VkFQRuoJiQzgq5o0",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=DWIE9ujpiHsBHqd4rsgpPA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=22.285282&pitch=0&thumbfov=100",
+    "kgmid": "/g/1thl0k6y"
+  },
+  {
+    "title": "Taylor Ave N & Prospect St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6291187,
+      "lng": -122.346147
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJS66rD8VkFQRVhVWyORuKE8",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x5490153facba2e25:0x4f286ee4c8561556",
+    "cid": "5703930856957416790",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:38.233Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taylor%20Ave%20N%20%26%20Prospect%20St&query_place_id=ChIJJS66rD8VkFQRVhVWyORuKE8",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.62821050439731,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=cn_6Qzs2shjwKJ22gsB_EQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=91.85355&pitch=0&thumbfov=100",
+    "kgmid": "/g/11dxkm8tdt"
+  },
+  {
+    "title": "Dexter Ave N & Howe St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63572,
+      "lng": -122.3424001
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJXeefdBcVkFQReeArQbkMfAI",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x54901517749fe75d:0x27c0cb9412be079",
+    "cid": "179032074989854841",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:40.426Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Passenger loading area": true
+        }
+      ],
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Dexter%20Ave%20N%20%26%20Howe%20St&query_place_id=ChIJXeefdBcVkFQReeArQbkMfAI",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=ykYZOQhvmb15xSCdHa_ZKw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=254.11719&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tkjkxj5"
+  },
+  {
+    "title": "Aurora Ave N & Crockett St",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "East Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63675,
+      "lng": -122.34412
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJl7hTOBcVkFQRTvSqo1SoD8Y",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015173853b897:0xc60fa854a3aaf44e",
+    "cid": "14271810825637000270",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:40.426Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Aurora%20Ave%20N%20%26%20Crockett%20St&query_place_id=ChIJl7hTOBcVkFQRTvSqo1SoD8Y",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.634,-122.3401,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=U31gve4k2DRaehE8te6AhA&cb_client=search.gws-prod.gps&w=408&h=240&yaw=237.09726&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tc_dz8t"
+  },
+  {
+    "title": "Boston St & Bigelow Ave N",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Bus stop",
+    "address": "Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": null,
+    "city": "Seattle",
+    "postalCode": null,
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.63819,
+      "lng": -122.3484
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJkeHmHBEVkFQRnWLYMKvkLhE",
+    "categories": [
+      "Bus stop"
+    ],
+    "fid": "0x549015111ce6e191:0x112ee4ab30d8629d",
+    "cid": "1238178371483493021",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:23:41.553Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Getting here": [
+        {
+          "24-hour transit available": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Boston%20St%20%26%20Bigelow%20Ave%20N&query_place_id=ChIJkeHmHBEVkFQRnWLYMKvkLhE",
+    "searchPageUrl": "https://www.google.com/maps/search/bus%20stop/@47.63978949560269,-122.34869030629478,17z?hl=en",
+    "searchString": "bus stop",
+    "language": "en",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=IYr1ypuqQ37anQkjjS6kIw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=303.72186&pitch=0&thumbfov=100",
+    "kgmid": "/g/1tt8bzm0"
+  },
+  {
+    "title": "Tot Lot",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Playground",
+    "address": "1215 5th Ave N, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "1215 5th Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6305097,
+      "lng": -122.3479109
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ5QFKMwAVkFQRhjCb-6Zt09c",
+    "categories": [
+      "Playground"
+    ],
+    "fid": "0x54901500334a01e5:0xd7d36da6fb9b3086",
+    "cid": "15551894502193705094",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:05.211Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Tot%20Lot&query_place_id=ChIJ5QFKMwAVkFQRhjCb-6Zt09c",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6304929,-122.3486605,18.43332942938228z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=QggB8X52DqxaHX8dfkDeCQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=242.1984&pitch=0&thumbfov=100",
+    "kgmid": "/g/11vq2nqbhf"
+  },
+  {
+    "title": "CELESTIAL CONSTRUCTION LLC",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Construction company",
+    "address": "524 Highland Dr, Seattle, WA 98109",
+    "neighborhood": "Queen Anne",
+    "street": "524 Highland Dr",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://celestialconstructionio.com/",
+    "phone": "(425) 900-3373",
+    "phoneUnformatted": "+14259003373",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6299861,
+      "lng": -122.3466059
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlRlpPPQVkFQRMe08AjKRHAc",
+    "categories": [
+      "Construction company"
+    ],
+    "fid": "0x549015f43c691995:0x71c9132023ced31",
+    "cid": "512444101585333553",
+    "reviewsCount": 52,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 51
+    },
+    "imagesCount": 128,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:06.000Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:30 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online estimates": true
+        },
+        {
+          "Onsite services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking garage": true
+        },
+        {
+          "Free parking lot": true
+        },
+        {
+          "Free street parking": true
+        },
+        {
+          "On-site parking": true
+        },
+        {
+          "Paid parking garage": true
+        },
+        {
+          "Paid parking lot": true
+        },
+        {
+          "Paid street parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=CELESTIAL%20CONSTRUCTION%20LLC&query_place_id=ChIJlRlpPPQVkFQRMe08AjKRHAc",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6304929,-122.3486605,18.43332942938228z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAELcBnwZquF6JJqw8SsmLd9iR43WkMCgcrNUBxHupEFslGlXCZOvRQH7tf0LcE82LoUF0Ry0lyLYGYZfeXTHThLuWTD7s0fSFdaEO41sZiPAW5tFegf6jU7ztoUntzaLBmTChzFafEjrSs=w408-h306-k-no",
+    "kgmid": "/g/11vzrndbp9"
+  },
+  {
+    "title": "Essential Essence",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Holistic medicine practitioner",
+    "address": "Seattle waterworks, 1818 Westlake Ave N # 310, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "Seattle waterworks, 1818 Westlake Ave N # 310",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.eehealing.com/",
+    "phone": "(206) 445-3926",
+    "phoneUnformatted": "+12064453926",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6354325,
+      "lng": -122.3397656
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJiSrJyfAVkFQRxieN2w-LEpY",
+    "categories": [
+      "Holistic medicine practitioner"
+    ],
+    "fid": "0x549015f0c9c92a89:0x96128b0fdb8d27c6",
+    "cid": "10813858555494213574",
+    "reviewsCount": null,
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:07.152Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Parking": [
+        {
+          "Free parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Essential%20Essence&query_place_id=ChIJiSrJyfAVkFQRxieN2w-LEpY",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6361711,-122.33997,18.43317266783171z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEulpvp46qWJCD8zok6AT5GGo8GirGVnilNGMCTVIdZNrkVjX3XmdWrSk5n197anvfy7x5pcokCIHWgngWqSzZliufaTNah5noxEx7E-uFAkb9-tZa9s4oBpJkNtEr-kq1Op6pXgcHZhzA=w426-h240-k-no",
+    "kgmid": "/g/11z638tgp4"
+  },
+  {
+    "title": "AGC of Washington",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Association / Organization",
+    "address": "1200 Westlake Ave N # 301, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1200 Westlake Ave N # 301",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.agcwa.com/",
+    "phone": "(206) 284-0061",
+    "phoneUnformatted": "+12062840061",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6299445,
+      "lng": -122.3396087
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJXVaNNzwVkFQRvc18zGweQQ8",
+    "categories": [
+      "Association / Organization"
+    ],
+    "fid": "0x5490153c378d565d:0xf411e6ccc7ccdbd",
+    "cid": "1099193236691144125",
+    "reviewsCount": 92,
+    "imagesCount": 300,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:07.583Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Parking": [
+        {
+          "Paid parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=AGC%20of%20Washington&query_place_id=ChIJXVaNNzwVkFQRvc18zGweQQ8",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6300119,-122.3395899,18.43334270721085z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYxCelONo_fb5aNRiGoMoHUbp10ekQ6sjHHbFdZ1pmrQ_iCDoNnA3C8sZeutCHfxeenG4aGQzF83fkwwRB__dLSFvwo2YAB9qHIBJvt_Il2Z0_5esFhhe5tTOdPtWw0b58F2M=w408-h544-k-no",
+    "kgmid": "/g/1261scc50"
+  },
+  {
+    "title": "LocalWorks Seattle - Dexter Ave",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Office space rental agency",
+    "address": "1425 Dexter Ave N 2nd floor, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1425 Dexter Ave N 2nd floor",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://localworks.us/west/washington/seattle-wa/?utm_source=GMB&utm_medium=Organic&utm_campaign=GMB",
+    "phone": "(206) 202-5011",
+    "phoneUnformatted": "+12062025011",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6322073,
+      "lng": -122.3429783
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJe1Id-2wVkFQRxo4-ZgRGARs",
+    "categories": [
+      "Office space rental agency",
+      "Business center",
+      "Business to business service",
+      "Commercial real estate agency",
+      "Corporate office",
+      "Coworking space"
+    ],
+    "fid": "0x5490156cfb1d527b:0x1b014604663e8ec6",
+    "cid": "1945913498709954246",
+    "reviewsCount": null,
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:09.255Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Online appointments": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=LocalWorks%20Seattle%20-%20Dexter%20Ave&query_place_id=ChIJe1Id-2wVkFQRxo4-ZgRGARs",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6327743,-122.3412815,18.433266449122836z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 19,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG4i_vJVFMB5pU_voS1KWZ5OU5r8n2YqHcOuAdn9Gqv2ZUaexyzRf2cHDB9PiAN3P-3BprASuN1qMXuPdoWVfy8Y9pXOyX8palNHURcpEiPTr-bLY1wmuHw45-Ge54msEjax86tgtMioqI=w426-h240-k-no",
+    "kgmid": "/g/11xljc6hwr"
+  },
+  {
+    "title": "Marine Servicenter Seattle",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Boat dealer",
+    "address": "2442 Westlake Ave N, Seattle, WA 98109",
+    "neighborhood": null,
+    "street": "2442 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.marinesc.com/",
+    "phone": "(206) 323-2405",
+    "phoneUnformatted": "+12063232405",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.640768,
+      "lng": -122.3418487
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ65mKrBsVkFQRhGL9Re1f8j8",
+    "categories": [
+      "Boat dealer",
+      "Boat accessories supplier",
+      "Houseboat rental service",
+      "Yacht broker"
+    ],
+    "fid": "0x5490151bac8a99eb:0x3ff25fed45fd6284",
+    "cid": "4607850841439560324",
+    "reviewsCount": 15,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 13
+    },
+    "imagesCount": 39,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:16.538Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Delivery": false
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible parking lot": true
+        },
+        {
+          "Wheelchair accessible restroom": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Gender-neutral restroom": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safespace": true
+        }
+      ],
+      "Payments": [
+        {
+          "Checks": true
+        },
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "Credit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        },
+        {
+          "Free street parking": true
+        },
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Marine%20Servicenter%20Seattle&query_place_id=ChIJ65mKrBsVkFQRhGL9Re1f8j8",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6408583,-122.3427543,18.433043241914305z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFk1mqfL841f4TO8BLBqJvRSEc3L6lkIKegDlm81TLwwRVOBIvrhICVYjXHKBG-vNadHctLo8kFJCOOC7ihSgEVq1fRjjlKf0Zp8Y2niQj_UYTLSdct9Fm-C1jjqtLAaJDhWoN6=w408-h725-k-no",
+    "kgmid": "/g/1vxfzw7g"
+  },
+  {
+    "title": "Studio Seance",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Nail salon",
+    "address": "2412 Westlake Ave N # 1, Seattle, WA 98109",
+    "neighborhood": null,
+    "street": "2412 Westlake Ave N # 1",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://www.vagaro.com/studioseance",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.639951,
+      "lng": -122.3411586
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJI6di7i8VkFQRxgpZ3xys1t8",
+    "categories": [
+      "Nail salon"
+    ],
+    "fid": "0x5490152fee62a723:0xdfd6ac1cdf590ac6",
+    "cid": "16129268355480226502",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:16.538Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "10 AM to 3:30 PM"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible restroom": false
+        },
+        {
+          "Wheelchair accessible seating": false
+        }
+      ],
+      "Amenities": [
+        {
+          "Restroom": true
+        },
+        {
+          "Wi-Fi": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointment required": true
+        },
+        {
+          "Appointments recommended": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "Free parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Studio%20Seance&query_place_id=ChIJI6di7i8VkFQRxgpZ3xys1t8",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6408583,-122.3427543,18.433043241914305z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 25,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFMlr_qDv6AMlht5_rT9jg9-C22iu02BXKmVLOWuaU-a3vFMd8slO7IF3hoIlKMXbp1brAbWhTz8t3bcfqyWQjcx1KExSSXtjzEMqO-m5W946DLFJTiLAG-wYm5lTE5SV2qI5w=w408-h725-k-no",
+    "kgmid": "/g/11sb317vkv"
+  },
+  {
+    "title": "Anchor Flats",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Apartment complex",
+    "address": "1511 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1511 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://anchorflats.bellwetherhousing.org/?utm_knock=g",
+    "phone": "(425) 546-1024",
+    "phoneUnformatted": "+14255461024",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6324816,
+      "lng": -122.3425705
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJN8Sh6o4VkFQRf3jqLqtDCEw",
+    "categories": [
+      "Apartment complex",
+      "Apartment building",
+      "Low income housing program"
+    ],
+    "fid": "0x5490158eeaa1c437:0x4c0843ab2eea787f",
+    "cid": "5478703349201795199",
+    "reviewsCount": 15,
+    "imagesCount": 28,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:20.560Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 4:30 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "In-unit washer/dryer": true
+        },
+        {
+          "Outdoor Space": true
+        },
+        {
+          "Pets welcome": true
+        }
+      ],
+      "Pets": [
+        {
+          "Dogs allowed": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Anchor%20Flats&query_place_id=ChIJN8Sh6o4VkFQRf3jqLqtDCEw",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6322073,-122.3429783,19.43328210217804z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 15,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkBV1YqHcvCGerfEzwAFa6Lq2LfX55YrG7q0EZr_1XRfFfxsv1sriOZFpGz8c10PAxvDgA1JyW3Uh3EEs3QJdYRwjcygYawRqJ0spYaYTP994oISLr7igsKUmefjwMo4NSLWus=w453-h240-k-no",
+    "kgmid": "/g/11gk8r1l7r"
+  },
+  {
+    "title": "ABC Imaging - Seattle",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Print shop",
+    "address": "1425 Dexter Ave N Units A & B, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1425 Dexter Ave N Units A & B",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.abcimaging.com/",
+    "phone": "(206) 357-0660",
+    "phoneUnformatted": "+12063570660",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6321534,
+      "lng": -122.3427424
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJj2ljwLpqkFQRYhq7IPE1hr0",
+    "categories": [
+      "Print shop",
+      "Banner store",
+      "Blueprint service",
+      "Commercial printer",
+      "Digital printer",
+      "Digital printing service",
+      "Graphic designer",
+      "Sign shop",
+      "Vinyl sign shop"
+    ],
+    "fid": "0x54906abac063698f:0xbd8635f120bb1a62",
+    "cid": "13656662229800131170",
+    "reviewsCount": 66,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 64
+    },
+    "imagesCount": 67,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:21.272Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Service options": [
+        {
+          "Delivery": true
+        },
+        {
+          "In-store pickup": true
+        },
+        {
+          "Onsite services": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        },
+        {
+          "NFC mobile payments": true
+        },
+        {
+          "Credit cards": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=ABC%20Imaging%20-%20Seattle&query_place_id=ChIJj2ljwLpqkFQRYhq7IPE1hr0",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6322073,-122.3429783,19.43328210217804z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGkaOvUb-IWwsCr2P3nZEbTk_xBVrc1EUl06iGV1brtjtQnQXXeb_fiH1yCbSkpFOMO2ZeIrbE6Fl__jKll2D_NgpwWs8IcSDOBD2fd_yN2UrGgq_l2yHjwfm2_yM6ANE2sZ7g=w408-h306-k-no",
+    "kgmid": "/g/1hc41y5n3"
+  },
+  {
+    "title": "Stellar",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Apartment complex",
+    "address": "1405 Dexter Ave N, Seattle, WA 98109",
+    "neighborhood": "Westlake",
+    "street": "1405 Dexter Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.stellarseattle.com/?utm_knock=g",
+    "phone": "(206) 432-4918",
+    "phoneUnformatted": "+12064324918",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.631696,
+      "lng": -122.3425532
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJv5KY_GgVkFQRoCfiBp-WV5I",
+    "categories": [
+      "Apartment complex",
+      "Apartment building"
+    ],
+    "fid": "0x54901568fc9892bf:0x9257969f06e227a0",
+    "cid": "10545062662270756768",
+    "reviewsCount": 76,
+    "reviewsDistribution": {
+      "oneStar": 16,
+      "twoStar": 4,
+      "threeStar": 0,
+      "fourStar": 3,
+      "fiveStar": 53
+    },
+    "imagesCount": 136,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:21.272Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair accessible entrance": true
+        },
+        {
+          "Wheelchair accessible parking lot": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Elevator": true
+        },
+        {
+          "Fitness center": true
+        },
+        {
+          "Maintenance": true
+        },
+        {
+          "Outdoor Space": true
+        },
+        {
+          "Pets welcome": true
+        }
+      ],
+      "Parking": [
+        {
+          "On-site parking": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Stellar&query_place_id=ChIJv5KY_GgVkFQRoCfiBp-WV5I",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6322073,-122.3429783,19.43328210217804z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHe8Mk2Aq-DX5zTl5julkG0ZSp1ZO-JolyGF2eRJTFFbXeBfkVQwIi6-rKL7hO2vprAIHW-sbzKUTt8nfnALaGphijp9iYwX7sz9LaOCu3W8Aicr3sR44dTCjO2zUv3s2VyzAUQm4N2QTCv=w437-h240-k-no",
+    "kgmid": "/g/11v3jhvh_9"
+  },
+  {
+    "title": "George H. Glade Psychotherapist ADHD Assessment Seattle",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Nurse practitioner",
+    "address": "1800 Westlake Ave N # 302, Seattle, WA 98109, United States",
+    "neighborhood": "Westlake",
+    "street": "1800 Westlake Ave N # 302",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "http://gladearnp.com/",
+    "phone": "+1 206-938-9580",
+    "phoneUnformatted": "+12069389580",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 47.6350027,
+      "lng": -122.3398753
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJsQX4kRcVkFQRqNCz_s6iv6M",
+    "categories": [
+      "Nurse practitioner",
+      "Psychotherapist",
+      "Registered general nurse",
+      "Specialised Clinic"
+    ],
+    "fid": "0x5490151791f805b1:0xa3bfa2cefeb3d0a8",
+    "cid": "11799328558654148776",
+    "reviewsCount": 18,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 16
+    },
+    "imagesCount": 125,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:27.671Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9 AM to 2:30 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Saturday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "From the business": [
+        {
+          "Identifies as veteran-owned": true
+        }
+      ],
+      "Service options": [
+        {
+          "On-site services": true
+        },
+        {
+          "English": true
+        }
+      ],
+      "Accessibility": [
+        {
+          "Wheelchair-accessible car park": true
+        },
+        {
+          "Wheelchair-accessible entrance": true
+        },
+        {
+          "Wheelchair-accessible seating": true
+        },
+        {
+          "Wheelchair-accessible toilet": true
+        }
+      ],
+      "Crowd": [
+        {
+          "LGBTQ+ friendly": true
+        },
+        {
+          "Transgender safe space": true
+        }
+      ],
+      "Payments": [
+        {
+          "Credit cards": true
+        },
+        {
+          "Debit cards": true
+        }
+      ],
+      "Parking": [
+        {
+          "On-site parking": true
+        },
+        {
+          "Paid parking lot": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=George%20H.%20Glade%20Psychotherapist%20ADHD%20Assessment%20Seattle&query_place_id=ChIJsQX4kRcVkFQRqNCz_s6iv6M",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6354325,-122.3397656,19.433193060580443z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 22,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHabnDmkdNtCVU_3KD9vDP9JCTir5cZtOWFWWnEAbLyX8F3XtxScLVl7QF4AyQAhpfKX1tMPyMYcubtPebLmfinwGLuS1R0YYDNWqVhLC7dn9QPrI7_Wr9r3YagyvmT1PcI96GQdicWDwA=w408-h272-k-no",
+    "kgmid": "/g/1trcg3qm"
+  },
+  {
+    "title": "Flux Golf",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Association / Organization",
+    "address": "1818 Westlake Ave N, Seattle, WA 98109, United States",
+    "neighborhood": "Westlake",
+    "street": "1818 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "phone": "+1 206-707-5600",
+    "phoneUnformatted": "+12067075600",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.6354755,
+      "lng": -122.3397859
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJq6r6JxgVkFQRLKNNMPaxusY",
+    "categories": [
+      "Association / Organization"
+    ],
+    "fid": "0x5490151827faaaab:0xc6bab1f6304da32c",
+    "cid": "14319953636108378924",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:27.671Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair-accessible car park": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Flux%20Golf&query_place_id=ChIJq6r6JxgVkFQRLKNNMPaxusY",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6354325,-122.3397656,19.433193060580443z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 23,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7UuzL7MkqA1FHEg6ecdJFg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=59.748486&pitch=0&thumbfov=100",
+    "kgmid": "/g/11ghq_ylhl"
+  },
+  {
+    "title": "Contextual-Conceptual Therapy",
+    "subTitle": null,
+    "description": null,
+    "price": null,
+    "categoryName": "Occupational therapist",
+    "address": "1818 Westlake Ave N, Seattle, WA 98109, United States",
+    "neighborhood": "Westlake",
+    "street": "1818 Westlake Ave N",
+    "city": "Seattle",
+    "postalCode": "98109",
+    "state": "Washington",
+    "countryCode": "US",
+    "website": "https://www.suicidetherapy.com/locations",
+    "phone": "+1 206-550-3961",
+    "phoneUnformatted": "+12065503961",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 47.635474,
+      "lng": -122.339785
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJSwLwJxgVkFQRr05xWcqw_ds",
+    "categories": [
+      "Occupational therapist"
+    ],
+    "fid": "0x5490151827f0024b:0xdbfdb0ca59714eaf",
+    "cid": "15852020646544494255",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-05-30T09:24:27.671Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accessibility": [
+        {
+          "Wheelchair-accessible car park": true
+        }
+      ],
+      "Amenities": [
+        {
+          "Toilet": true
+        }
+      ],
+      "Planning": [
+        {
+          "Appointments recommended": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Contextual-Conceptual%20Therapy&query_place_id=ChIJSwLwJxgVkFQRr05xWcqw_ds",
+    "searchPageUrl": "https://www.google.com/maps/search/parking%20lot/@47.6354325,-122.3397656,19.433193060580443z?hl=en",
+    "searchString": "parking lot",
+    "language": "en",
+    "rank": 24,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=7UuzL7MkqA1FHEg6ecdJFg&cb_client=search.gws-prod.gps&w=408&h=240&yaw=60.24838&pitch=0&thumbfov=100",
+    "kgmid": "/g/11twq3p1w3"
+  }
+]
