@@ -219,12 +219,25 @@ def _build_summary(geo: dict) -> str:
 
 def _load_poi(venue_key: str) -> dict:
     """
-    Load Kone's cached Apify scrape (apify_data/<venue_key>_scraped.json) and
-    aggregate it into a poi_summary via poi_aggregator. Falls back to mock POI
-    when no scrape file exists yet for this venue.
+    Load Kone's cached Apify scrape and aggregate it via poi_aggregator.
+
+    Tries, in order:
+      1. apify_data/<venue_key>_scraped.json   (per-venue, e.g. venue_a_scraped.json)
+      2. apify_data/venue_scraped.json         (Kone's default single-venue output)
+    Falls back to mock POI when neither exists.
+
+    NOTE: for a real two-venue comparison Kone should produce BOTH
+    venue_a_scraped.json and venue_b_scraped.json (scraper supports
+    `--key venue_a/--key venue_b`); otherwise both venues share the same
+    venue_scraped.json and the comparison is meaningless.
     """
-    path = APIFY_DATA_DIR / f"{venue_key}_scraped.json"
-    if path.exists():
+    candidates = [
+        APIFY_DATA_DIR / f"{venue_key}_scraped.json",
+        APIFY_DATA_DIR / "venue_scraped.json",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
         try:
             raw = json.loads(path.read_text(encoding="utf-8"))
             places = raw if isinstance(raw, list) else (
@@ -233,7 +246,7 @@ def _load_poi(venue_key: str) -> dict:
             if places:
                 return aggregate_pois(places)
         except Exception as e:
-            print(f"[main] POI load failed for {venue_key}, using mock: {e}")
+            print(f"[main] POI load failed for {path.name}, trying next: {e}")
     return _mock_poi(venue_key)
 
 
