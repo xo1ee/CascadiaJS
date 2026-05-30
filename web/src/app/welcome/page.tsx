@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// the initial page the user sees
 export default function WelcomePage() {
   return (
     <div className="min-h-full bg-zinc-50 px-4 pt-[20vh] pb-10 dark:bg-zinc-950 sm:px-6 lg:px-8">
@@ -28,6 +29,7 @@ export default function WelcomePage() {
             </p>
           </section>
 
+        {/* redirects to compare page */}
           <div className="border-t border-zinc-100 bg-zinc-50/50 px-6 py-5 dark:border-zinc-800 dark:bg-zinc-950/30 sm:px-8">
             <Link
               href="/compare"

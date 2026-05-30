@@ -3,7 +3,9 @@
 import { useState } from "react";
 import type { AnalyzeVenuesResponse, VenueAnalysis, VenueInput } from "@/lib/types";
 
+// user input data
 type Venue = VenueInput;
+// form placeholders
 const VENUE_PLACEHOLDERS: Pick<Venue, "name" | "address">[] = [
   {
     name: "thinkspace Seattle",
@@ -15,6 +17,7 @@ const VENUE_PLACEHOLDERS: Pick<Venue, "name" | "address">[] = [
   },
 ];
 
+// default compares 2 venues (user can add more)
 const DEFAULT_VENUES: Venue[] = [
   { id: "venue-1", name: "", address: "" },
   { id: "venue-2", name: "", address: "" },
