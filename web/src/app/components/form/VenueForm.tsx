@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { analyzeVenues, ApiError } from "@/lib/api";
 import type { AnalyzeVenuesResponse, VenueAnalysis, VenueInput } from "@/lib/types";
 
 // user input data
@@ -140,12 +141,20 @@ function VenueComparisonCard({
     analysis?.summary?.trim() ||
     "Comparison summary will appear here after generation.";
 
-  return (    <div className={`${venueCardClassName} ${className}`}>
+  return (
+    <div className={`${venueCardClassName} ${className}`}>
       <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         Venue {index + 1}
       </p>
       <p className="text-sm text-zinc-800 dark:text-zinc-200">{displayName}</p>
       <p className="text-xs text-zinc-500 dark:text-zinc-400">{displayDescription}</p>
+      {analysis?.map_url ? (
+        <img
+          src={analysis.map_url}
+          alt={`Map preview for ${displayName}`}
+          className="mt-3 w-full rounded-lg border border-zinc-200 object-cover dark:border-zinc-700"
+        />
+      ) : null}
     </div>
   );
 }
@@ -156,8 +165,11 @@ export default function VenueForm() {
   const [venues, setVenues] = useState<Venue[]>(DEFAULT_VENUES);
   const [comparisonResult, setComparisonResult] =
     useState<AnalyzeVenuesResponse | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const useScrollLayout = venues.length > 2;
+  const allVenuesHaveAddress = venues.every((v) => v.address.trim().length > 0);
   const updateVenue = (
     id: string,
     field: keyof Pick<Venue, "name" | "address">,
@@ -181,10 +193,35 @@ export default function VenueForm() {
     setVenues((prev) => prev.filter((venue) => venue.id !== id));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: call POST /api/analyze-venues, then setComparisonResult(response)
-    console.log({ eventName, useCase, venues });
+    if (!allVenuesHaveAddress) {
+      setError("Enter an address for each venue before generating.");
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+    setComparisonResult(null);
+
+    try {
+      const result = await analyzeVenues({
+        event_name: eventName,
+        use_case: useCase,
+        venues,
+      });
+      setComparisonResult(result);
+    } catch (err) {
+      const message =
+        err instanceof ApiError
+          ? err.message
+          : err instanceof Error
+            ? err.message
+            : "Something went wrong. Is the backend running on port 8000?";
+      setError(message);
+    } finally {
+      setIsLoading(false);
+    }
   };
   return (
     <div className="min-h-full bg-zinc-50 px-4 py-10 dark:bg-zinc-950 sm:px-6 lg:px-8">
@@ -278,6 +315,27 @@ export default function VenueForm() {
               AI Comparison
             </h2>
 
+            {error ? (
+              <p
+                role="alert"
+                className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-200"
+              >
+                {error}
+              </p>
+            ) : null}
+
+            {comparisonResult?.overall_recommendation ? (
+              <p className="mb-4 rounded-lg border border-emerald-100 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900 dark:border-emerald-900/40 dark:bg-emerald-950/30 dark:text-emerald-100">
+                {comparisonResult.overall_recommendation}
+              </p>
+            ) : null}
+
+            {isLoading ? (
+              <p className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
+                Analyzing venues — geocoding maps and building evidence…
+              </p>
+            ) : null}
+
             {useScrollLayout ? (
               <div className="overflow-x-auto pb-2">
                 <div className="flex w-max gap-4">
@@ -309,10 +367,16 @@ export default function VenueForm() {
           <div className="border-t border-zinc-100 bg-zinc-50/50 px-6 py-5 dark:border-zinc-800 dark:bg-zinc-950/30 sm:px-8">
             <button
               type="submit"
-              className="w-full rounded-lg bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900 sm:w-auto sm:min-w-[220px]"
+              disabled={isLoading || !allVenuesHaveAddress}
+              className="w-full rounded-lg bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 dark:focus:ring-offset-zinc-900 sm:w-auto sm:min-w-[220px]"
             >
-              Generate Venue Packet
+              {isLoading ? "Generating…" : "Generate Venue Packet"}
             </button>
+            {!allVenuesHaveAddress && !isLoading ? (
+              <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
+                Fill in every venue address to enable generation.
+              </p>
+            ) : null}
           </div>
         </form>
       </div>
