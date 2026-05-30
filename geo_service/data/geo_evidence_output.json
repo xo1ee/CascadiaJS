@@ -1,0 +1,116 @@
+{
+  "venue_a": {
+    "address": "1700 Westlake Ave N #200, Seattle, WA 98109",
+    "lat": 47.634418,
+    "lon": -122.339703,
+    "map_path": "/Users/ggq/Documents/xjy/cs/project/Hackathon/SiteLens/backend/static/demo/venue_a_map.png",
+    "satellite_path": "/Users/ggq/Documents/xjy/cs/project/Hackathon/SiteLens/backend/static/demo/venue_a_satellite.png",
+    "map_signals": {
+      "water_nearby": true,
+      "green_space_level": "medium",
+      "building_density": "medium",
+      "road_access": "strong",
+      "visible_parking": "unknown",
+      "land_use_context": "mixed",
+      "observations": [
+        "Location directly adjacent to large water body (lake/harbor) on eastern edge",
+        "Multiple labeled cultural venues nearby (Swedish Cultural Center, Mother India Cuisine, The Toledo)",
+        "Aurora Ave N (major arterial - appears to be SR 99) provides primary north-south access",
+        "Green corridors visible including Trolley Hill Park to west",
+        "Marina/boat slips visible in water area suggesting waterfront district",
+        "Mix of street grid patterns indicating established urban neighborhood",
+        "Westlake Prospect Blvd runs along waterfront"
+      ],
+      "risks": [
+        "Waterfront location may limit approach directions and backup routes",
+        "Aurora Ave N proximity could generate noise/traffic during event hours",
+        "No obvious large parking structures visible in immediate vicinity",
+        "Mixed-use area may have competing demands for street parking",
+        "Waterfront areas sometimes have restricted access or special event permitting requirements"
+      ],
+      "confidence": "medium"
+    },
+    "satellite_signals": {
+      "water_nearby": true,
+      "green_space_level": "medium",
+      "building_density": "high",
+      "road_access": "strong",
+      "visible_parking": "strong",
+      "land_use_context": "mixed",
+      "observations": [
+        "Location is directly adjacent to Lake Union waterfront on eastern shore",
+        "Numerous marina/boat slips visible immediately adjacent to marked location",
+        "Dense urban development pattern with mix of building types and sizes",
+        "Major road corridor (appears to be Fairview Ave) runs parallel to waterfront",
+        "Substantial parking structures and surface lots visible in immediate vicinity",
+        "Mix of residential, commercial, and marine-related facilities in area",
+        "Trolley Hill Park and green corridors visible within 500m to west",
+        "Swedish Cultural Center and other labeled facilities suggest mixed-use district"
+      ],
+      "risks": [
+        "Waterfront location may have limited expansion space or constrained venue options",
+        "High building density suggests potential noise and congestion during events",
+        "Marina activity may compete for parking and access during peak times",
+        "Limited visible street parking; reliance on structures or paid lots likely",
+        "Urban waterfront setting may have higher venue costs"
+      ],
+      "confidence": "high"
+    }
+  },
+  "venue_b": {
+    "address": "325 Eastlake Ave E, Seattle, WA 98109",
+    "lat": 47.621434,
+    "lon": -122.329505,
+    "map_path": "/Users/ggq/Documents/xjy/cs/project/Hackathon/SiteLens/backend/static/demo/venue_b_map.png",
+    "satellite_path": "/Users/ggq/Documents/xjy/cs/project/Hackathon/SiteLens/backend/static/demo/venue_b_satellite.png",
+    "map_signals": {
+      "water_nearby": false,
+      "green_space_level": "low",
+      "building_density": "high",
+      "road_access": "strong",
+      "visible_parking": "unknown",
+      "land_use_context": "mixed",
+      "observations": [
+        "Location is on Melrose Ave E, a major north-south arterial with Interstate 5 immediately adjacent to the west",
+        "Dense urban environment with multiple labeled businesses, hotels, and restaurants in immediate vicinity",
+        "Intersection of Harrison St and Melrose Ave E shows typical urban grid pattern",
+        "Small green spaces visible on map (pocket parks) but minimal overall greenery in immediate area",
+        "Multiple hospitality venues (hotels, breweries, tapas) suggest commercial/entertainment district",
+        "Capitol Hill neighborhood context visible with library branch marked nearby"
+      ],
+      "risks": [
+        "Limited visible surface parking options in dense urban area may require attendees to use garages or transit",
+        "High building density suggests potential noise and congestion during event setup/breakdown",
+        "Proximity to Interstate 5 provides highway access but may create traffic/noise considerations",
+        "Mixed commercial-residential area may have loading zone restrictions or limited staging areas"
+      ],
+      "confidence": "medium"
+    },
+    "satellite_signals": {
+      "water_nearby": true,
+      "green_space_level": "low",
+      "building_density": "high",
+      "road_access": "strong",
+      "visible_parking": "limited",
+      "land_use_context": "mixed",
+      "observations": [
+        "Location adjacent to Interstate 5 freeway with direct visibility and access",
+        "Dense urban environment with tightly packed multi-story buildings",
+        "Water body visible to the west (likely Puget Sound/Elliott Bay)",
+        "Minimal green space in immediate vicinity, mostly hardscape",
+        "Mix of commercial and residential structures based on building footprints",
+        "Labeled landmarks indicate downtown Seattle core area",
+        "Street grid pattern suggests walkable urban environment",
+        "Limited surface parking lots visible in immediate area"
+      ],
+      "risks": [
+        "Limited on-site parking may require attendees to use paid garages or public transit",
+        "High building density could limit outdoor event space options",
+        "Freeway proximity may create noise concerns for outdoor portions",
+        "Urban congestion during peak hours could affect attendee arrival timing",
+        "Limited green space reduces options for outdoor networking areas"
+      ],
+      "confidence": "high"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.env
+geo_service/.venv/
+geo_service/static/demo/
+geo_service/outputs/
+__pycache__/
+**/__pycache__/
+*.pyc
+.DS_Store

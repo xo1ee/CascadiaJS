@@ -1,0 +1,14 @@
+{
+  "venue_a": {
+    "name": "thinkspace Seattle",
+    "address": "1700 Westlake Ave N #200, Seattle, WA 98109",
+    "lat": 47.6340,
+    "lon": -122.3401
+  },
+  "venue_b": {
+    "name": "CIC Seattle",
+    "address": "325 Eastlake Ave E, Seattle, WA 98109",
+    "lat": 47.6239,
+    "lon": -122.3295
+  }
+}

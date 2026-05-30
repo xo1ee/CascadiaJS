@@ -1289,85 +1289,65 @@ Team backgrounds:
 The recommended split is:
 
 ```txt
-Jingyi:   Geospatial reasoning + agent/product framing
-Kone:     Map / vision / Apify / backend evidence pipeline
+Jingyi:   Map data retrieval + geospatial analysis → feeds structured evidence to Simin
+Kone:     Apify POI data scraping → feeds structured POI data to Simin
+Simin:    AI analysis + report generation (consumes data from Jingyi and Kone)
 Phohanh:  Frontend implementation
-Simin:    Decision narrative + report content + Box output polish
 ```
 
 This split is intentionally based on each person's strongest domain fit, not on personal attributes.
-With Phohanh joining and owning the React frontend, Simin can focus entirely on the content and storytelling layer — where her journalism and finance background adds the most value.
+Jingyi and Kone each own one data pipeline; Simin acts as the analysis and reporting layer that consumes both.
 
 ---
 
-### Jingyi: Geospatial Reasoning Lead + Agent/Product Framing
+### Jingyi: Map Data Retrieval + Geospatial Analysis Lead
 
-Jingyi should own the part that makes SiteLens different from a generic map summary or RAG app.
+Jingyi owns the map data pipeline: fetching map and satellite imagery for each venue, extracting structured geospatial signals from that data, and delivering a clean evidence object to Simin for analysis.
 
 Responsibilities:
 
-- Define the core venue evaluation criteria:
-  - Accessibility
-  - Nearby Amenities
-  - Event Atmosphere
-  - Logistics Risk
-  - Attendee Communication Needs
-- Define the map/satellite visual signal schema:
+- Geocode venue addresses into coordinates
+- Fetch map and satellite snapshots:
+  - Mapbox Static Images API
+  - local PNG fallback if API unavailable
+- Define the visual signal schema to extract:
   - water nearby
   - green space level
   - building density
   - road access
   - visible parking
   - land use context
-- Design and refine the **Vision Evidence Prompt**
-- Design and refine the **Decision Agent Prompt**
-- Make sure the AI does not overclaim:
-  - Do not call RGB map screenshots NDVI
+- Run vision analysis on map/satellite images to populate the signal schema
+- Make sure the analysis does not overclaim:
+  - Do not call RGB screenshots NDVI
   - Do not claim professional remote sensing classification
-  - Use “map/satellite visual signals as one evidence layer”
-- Validate whether the generated site observations are geographically reasonable
-- Own the product framing:
-  - SiteLens is not a generic site-selection tool
-  - SiteLens is a DevRel event venue intelligence agent
-  - SiteLens generates a Box planning packet, not just a map summary
-- Prepare the final pitch and demo story
+  - Frame as “map/satellite visual signals as one evidence layer”
+- Validate that extracted signals are geographically reasonable
+- Output a structured evidence object per venue and pass it to Simin
 
 Key deliverables:
 
-- `agent_service.py` prompt logic or prompt constants
-- visual signal schema
-- evaluation criteria
-- polished sample report wording
-- final 2-minute pitch
-- README sections:
-  - What it does
-  - Why map/satellite evidence matters
-  - Why this is an agent workflow
+- `mapbox_service.py` — geocoding + map/satellite image fetching
+- `vision_service.py` — visual signal extraction from images
+- `geo_evidence_schema.py` — structured output schema
+- local fallback images and mock coordinates
+- documented output format that Simin's analysis module consumes
 
 Success metric:
 
-> Jingyi should make sure SiteLens sounds like a credible geospatial intelligence workflow, not just “AI looked at a map.”
+> Jingyi's pipeline should reliably produce a structured geospatial evidence object per venue — address → coordinates → map images → visual signals → structured JSON.
 
 ---
 
-### Kone: Map / Vision / Logistics Evidence Pipeline Lead
+### Kone: Apify POI Data Pipeline Lead
 
-Kone should own the technical pipeline that turns venue addresses into usable evidence.
+Kone owns the nearby-place data pipeline: scraping POI data from Apify for each venue, normalizing it into a clean structured summary, and delivering it to Simin for analysis.
 
-This fits Kone's logistics and computer vision background because this module combines spatial access, venue logistics, map images, visual evidence, and backend API integration.
+This fits Kone's logistics background — he understands what venue logistics data matters: parking, transit access, food options, after-party logistics.
 
 Responsibilities:
 
-- Implement backend FastAPI routes
-- Implement or wire the map/geospatial pipeline:
-  - geocoding fallback
-  - Mapbox Static Images API
-  - local map/satellite PNG fallback
-- Implement or wire the vision evidence pipeline:
-  - send map/satellite snapshots to vision model
-  - parse structured JSON visual signals
-  - handle fallback/mock visual signal outputs
-- Implement Apify nearby-place data pipeline:
+- Implement Apify nearby-place scraping for each venue:
   - restaurants
   - coffee
   - parking
@@ -1375,39 +1355,31 @@ Responsibilities:
   - bars / after-party options
   - convenience stores
   - public transit
-- Normalize POI data into a clean summary:
+- Normalize raw Apify results into a clean per-venue POI summary:
   - category counts
-  - top places
-  - ratings
-  - review counts
-- Own logistics-related interpretation support:
-  - parking / rideshare risk
-  - arrival convenience
-  - after-party logistics
-  - access constraints
+  - top places (name, rating, review count)
+  - distance from venue
 - Implement fallback strategy:
-  - mock venue coordinates
-  - cached Apify JSON
-  - local image files
-- Wire backend services together so the demo works even if live APIs fail
+  - cached Apify JSON files
+  - mock POI summaries for demo
+- Implement backend FastAPI routes and wire up the overall `/api/analyze-venues` endpoint
+- Implement `models.py` (shared request/response schemas)
+- Make sure the demo works even if live Apify API is unavailable
 
 Key deliverables:
 
-- `main.py`
-- `mapbox_service.py`
-- `vision_service.py`
-- `apify_service.py`
-- `models.py`
+- `apify_service.py` — POI scraping and normalization
+- `main.py` — FastAPI app and `/api/analyze-venues` endpoint
+- `models.py` — request/response schemas
 - local fallback data:
-  - `demo_venues.json`
   - `venue_a_places.json`
   - `venue_b_places.json`
-  - map/satellite PNGs
-- backend `/api/analyze-venues` endpoint
+  - `demo_venues.json`
+- documented output format that Simin's analysis module consumes
 
 Success metric:
 
-> Kone should make sure SiteLens has a stable evidence pipeline: address → map/visual evidence → POI data → structured venue evidence.
+> Kone's pipeline should reliably produce a structured POI summary per venue — venue address → Apify scrape → normalized place data → structured JSON.
 
 ---
 
@@ -1453,44 +1425,47 @@ Success metric:
 
 ---
 
-### Simin: Decision Narrative + Report Content + Box Output Polish Lead
+### Simin: AI Analysis + Report Generation Lead
 
-Simin should own the part that turns raw AI output into a credible, professional planning artifact.
+Simin owns the analysis and reporting layer. She consumes the structured evidence from Jingyi (geospatial signals) and Kone (POI data), runs AI reasoning over both, and produces the final output package.
 
-With Phohanh handling the frontend, Simin can focus entirely on what her journalism and finance background does best: structuring information, writing clearly under constraints, framing trade-offs, and making the output feel like a real deliverable — not just AI-generated text.
+This fits Simin's journalism and finance background: she understands how to structure information, frame trade-offs clearly, and produce a deliverable that feels credible — not just AI-generated text.
 
 Responsibilities:
 
-- Define and refine what goes inside each report file:
-  - `venue_comparison_report.md` — executive summary, trade-off framing
-  - `organizer_action_checklist.md` — action-oriented, prioritized
-  - `attendee_logistics_email.md` — concise, attendee-friendly tone
-- Improve report readability:
-  - concise executive summary
-  - clear trade-off framing (not just pros/cons)
-  - evidence-backed risk explanations
-  - action-oriented recommendations
-- Own the “decision packet” feel:
-  - not just data
-  - not just AI text
-  - a professional planning artifact a DevRel team would actually use
-- Write README sections from the user's perspective:
-  - What SiteLens does for event organizers
-  - What the output looks like and why it matters
-- Collaborate with Phohanh on what report data the UI should display
-- Collaborate with Jingyi on final pitch wording and demo story
+- Consume Jingyi's geospatial evidence object and Kone's POI summary as inputs
+- Design and run the **Decision Agent** prompt:
+  - compare the two venues across evaluation criteria
+  - use map evidence and POI data as grounding
+  - produce structured trade-off analysis
+- Generate the full output package:
+  - `venue_comparison_report.md` — executive summary + trade-off matrix
+  - `organizer_action_checklist.md` — prioritized action items
+  - `attendee_logistics_email.md` — attendee-ready logistics summary
+- Upload the output package to Box
+- Make sure the AI does not hallucinate or overclaim:
+  - reasoning must be grounded in the evidence provided
+  - flag low-confidence signals explicitly
+- Define the evaluation criteria used in the decision prompt:
+  - Accessibility
+  - Nearby Amenities
+  - Event Atmosphere
+  - Logistics Risk
+  - Attendee Communication Needs
+- Collaborate with Phohanh on what fields the UI needs from the analysis output
+- Own the “decision packet” feel: a professional artifact a DevRel team would actually use
 
 Key deliverables:
 
-- report content templates and wording
-- `organizer_action_checklist.md` structure
-- `attendee_logistics_email.md` tone/format
-- README user-facing sections
-- demo narrative polish
+- `agent_service.py` — decision agent prompt + reasoning logic
+- `report_service.py` — report generation and formatting
+- `box_service.py` — Box upload integration
+- report output templates
+- documented input contract (what schema Jingyi and Kone must deliver)
 
 Success metric:
 
-> Simin should make sure that the Box output files feel like something a real event organizer would save and share — not just an AI dump.
+> Simin's output should feel like a real planning artifact — evidence-grounded, clearly structured, and immediately useful to an event organizer.
 
 ---
 
@@ -1523,15 +1498,19 @@ Two venue comparison
 
 Recommended order of collaboration:
 
-1. **Kone** gets backend mock endpoint working.
-2. **Phohanh** builds frontend against the mock endpoint.
-3. **Jingyi** finalizes prompts, schema, and sample output expectations.
-4. **Kone** plugs in fallback data first, then live APIs if time allows.
-5. **Simin** refines report content, wording, and decision packet structure.
-6. **Jingyi + Phohanh** align on what data fields the UI should surface from the report.
-7. **All four** test the end-to-end demo and prepare the pitch.
+1. **Jingyi + Kone + Simin** agree on the shared data contract:
+   - what schema Jingyi's geo evidence object must have
+   - what schema Kone's POI summary must have
+   - what fields Simin's analysis output must return to the frontend
+2. **Kone** gets the backend `/api/analyze-venues` endpoint returning mock data.
+3. **Phohanh** builds the frontend against the mock endpoint.
+4. **Jingyi** wires map fetching and visual signal extraction with fallback data.
+5. **Kone** wires Apify scraping with fallback cached JSON.
+6. **Simin** builds the decision agent and report generator against mock inputs first.
+7. **Jingyi + Kone** connect live outputs to Simin's analysis module.
+8. **All four** test the end-to-end demo and prepare the pitch.
 
-Do not wait for live integrations before building the UI.  
+Do not wait for live integrations before building the UI.
 The frontend should first work with mock data, then switch to real backend outputs when available.
 
 ---
@@ -1540,10 +1519,10 @@ The frontend should first work with mock data, then switch to real backend outpu
 
 | Member | Background | Main Role | Core Output |
 |---|---|---|---|
-| **Jingyi** | Remote sensing / GIS + CS | Geospatial reasoning + agent/product framing | visual signal schema, prompts, evaluation criteria, pitch |
-| **Kone** | Logistics / CV + CS | Map/vision/Apify/backend evidence pipeline | backend API, map snapshots, vision signals, POI summaries, fallbacks |
+| **Jingyi** | Remote sensing / GIS + CS | Map data retrieval + geospatial analysis | geocoding, map/satellite images, visual signal extraction, structured geo evidence |
+| **Kone** | Logistics / CV + CS | Apify POI data pipeline + backend API | POI scraping, normalized place summaries, FastAPI endpoint, fallback data |
+| **Simin** | Journalism / Finance + CS | AI analysis + report generation | decision agent, venue comparison report, organizer checklist, attendee email, Box upload |
 | **Phohanh** | CS (frontend focus) | Frontend implementation | React UI, venue form, results page, trade-off matrix, styling |
-| **Simin** | Journalism / Finance + CS | Decision narrative + report content + Box output polish | report templates, organizer checklist, attendee email, README copy |
 
 
 
