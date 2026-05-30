@@ -1,0 +1,3 @@
+[flake8]
+# This project does not enforce the legacy 79-char line limit.
+extend-ignore = E501

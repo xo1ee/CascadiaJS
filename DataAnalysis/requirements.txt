@@ -1,0 +1,5 @@
+# Dependencies for the DataAnalysis modules
+# Install with:  pip install -r DataAnalysis/requirements.txt
+
+requests        # box_service.py — HTTP calls to the Box API
+anthropic       # agent_service.py — Decision Agent LLM calls

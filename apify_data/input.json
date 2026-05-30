@@ -1,0 +1,11 @@
+{
+  "_comment": "Edit this file to control the scrape — it is decoupled from scraper.py. radius_km 0.8 ≈ 1-mile diameter. Add one entry per venue under 'venues'; or override a single run with --lat/--lon on the CLI. Set upload_to_box=true to push each saved file to Box.",
+  "search_terms": ["parking lot", "bus stop"],
+  "radius_km": 0.8,
+  "max_per_search": 50,
+  "language": "en",
+  "upload_to_box": false,
+  "venues": [
+    { "key": "venue_a", "lat": 47.6340, "lon": -122.3401 }
+  ]
+}
