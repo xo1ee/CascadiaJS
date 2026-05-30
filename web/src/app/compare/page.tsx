@@ -1,4 +1,4 @@
-import VenueForm from "../components/VenueForm";
+import VenueForm from "@/app/components/form/VenueForm";
 
 export default function ComparePage() {
   return (
