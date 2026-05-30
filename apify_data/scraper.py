@@ -7,7 +7,7 @@ points of interest — parking lots, bus stops, ... — within a radius, and sto
 the raw results as JSON in this folder. It has no dependency on any other part
 of the project; the caller passes the coordinates in.
 
-Stored JSON matches demo_data_from_scraper.json. Each item:
+Stored JSON matches demo_data.json. Each item:
     {"address", "location": {"lat", "lng"}, "categoryName", "categories": [...]}
 Live runs additionally include richer fields such as "title", "totalScore" and
 "reviewsCount".
@@ -15,19 +15,28 @@ Live runs additionally include richer fields such as "title", "totalScore" and
 Config — read from the repo-root .env automatically (or the real environment):
     APIFY_TOKEN      Apify API token — required for a live scrape.
     APIFY_ACTOR_ID   Optional; defaults to compass/crawler-google-places.
-    USE_MOCK_DATA    "true" (default) → reuse demo_data_from_scraper.json so the
+    USE_MOCK_DATA    "true" (default) → reuse demo_data.json so the
                      pipeline keeps working offline / without a token. This flag
                      is project-wide; use --live / force_live to go live for just
                      this module without flipping it.
+
+Input — search terms, radius, language and the venue coordinates live in a
+separate, hand-editable file, apify_data/input.json (decoupled from this code).
+Edit that file to change what gets scraped; the CLI reads it. A DEFAULT_*
+constant is used only when input.json is missing or a key is absent.
 
 Usage as a library:
     from apify_data.scraper import scrape_and_store
     places, path = scrape_and_store(47.6340, -122.3401, venue_key="venue_a")
 
 Usage as a CLI:
-    # mock (default): reuse the demo dataset
-    python apify_data/scraper.py --lat 47.6340 --lon -122.3401 --key venue_a
-    # live: token from .env/env, just this module
+    # scrape the venue(s) defined in input.json (mock by default)
+    python apify_data/scraper.py
+    # live (real Apify), just this module
+    python apify_data/scraper.py --live
+    # live + save locally + HTTP-upload each saved file to Box
+    python apify_data/scraper.py --live --upload-box
+    # one-off override: scrape a single coordinate instead of input.json
     python apify_data/scraper.py --lat 47.6340 --lon -122.3401 --key venue_a --live
 """
 
@@ -44,7 +53,7 @@ from pathlib import Path
 # --- Config -----------------------------------------------------------------
 
 DATA_DIR = Path(__file__).parent
-DEMO_DATA_PATH = DATA_DIR / "demo_data_from_scraper.json"
+DEMO_DATA_PATH = DATA_DIR / "demo_data.json"
 
 
 def _load_env_file(path: Path) -> None:
@@ -71,11 +80,16 @@ APIFY_TOKEN = os.getenv("APIFY_TOKEN")
 APIFY_ACTOR_ID = os.getenv("APIFY_ACTOR_ID") or "nwua9Gu5YrADL7ZDj"
 USE_MOCK_DATA = os.getenv("USE_MOCK_DATA", "true").lower() == "true"
 
-# What to look for around each venue. Extend to add more categories.
+# Fallback defaults — used only when input.json is missing or a key is absent.
+# The real, hand-editable input lives in input.json (see load_input).
 DEFAULT_SEARCH_TERMS = ["parking lot", "bus stop"]
 # "diameter 1 mile" → radius 0.5 mile ≈ 0.8 km.
 DEFAULT_RADIUS_KM = 0.8
 DEFAULT_MAX_PER_SEARCH = 50
+DEFAULT_LANGUAGE = "en"
+
+# The scrape input is decoupled into a single hand-editable JSON file.
+INPUT_PATH = DATA_DIR / "input.json"
 
 _APIFY_SYNC_URL = (
     f"https://api.apify.com/v2/acts/{APIFY_ACTOR_ID}/run-sync-get-dataset-items"
@@ -84,6 +98,27 @@ _APIFY_SYNC_URL = (
 
 # --- Public API -------------------------------------------------------------
 
+def load_input(path: Path = INPUT_PATH) -> dict:
+    """Load the scrape input from input.json (decoupled, hand-editable).
+
+    Returns a dict with ``search_terms``, ``radius_km``, ``max_per_search``,
+    ``language``, ``upload_to_box`` and ``venues`` (list of {key, lat, lon}).
+    A missing file or absent key falls back to the matching DEFAULT_* constant.
+    """
+    cfg: dict = {}
+    if path.exists():
+        with open(path) as f:
+            cfg = json.load(f)
+    return {
+        "search_terms": cfg.get("search_terms", DEFAULT_SEARCH_TERMS),
+        "radius_km": cfg.get("radius_km", DEFAULT_RADIUS_KM),
+        "max_per_search": cfg.get("max_per_search", DEFAULT_MAX_PER_SEARCH),
+        "language": cfg.get("language", DEFAULT_LANGUAGE),
+        "upload_to_box": cfg.get("upload_to_box", False),
+        "venues": cfg.get("venues", []),
+    }
+
+
 def scrape_nearby(
     lat: float,
     lon: float,
@@ -91,6 +126,7 @@ def scrape_nearby(
     search_terms: list[str] | None = None,
     radius_km: float = DEFAULT_RADIUS_KM,
     max_per_search: int = DEFAULT_MAX_PER_SEARCH,
+    language: str = DEFAULT_LANGUAGE,
     token: str | None = None,
     force_live: bool = False,
 ) -> list[dict]:
@@ -107,7 +143,9 @@ def scrape_nearby(
 
     if api_token and (force_live or not USE_MOCK_DATA):
         try:
-            return _fetch_via_apify(lat, lon, terms, radius_km, max_per_search, api_token)
+            return _fetch_via_apify(
+                lat, lon, terms, radius_km, max_per_search, language, api_token
+            )
         except Exception as e:  # network / API / parse errors → degrade to demo
             print(f"[scraper] Apify request failed, using demo data: {e}")
 
@@ -145,6 +183,7 @@ def _fetch_via_apify(
     search_terms: list[str],
     radius_km: float,
     max_per_search: int,
+    language: str,
     token: str,
 ) -> list[dict]:
     """Run the actor synchronously and return the scraped dataset items.
@@ -161,7 +200,7 @@ def _fetch_via_apify(
             "radiusKm": radius_km,
         },
         "maxCrawledPlacesPerSearch": max_per_search,
-        "language": "en",
+        "language": language,
     }
     url = f"{_APIFY_SYNC_URL}?{urllib.parse.urlencode({'token': token})}"
     body = json.dumps(payload).encode("utf-8")
@@ -186,31 +225,63 @@ def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Fetch & store nearby places via the Apify Google Maps Scraper."
     )
-    p.add_argument("--lat", type=float, required=True, help="venue latitude")
-    p.add_argument("--lon", type=float, required=True, help="venue longitude")
-    p.add_argument("--key", default="venue", help="venue key → output filename")
-    p.add_argument("--radius-km", type=float, default=DEFAULT_RADIUS_KM)
-    p.add_argument("--terms", nargs="+", default=DEFAULT_SEARCH_TERMS,
-                   help="search terms, e.g. --terms 'parking lot' 'bus stop'")
+    p.add_argument("--lat", type=float, default=None,
+                   help="one-off latitude (overrides the venues in input.json)")
+    p.add_argument("--lon", type=float, default=None,
+                   help="one-off longitude (overrides the venues in input.json)")
+    p.add_argument("--key", default="venue", help="venue key → output filename (with --lat/--lon)")
+    p.add_argument("--input", default=str(INPUT_PATH), help="path to the input JSON")
+    p.add_argument("--radius-km", type=float, default=None, help="override input.json radius_km")
+    p.add_argument("--terms", nargs="+", default=None,
+                   help="override input.json search_terms, e.g. --terms 'parking lot' 'bus stop'")
     p.add_argument("--token", default=None, help="Apify token (overrides APIFY_TOKEN)")
     p.add_argument("--live", action="store_true",
                    help="force a live Apify call without flipping USE_MOCK_DATA")
+    p.add_argument("--upload-box", action="store_true",
+                   help="after saving locally, HTTP-upload the JSON file to Box")
     return p.parse_args()
 
 
 if __name__ == "__main__":
     args = _parse_args()
+    cfg = load_input(Path(args.input))
+
     # An explicitly-passed --token implies you want a live call.
     force_live = args.live or args.token is not None
-    places, path = scrape_and_store(
-        args.lat,
-        args.lon,
-        args.key,
-        search_terms=args.terms,
-        radius_km=args.radius_km,
-        token=args.token,
-        force_live=force_live,
-    )
+    upload_box = args.upload_box or cfg["upload_to_box"]
+    search_terms = args.terms or cfg["search_terms"]
+    radius_km = args.radius_km if args.radius_km is not None else cfg["radius_km"]
+
+    # --lat/--lon is a one-off override; otherwise scrape the venues in input.json.
+    if args.lat is not None and args.lon is not None:
+        venues = [{"key": args.key, "lat": args.lat, "lon": args.lon}]
+    else:
+        venues = cfg["venues"]
+        if not venues:
+            raise SystemExit(
+                "No venues to scrape. Add venues to input.json, or pass --lat/--lon."
+            )
+
     went_live = bool(args.token or APIFY_TOKEN) and (force_live or not USE_MOCK_DATA)
     source = "Apify (live)" if went_live else "demo data (mock)"
-    print(f"Stored {len(places)} places from {source} → {path}")
+
+    for v in venues:
+        key = v.get("key", "venue")
+        places, path = scrape_and_store(
+            v["lat"],
+            v["lon"],
+            key,
+            search_terms=search_terms,
+            radius_km=radius_km,
+            max_per_search=cfg["max_per_search"],
+            language=cfg["language"],
+            token=args.token,
+            force_live=force_live,
+        )
+        print(f"[{key}] Stored {len(places)} places from {source} → {path}")
+
+        # Final flow: data is saved locally above, then HTTP-POSTed to Box.
+        if upload_box:
+            from box_uploader import upload_file
+            file_id = upload_file(path)
+            print(f"[{key}] Uploaded to Box → file id {file_id}")

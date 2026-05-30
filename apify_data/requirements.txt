@@ -1,3 +1,0 @@
-# Core scraper.py needs nothing beyond the Python standard library.
-# This dependency is ONLY needed for box_uploader.py (uploading results to Box).
-box-sdk-gen

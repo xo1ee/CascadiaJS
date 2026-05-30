@@ -1,19 +1,21 @@
 """
-Upload scraped POI data to Box (cloud storage).
+Upload a local file to Box over plain HTTP (Box Content API).
 
-You do NOT build anything on the Box side — Box exposes a ready-made upload API.
-This module authenticates with a Box token and uploads a JSON file into a Box
-folder. It's independent of scraper.py: hand it a places list (or any bytes).
+Final flow: scraper.py saves results to a local JSON file, then this module
+HTTP-POSTs that file to Box. You do NOT build anything on the Box side — Box
+provides the upload REST API. You only need an access token and a destination
+folder id, both read from the repo-root .env. Standard library only — no SDK,
+no pip install.
 
-Auth: Box Developer Token (BOX_DEVELOPER_TOKEN) — simplest, but expires ~60 min,
-so it's best for a hackathon/demo. For production use a Client Credentials Grant
-(CCG) or JWT app instead (those need an enterprise/user id, not just these vars).
+Box endpoints used:
+    new file     POST https://upload.box.com/api/2.0/files/content
+    new version  POST https://upload.box.com/api/2.0/files/{file_id}/content
+Auth: header  Authorization: Bearer <BOX_DEVELOPER_TOKEN>
 
-Env (read from the repo-root .env):
+Env (repo-root .env):
     BOX_DEVELOPER_TOKEN   developer token from the Box developer console
+                          (simplest; expires ~60 min — refresh it for a new run)
     BOX_FOLDER_ID         destination folder id ("0" = the All Files root)
-
-Requires: pip install box-sdk-gen   (see apify_data/requirements.txt)
 
 CLI:
     python apify_data/box_uploader.py apify_data/venue_a_scraped.json
@@ -22,11 +24,16 @@ CLI:
 from __future__ import annotations
 
 import os
-import io
 import json
+import uuid
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 _REPO_ROOT = Path(__file__).parent.parent
+
+_UPLOAD_NEW_URL = "https://upload.box.com/api/2.0/files/content"
+_UPLOAD_VERSION_URL = "https://upload.box.com/api/2.0/files/{file_id}/content"
 
 
 def _load_env(path: Path) -> None:
@@ -46,73 +53,123 @@ BOX_DEVELOPER_TOKEN = os.getenv("BOX_DEVELOPER_TOKEN")
 BOX_FOLDER_ID = os.getenv("BOX_FOLDER_ID") or "0"
 
 
-def upload_places(
-    places: list[dict],
-    file_name: str = "venue_scraped.json",
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+
+def upload_file(
+    local_path: str | Path,
+    box_name: str | None = None,
     folder_id: str | None = None,
+    token: str | None = None,
 ) -> str:
-    """Upload ``places`` as a JSON file to Box; return the Box file id."""
-    data = json.dumps(places, ensure_ascii=False, indent=2).encode("utf-8")
-    return upload_bytes(data, file_name, folder_id)
+    """HTTP-upload a local file to Box; return the Box file id.
 
-
-def upload_bytes(data: bytes, file_name: str, folder_id: str | None = None) -> str:
-    """Upload raw bytes as ``file_name`` into the Box folder; return the file id.
-
-    If a file with the same name already exists in the folder, a new *version*
-    is uploaded instead of failing with a name conflict.
+    Uploads a new file, or a new *version* if a file with the same name already
+    exists in the folder (Box answers 409 on a name conflict).
     """
-    # Imported lazily so the module loads even when box-sdk-gen isn't installed.
-    from box_sdk_gen import BoxClient, BoxDeveloperTokenAuth
-    from box_sdk_gen.schemas import (
-        UploadFileAttributes,
-        UploadFileAttributesParentField,
-        UploadFileVersionAttributes,
-    )
+    local_path = Path(local_path)
+    data = local_path.read_bytes()
+    return upload_bytes(data, box_name or local_path.name, folder_id=folder_id, token=token)
 
-    if not BOX_DEVELOPER_TOKEN:
+
+def upload_bytes(
+    data: bytes,
+    box_name: str,
+    folder_id: str | None = None,
+    token: str | None = None,
+) -> str:
+    """HTTP-upload raw bytes to Box as ``box_name``; return the Box file id."""
+    token = token or BOX_DEVELOPER_TOKEN
+    folder_id = folder_id or BOX_FOLDER_ID
+    if not token:
         raise RuntimeError(
             "BOX_DEVELOPER_TOKEN missing — paste a token into the repo-root .env"
         )
 
-    folder_id = folder_id or BOX_FOLDER_ID
-    client = BoxClient(auth=BoxDeveloperTokenAuth(token=BOX_DEVELOPER_TOKEN))
-
-    existing_id = _find_file_id(client, folder_id, file_name)
-    if existing_id:
-        result = client.uploads.upload_file_version(
-            file_id=existing_id,
-            attributes=UploadFileVersionAttributes(name=file_name),
-            file=io.BytesIO(data),
+    attributes = json.dumps({"name": box_name, "parent": {"id": folder_id}})
+    try:
+        resp = _post_multipart(
+            _UPLOAD_NEW_URL, token, box_name, data, {"attributes": attributes}
         )
-    else:
-        result = client.uploads.upload_file(
-            UploadFileAttributes(
-                name=file_name,
-                parent=UploadFileAttributesParentField(id=folder_id),
-            ),
-            io.BytesIO(data),
-        )
-    return result.entries[0].id
+    except urllib.error.HTTPError as e:
+        if e.code != 409:  # something other than a name conflict
+            raise
+        existing_id = _conflict_file_id(e)
+        url = _UPLOAD_VERSION_URL.format(file_id=existing_id)
+        resp = _post_multipart(url, token, box_name, data, {})
+    return resp["entries"][0]["id"]
 
 
-def _find_file_id(client, folder_id: str, file_name: str) -> str | None:
-    """Return the id of a file named ``file_name`` in the folder, else None."""
-    for item in client.folders.get_folder_items(folder_id).entries:
-        if getattr(item, "name", None) == file_name:
-            return item.id
-    return None
+# ---------------------------------------------------------------------------
+# Internal helpers — raw multipart/form-data over urllib
+# ---------------------------------------------------------------------------
 
+def _post_multipart(url, token, file_name, file_bytes, extra_fields):
+    boundary = "----SiteLensBox" + uuid.uuid4().hex
+    body = _encode_multipart(boundary, extra_fields, "file", file_name, file_bytes)
+    req = urllib.request.Request(
+        url,
+        data=body,
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": f"multipart/form-data; boundary={boundary}",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return json.load(r)
+
+
+def _encode_multipart(
+    boundary, fields, file_field, file_name, file_bytes, content_type="application/json"
+):
+    """Build a multipart/form-data body: string fields first, then the file."""
+    b = boundary.encode()
+    parts: list[bytes] = []
+    for name, value in fields.items():
+        parts += [
+            b"--" + b,
+            f'Content-Disposition: form-data; name="{name}"'.encode(),
+            b"",
+            value.encode("utf-8"),
+        ]
+    parts += [
+        b"--" + b,
+        f'Content-Disposition: form-data; name="{file_field}"; filename="{file_name}"'.encode(),
+        f"Content-Type: {content_type}".encode(),
+        b"",
+        file_bytes,
+        b"--" + b + b"--",
+        b"",
+    ]
+    return b"\r\n".join(parts)
+
+
+def _conflict_file_id(err: urllib.error.HTTPError) -> str:
+    """Pull the existing file id out of a Box 409 (name conflict) response."""
+    info = json.loads(err.read().decode("utf-8"))
+    conflicts = info.get("context_info", {}).get("conflicts")
+    if isinstance(conflicts, list) and conflicts:
+        return conflicts[0]["id"]
+    if isinstance(conflicts, dict):
+        return conflicts["id"]
+    raise RuntimeError(f"Box returned 409 but no conflict id was found: {info}")
+
+
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import argparse
 
-    p = argparse.ArgumentParser(description="Upload a JSON file to Box.")
-    p.add_argument("path", help="local JSON file, e.g. apify_data/venue_a_scraped.json")
+    p = argparse.ArgumentParser(description="HTTP-upload a local file to Box.")
+    p.add_argument("path", help="local file, e.g. apify_data/venue_a_scraped.json")
     p.add_argument("--name", default=None, help="name to store in Box (default: same filename)")
     p.add_argument("--folder", default=None, help="Box folder id (default: BOX_FOLDER_ID / root)")
+    p.add_argument("--token", default=None, help="Box token (overrides BOX_DEVELOPER_TOKEN)")
     args = p.parse_args()
 
-    raw = Path(args.path).read_bytes()
-    file_id = upload_bytes(raw, args.name or Path(args.path).name, args.folder)
-    print(f"Uploaded → Box file id {file_id}")
+    file_id = upload_file(args.path, box_name=args.name, folder_id=args.folder, token=args.token)
+    print(f"Uploaded {args.path} → Box file id {file_id}")
