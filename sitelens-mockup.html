@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SiteLens — Venue Comparison</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    --accent: #059669;
+    --accent-soft: #ecfdf5;
+    --strong: #059669;
+    --medium: #d97706;
+    --weak: #dc2626;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 80px; }
+
+  /* Header */
+  header.top { margin-bottom: 28px; }
+  .brand { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: 30px; margin: 6px 0 4px; letter-spacing: -.02em; }
+  .sub { color: var(--muted); font-size: 15px; margin: 0; }
+  .meta { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { background: #f1f5f9; border: 1px solid var(--border); border-radius: 999px; padding: 3px 12px; font-size: 13px; color: #334155; }
+
+  /* Cards */
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); padding: 22px 24px; margin-bottom: 20px; }
+  .card h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 14px; }
+
+  /* Recommendation */
+  .reco { background: var(--accent-soft); border-color: #a7f3d0; }
+  .reco p { margin: 0; font-size: 16px; }
+
+  /* Venue grid */
+  .venues { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .venue-name { font-size: 18px; font-weight: 700; margin: 0; }
+  .venue-addr { color: var(--muted); font-size: 13px; margin: 2px 0 14px; }
+  .map { height: 150px; border-radius: 10px; background:
+      linear-gradient(135deg, #dbeafe 0%, #bfdbfe 40%, #a7f3d0 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: #1e40af; font-size: 13px; font-weight: 600; margin-bottom: 14px; border: 1px solid var(--border); }
+  .stats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .stat { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 4px 9px; font-size: 12px; color: #334155; }
+  .stat b { color: var(--text); }
+  .signals { display: flex; flex-wrap: wrap; gap: 6px; }
+  .sig { font-size: 11px; padding: 2px 8px; border-radius: 6px; background: #eef2ff; color: #3730a3; }
+
+  /* Tradeoff table */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  td.crit { font-weight: 600; white-space: nowrap; }
+  td.ev { color: var(--muted); font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .b-Strong { background: #d1fae5; color: var(--strong); }
+  .b-Medium { background: #fef3c7; color: var(--medium); }
+  .b-Weak   { background: #fee2e2; color: var(--weak); }
+
+  /* Risks */
+  .risk { border-left: 3px solid #f59e0b; background: #fffbeb; padding: 10px 14px; border-radius: 0 8px 8px 0; margin-bottom: 10px; }
+  .risk .rt { font-weight: 600; font-size: 14px; }
+  .risk .rd { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .risk .rm { font-size: 13px; margin-top: 4px; }
+  .risk .rm b { color: var(--accent); }
+
+  /* Checklist */
+  ul.check { list-style: none; padding: 0; margin: 0; }
+  ul.check li { padding: 7px 0 7px 28px; position: relative; font-size: 14px; border-bottom: 1px solid #f1f5f9; }
+  ul.check li::before { content: "☐"; position: absolute; left: 4px; color: var(--accent); font-size: 16px; }
+
+  /* Email */
+  .email { background: #f8fafc; border: 1px dashed var(--border); border-radius: 10px; padding: 16px 18px; }
+  .email .subj { font-weight: 600; margin-bottom: 8px; }
+  .email pre { white-space: pre-wrap; font-family: inherit; font-size: 14px; margin: 0; color: #334155; }
+
+  /* Box files */
+  ul.files { list-style: none; padding: 0; margin: 0; }
+  ul.files li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid #f1f5f9; font-size: 14px; }
+  ul.files li::before { content: "📄"; }
+  ul.files a { color: var(--accent); text-decoration: none; margin-left: auto; font-size: 13px; }
+  ul.files a:hover { text-decoration: underline; }
+
+  .src { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  @media (max-width: 680px) { .venues { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">SiteLens</div>
+    <h1>Venue Comparison</h1>
+    <p class="sub">Turn any event venue into an evidence-backed planning packet.</p>
+    <div class="meta">
+      <span class="chip">📅 Seattle AI Developer Meetup</span>
+      <span class="chip">🎯 100-person AI developer event</span>
+    </div>
+  </header>
+
+  <!-- Overall recommendation -->
+  <section class="card reco">
+    <h2>Overall Recommendation</h2>
+    <p>thinkspace Seattle suits a professional, weekday developer event with strong road access, while Capitol Hill Event Space leans social with more walkable amenities. Choose based on whether venue character or nearby food / after-party options matter more.</p>
+  </section>
+
+  <!-- Venue cards -->
+  <div class="venues">
+    <section class="card">
+      <p class="venue-name">Venue A · thinkspace Seattle</p>
+      <p class="venue-addr">1700 Westlake Ave N #200, Seattle, WA 98109</p>
+      <div class="map">🗺️ Map / Satellite snapshot</div>
+      <div class="stats">
+        <span class="stat"><b>12</b> restaurants</span>
+        <span class="stat"><b>5</b> coffee</span>
+        <span class="stat"><b>6</b> bars</span>
+        <span class="stat"><b>3</b> parking</span>
+        <span class="stat"><b>4</b> hotels</span>
+        <span class="stat">⭐ 4.2 avg</span>
+      </div>
+      <div class="signals">
+        <span class="sig">high density</span>
+        <span class="sig">strong road access</span>
+        <span class="sig">limited parking</span>
+        <span class="sig">commercial / office</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <p class="venue-name">Venue B · Capitol Hill Event Space</p>
+      <p class="venue-addr">Capitol Hill, Seattle, WA</p>
+      <div class="map">🗺️ Map / Satellite snapshot</div>
+      <div class="stats">
+        <span class="stat"><b>18</b> restaurants</span>
+        <span class="stat"><b>8</b> coffee</span>
+        <span class="stat"><b>9</b> bars</span>
+        <span class="stat"><b>5</b> parking</span>
+        <span class="stat"><b>6</b> hotels</span>
+        <span class="stat">⭐ 4.3 avg</span>
+      </div>
+      <div class="signals">
+        <span class="sig">water nearby</span>
+        <span class="sig">moderate road access</span>
+        <span class="sig">moderate parking</span>
+        <span class="sig">mixed use</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Trade-off matrix -->
+  <section class="card">
+    <h2>Trade-off Matrix</h2>
+    <table>
+      <thead>
+        <tr><th>Criterion</th><th>thinkspace</th><th>Capitol Hill</th><th>Evidence</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="crit">Accessibility</td>
+          <td><span class="badge b-Strong">Strong</span></td>
+          <td><span class="badge b-Medium">Medium</span></td>
+          <td class="ev">Based on road access signals from map imagery.</td>
+        </tr>
+        <tr>
+          <td class="crit">Nearby Amenities</td>
+          <td><span class="badge b-Strong">Strong</span></td>
+          <td><span class="badge b-Strong">Strong</span></td>
+          <td class="ev">Based on nearby restaurant, coffee, and bar counts.</td>
+        </tr>
+        <tr>
+          <td class="crit">Event Atmosphere</td>
+          <td><span class="badge b-Medium">Medium</span></td>
+          <td><span class="badge b-Strong">Strong</span></td>
+          <td class="ev">Based on land use context and visible surroundings.</td>
+        </tr>
+        <tr>
+          <td class="crit">Logistics Risk</td>
+          <td><span class="badge b-Weak">Weak</span></td>
+          <td><span class="badge b-Medium">Medium</span></td>
+          <td class="ev">Based on visible parking constraints and road access.</td>
+        </tr>
+        <tr>
+          <td class="crit">Attendee Communication</td>
+          <td><span class="badge b-Medium">Medium</span></td>
+          <td><span class="badge b-Medium">Medium</span></td>
+          <td class="ev">Both venues need clear arrival, parking, and transit guidance.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Key risks -->
+  <section class="card">
+    <h2>Key Risks &amp; Mitigations</h2>
+    <div class="risk">
+      <div class="rt">Venue A — Street parking likely constrained during business hours.</div>
+      <div class="rd">Evidence: identified from map / satellite visual signals.</div>
+      <div class="rm"><b>Mitigation:</b> recommend rideshare; confirm on-site parking and overflow options.</div>
+    </div>
+    <div class="risk">
+      <div class="rt">Venue B — Moderate road access may cause congestion during arrivals.</div>
+      <div class="rd">Evidence: identified from map / satellite visual signals.</div>
+      <div class="rm"><b>Mitigation:</b> stagger arrival window and share a transit-first arrival guide.</div>
+    </div>
+  </section>
+
+  <!-- Organizer actions -->
+  <section class="card">
+    <h2>Organizer Action Checklist</h2>
+    <ul class="check">
+      <li>Confirm parking capacity and reserve overflow options for the chosen venue.</li>
+      <li>Verify A/V setup and capacity for 100 attendees.</li>
+      <li>Identify rideshare drop-off zones and share them with attendees.</li>
+      <li>Book a nearby restaurant or bar block for post-event networking.</li>
+    </ul>
+  </section>
+
+  <!-- Attendee email -->
+  <section class="card">
+    <h2>Attendee Logistics Email</h2>
+    <div class="email">
+      <div class="subj">Subject: Getting to Seattle AI Developer Meetup</div>
+      <pre>Hi everyone,
+
+Here are the logistics for the event. Rideshare is recommended as parking
+may be limited; drop-off is available at the main entrance. Several
+restaurants and coffee shops are within a short walk, and we'll gather at a
+nearby spot afterward for networking.
+
+We'll follow up with the confirmed venue and a detailed map.
+
+See you there!</pre>
+    </div>
+  </section>
+
+  <!-- Box outputs -->
+  <section class="card">
+    <h2>Saved to Box</h2>
+    <ul class="files">
+      <li>venue_comparison_report.md <a href="#">Open in Box →</a></li>
+      <li>venue_a_site_packet.md <a href="#">Open in Box →</a></li>
+      <li>venue_b_site_packet.md <a href="#">Open in Box →</a></li>
+      <li>organizer_action_checklist.md <a href="#">Open in Box →</a></li>
+      <li>attendee_logistics_email.md <a href="#">Open in Box →</a></li>
+      <li>nearby_places_summary.csv <a href="#">Open in Box →</a></li>
+    </ul>
+    <p class="src">Evidence sources: Box event checklist · Apify nearby places · Map / satellite visual evidence</p>
+  </section>
+
+</div>
+</body>
+</html>
