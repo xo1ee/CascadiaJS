@@ -1276,7 +1276,7 @@ write_outputs_to_disk(files: dict) -> list[str]
 
 ## 24. Team Division
 
-The team has three people: Jingyi, Simin, and Kone.  
+The team has four people: Jingyi, Simin, Kone, and Phohanh.
 The split should use each person's background while still keeping the implementation parallel and hackathon-friendly.
 
 Team backgrounds:
@@ -1284,16 +1284,19 @@ Team backgrounds:
 - **Jingyi**: Remote sensing / GIS + Computer Science
 - **Simin**: Journalism / Finance + Computer Science
 - **Kone**: Logistics / Computer Vision + Computer Science
+- **Phohanh**: Computer Science (frontend focus)
 
 The recommended split is:
 
 ```txt
-Jingyi: Geospatial reasoning + agent/product framing
-Kone: Map / vision / Apify / backend evidence pipeline
-Simin: Frontend + decision narrative + report presentation
+Jingyi:   Geospatial reasoning + agent/product framing
+Kone:     Map / vision / Apify / backend evidence pipeline
+Phohanh:  Frontend implementation
+Simin:    Decision narrative + report content + Box output polish
 ```
 
 This split is intentionally based on each person's strongest domain fit, not on personal attributes.
+With Phohanh joining and owning the React frontend, Simin can focus entirely on the content and storytelling layer — where her journalism and finance background adds the most value.
 
 ---
 
@@ -1408,11 +1411,11 @@ Success metric:
 
 ---
 
-### Simin: Frontend + Decision Narrative + Report Presentation Lead
+### Phohanh: Frontend Implementation Lead
 
-Simin should own the part that makes the output clear, credible, and easy for judges to understand.
+Phohanh should own the React frontend from input to results display.
 
-This fits Simin's journalism and finance background because the final product needs strong information structure, concise storytelling, risk framing, and trade-off presentation.
+This fits Phohanh's CS background and frontend preference — the UI is the judges' first impression of SiteLens and needs to be clean, fast, and intuitive.
 
 Responsibilities:
 
@@ -1422,7 +1425,7 @@ Responsibilities:
   - results page
   - trade-off matrix
   - risk cards
-  - organizer actions
+  - organizer actions section
   - attendee logistics email section
   - Box output file list
 - Design the result page so judges immediately understand:
@@ -1430,20 +1433,10 @@ Responsibilities:
   - what each venue is better for
   - what risks exist
   - what the organizer should do next
-- Improve report readability:
-  - concise executive summary
-  - clear trade-off matrix
-  - evidence-backed risk explanations
-  - action-oriented recommendations
-- Help format the generated markdown reports:
-  - `venue_comparison_report.md`
-  - `organizer_action_checklist.md`
-  - `attendee_logistics_email.md`
-- Own the “decision packet” feel:
-  - not just data
-  - not just AI text
-  - a professional planning artifact
-- Help with README and demo wording from the user's perspective
+- Wire the frontend to the backend `/api/analyze-venues` endpoint
+- Start with mock data, then switch to live backend when ready
+- Own frontend styling and layout polish
+- README/demo screenshots if time allows
 
 Key deliverables:
 
@@ -1453,18 +1446,57 @@ Key deliverables:
 - `TradeoffMatrix.tsx`
 - `BoxOutputList.tsx`
 - frontend styling
-- report display polish
-- README/demo screenshots if time allows
 
 Success metric:
 
-> Simin should make sure the judges can understand the value of SiteLens within 10 seconds of seeing the UI.
+> Phohanh should make sure the judges can understand the value of SiteLens within 10 seconds of seeing the UI.
+
+---
+
+### Simin: Decision Narrative + Report Content + Box Output Polish Lead
+
+Simin should own the part that turns raw AI output into a credible, professional planning artifact.
+
+With Phohanh handling the frontend, Simin can focus entirely on what her journalism and finance background does best: structuring information, writing clearly under constraints, framing trade-offs, and making the output feel like a real deliverable — not just AI-generated text.
+
+Responsibilities:
+
+- Define and refine what goes inside each report file:
+  - `venue_comparison_report.md` — executive summary, trade-off framing
+  - `organizer_action_checklist.md` — action-oriented, prioritized
+  - `attendee_logistics_email.md` — concise, attendee-friendly tone
+- Improve report readability:
+  - concise executive summary
+  - clear trade-off framing (not just pros/cons)
+  - evidence-backed risk explanations
+  - action-oriented recommendations
+- Own the “decision packet” feel:
+  - not just data
+  - not just AI text
+  - a professional planning artifact a DevRel team would actually use
+- Write README sections from the user's perspective:
+  - What SiteLens does for event organizers
+  - What the output looks like and why it matters
+- Collaborate with Phohanh on what report data the UI should display
+- Collaborate with Jingyi on final pitch wording and demo story
+
+Key deliverables:
+
+- report content templates and wording
+- `organizer_action_checklist.md` structure
+- `attendee_logistics_email.md` tone/format
+- README user-facing sections
+- demo narrative polish
+
+Success metric:
+
+> Simin should make sure that the Box output files feel like something a real event organizer would save and share — not just an AI dump.
 
 ---
 
 ### Shared Responsibilities
 
-All three team members should jointly decide and validate:
+All four team members should jointly decide and validate:
 
 - The second venue address
 - The exact demo story
@@ -1492,11 +1524,12 @@ Two venue comparison
 Recommended order of collaboration:
 
 1. **Kone** gets backend mock endpoint working.
-2. **Simin** builds frontend against the mock endpoint.
+2. **Phohanh** builds frontend against the mock endpoint.
 3. **Jingyi** finalizes prompts, schema, and sample output expectations.
 4. **Kone** plugs in fallback data first, then live APIs if time allows.
-5. **Jingyi + Simin** refine report wording and UI presentation.
-6. **All three** test the end-to-end demo and prepare the pitch.
+5. **Simin** refines report content, wording, and decision packet structure.
+6. **Jingyi + Phohanh** align on what data fields the UI should surface from the report.
+7. **All four** test the end-to-end demo and prepare the pitch.
 
 Do not wait for live integrations before building the UI.  
 The frontend should first work with mock data, then switch to real backend outputs when available.
@@ -1509,7 +1542,8 @@ The frontend should first work with mock data, then switch to real backend outpu
 |---|---|---|---|
 | **Jingyi** | Remote sensing / GIS + CS | Geospatial reasoning + agent/product framing | visual signal schema, prompts, evaluation criteria, pitch |
 | **Kone** | Logistics / CV + CS | Map/vision/Apify/backend evidence pipeline | backend API, map snapshots, vision signals, POI summaries, fallbacks |
-| **Simin** | Journalism / Finance + CS | Frontend + decision narrative/report presentation | UI, trade-off matrix, report display, decision packet polish |
+| **Phohanh** | CS (frontend focus) | Frontend implementation | React UI, venue form, results page, trade-off matrix, styling |
+| **Simin** | Journalism / Finance + CS | Decision narrative + report content + Box output polish | report templates, organizer checklist, attendee email, README copy |
 
 
 
