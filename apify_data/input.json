@@ -1,11 +1,49 @@
 {
-  "_comment": "Edit this file to control the scrape — it is decoupled from scraper.py. radius_km 0.8 ≈ 1-mile diameter. Add one entry per venue under 'venues'; or override a single run with --lat/--lon on the CLI. Set upload_to_box=true to push each saved file to Box.",
-  "search_terms": ["parking lot", "bus stop"],
-  "radius_km": 0.8,
-  "max_per_search": 50,
+  "searchStringsArray": [
+    "parking lot",
+    "bus stop",
+    "coffee",
+    "bars",
+    "restaurant",
+    "hotel",
+    "grocery"
+  ],
+  "customGeolocation": {
+    "type": "Point",
+    "coordinates": [
+      "-122.3390679",
+      "47.6343777"
+    ],
+    "radiusKm": 1
+  },
+  "maxCrawledPlacesPerSearch": 50,
   "language": "en",
-  "upload_to_box": false,
-  "venues": [
-    { "key": "venue_a", "lat": 47.6340, "lon": -122.3401 }
-  ]
+  "searchMatching": "all",
+  "website": "allPlaces",
+  "placeMinimumStars": "",
+  "skipClosedPlaces": false,
+  "includeWebResults": false,
+  "scrapePlaceDetailPage": false,
+  "scrapeContacts": false,
+  "scrapeDirectories": false,
+  "scrapeImageAuthors": false,
+  "scrapeOrderOnline": false,
+  "scrapeReviewsPersonalData": true,
+  "scrapeTableReservationProvider": false,
+  "scrapeSocialMediaProfiles": {
+    "facebooks": false,
+    "instagrams": false,
+    "tiktoks": false,
+    "twitters": false,
+    "youtubes": false
+  },
+  "maxReviews": 0,
+  "reviewsSort": "newest",
+  "reviewsFilterString": "",
+  "reviewsOrigin": "all",
+  "maxQuestions": 0,
+  "maxImages": 0,
+  "maximumLeadsEnrichmentRecords": 0,
+  "verifyLeadsEnrichmentEmails": false,
+  "allPlacesNoSearchAction": ""
 }
