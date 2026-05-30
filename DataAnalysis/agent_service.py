@@ -73,7 +73,7 @@ Rules:
 - Produce concrete, actionable organizer actions and a ready-to-send attendee
   logistics email grounded in the evidence.
 
-Return STRICT JSON only (no markdown, no commentary) with exactly this schema:
+Return STRICT JSON only (no markdown, no commentary, no explanation outside JSON.) with exactly this schema:
 
 {
   "overall_recommendation": "Short recommendation with nuance.",
@@ -229,8 +229,10 @@ def _mock_decision(venue_a: Dict[str, Any], venue_b: Dict[str, Any]) -> Dict[str
     b_poi = venue_b.get("poi_summary", {})
 
     def amenities_rating(poi: Dict[str, Any]) -> str:
-        total = (poi.get("restaurants_count", 0) + poi.get("coffee_count", 0)
-                 + poi.get("bars_count", 0))
+        cc = poi.get("category_counts") or {}
+        total = (cc.get("restaurant", poi.get("restaurants_count", 0))
+                 + cc.get("coffee", poi.get("coffee_count", 0))
+                 + cc.get("bar", poi.get("bars_count", 0)))
         return "Strong" if total >= 15 else "Medium" if total >= 6 else "Weak"
 
     def access_rating(sig: Dict[str, Any]) -> str:
