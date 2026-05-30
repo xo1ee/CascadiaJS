@@ -19,6 +19,7 @@ load_dotenv(Path(__file__).parent / ".env")
 import sys  # noqa: E402
 sys.path.insert(0, str(Path(__file__).parent / "geo_service"))
 sys.path.insert(0, str(Path(__file__).parent / "DataAnalysis"))
+sys.path.insert(0, str(Path(__file__).parent / "apify_data"))
 
 import json  # noqa: E402
 
@@ -27,6 +28,7 @@ from agent_service import compare_venues  # noqa: E402
 from report_service import build_packet_files, write_outputs_to_disk  # noqa: E402
 from poi_aggregator import aggregate_pois  # noqa: E402
 import box_service  # noqa: E402
+from scraper import scrape_and_store  # noqa: E402
 
 APIFY_DATA_DIR = Path(__file__).parent / "apify_data"
 
@@ -80,11 +82,18 @@ def analyze_venues(req: AnalyzeVenuesRequest):
     for i, venue in enumerate(req.venues):
         venue_key = f"venue_{chr(ord('a') + i)}"  # venue_a, venue_b, ...
         geo = run_geo_pipeline(venue.address, venue_key)
+
+        # Scrape nearby POI via Apify using coordinates from geo pipeline
+        try:
+            scrape_and_store(geo["lat"], geo["lon"], venue_key=venue_key)
+        except Exception as e:
+            print(f"[main] Apify scrape failed for {venue_key}: {e}")
+
         venues.append({
             "name": venue.name or geo["address"],
             "address": geo["address"],
             "visual_signals": geo["map_signals"],
-            "poi_summary": _load_poi(venue_key),  # Kone's Apify scrape -> poi_aggregator
+            "poi_summary": _load_poi(venue_key),
             "_venue_key": venue_key,
             "_geo": geo,
         })
