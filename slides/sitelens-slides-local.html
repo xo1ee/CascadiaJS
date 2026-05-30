@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SiteLens — Hackathon Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&amp;family=Chakra+Petch:wght@300;400;500;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+/* ============================================
+   VIEWPORT BASE
+   ============================================ */
+html, body { width:100%; height:100%; margin:0; overflow:hidden; background:#0A0E27; }
+.deck-viewport { position:fixed; inset:0; overflow:hidden; background:#0A0E27; }
+.deck-stage {
+  position:absolute; left:0; top:0;
+  width:1920px; height:1080px;
+  overflow:hidden; transform-origin:0 0;
+}
+.slide {
+  position:absolute; inset:0;
+  width:1920px; height:1080px;
+  overflow:hidden; display:block;
+  visibility:hidden; opacity:0; pointer-events:none;
+}
+.slide.active  { visibility:visible; opacity:1; pointer-events:auto; z-index:1; }
+.slide.prev    { visibility:hidden;  opacity:0; pointer-events:none; z-index:0; }
+img, video, canvas, svg { max-width:100%; max-height:100%; }
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.2s !important; }
+}
+
+/* ============================================
+   DESIGN SYSTEM
+   ============================================ */
+:root {
+  --void:     #0A0E27;
+  --navy:     #0F1B3D;
+  --navy2:    #111f45;
+  --cyan:     #5EDCF4;
+  --cyan-dim: rgba(94,220,244,.15);
+  --pink:     #F0A6CA;
+  --yellow:   #F4D03F;
+  --green:    #06D6A0;
+  --lavender: #E2D5F2;
+  --white:    #FFFFFF;
+  --px:       4px;
+}
+
+.deck-stage { font-family:'Chakra Petch', sans-serif; background:var(--void); }
+
+/* Scanline overlay */
+.deck-stage::before {
+  content:''; position:absolute; inset:0; z-index:300; pointer-events:none;
+  background:repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,0,0,.05) 3px, rgba(0,0,0,.05) 4px
+  );
+}
+
+/* Noise texture */
+.deck-stage::after {
+  content:''; position:absolute; inset:0; z-index:299; pointer-events:none;
+  opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+
+/* Pixel grid */
+.pg {
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(94,220,244,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94,220,244,.035) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes scan      { 0%{top:-4%;} 100%{top:104%;} }
+@keyframes blink     { 0%,49%{opacity:1;} 50%,100%{opacity:0;} }
+@keyframes pulse-g   { 0%,100%{opacity:.4;} 50%{opacity:1;} }
+@keyframes pulse-g2  { 0%,100%{opacity:.6;} 50%{opacity:1;} }
+@keyframes orbit-rot { from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+@keyframes orbit-rev { from{transform:rotate(0deg);} to{transform:rotate(-360deg);} }
+@keyframes fade-up   { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
+@keyframes fade-in   { from{opacity:0;} to{opacity:1;} }
+@keyframes ping      { 0%{transform:scale(1);opacity:.7;} 100%{transform:scale(3);opacity:0;} }
+@keyframes glow-pulse{ 0%,100%{box-shadow:0 0 20px var(--cyan);} 50%{box-shadow:0 0 50px var(--cyan), 0 0 80px rgba(94,220,244,.3);} }
+@keyframes float     { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+@keyframes shimmer   { 0%{background-position:-400px 0;} 100%{background-position:400px 0;} }
+@keyframes dash-move { from{stroke-dashoffset:100;} to{stroke-dashoffset:0;} }
+@keyframes counter-in{ from{opacity:0;transform:scale(.7);} to{opacity:1;transform:scale(1);} }
+@keyframes slide-right{ from{transform:scaleX(0);} to{transform:scaleX(1);} }
+@keyframes twinkle    { from{opacity:.1;} to{opacity:.8;} }
+
+/* Staggered entry for active slide children */
+.slide.active .anim-1 { animation:fade-up .5s .1s both; }
+.slide.active .anim-2 { animation:fade-up .5s .2s both; }
+.slide.active .anim-3 { animation:fade-up .5s .3s both; }
+.slide.active .anim-4 { animation:fade-up .5s .4s both; }
+.slide.active .anim-5 { animation:fade-up .5s .5s both; }
+.slide.active .anim-6 { animation:fade-up .5s .6s both; }
+.slide.active .anim-7 { animation:fade-up .5s .7s both; }
+
+/* ============================================
+   SHARED ATOMS
+   ============================================ */
+.eyebrow {
+  font-family:'Space Mono', monospace;
+  font-size:13px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--cyan);
+}
+.section-tag {
+  font-family:'Space Mono', monospace;
+  font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+  padding:7px 16px;
+  background:rgba(94,220,244,.1);
+  border:1.5px solid rgba(94,220,244,.35);
+  color:var(--cyan);
+  display:inline-flex; align-items:center; gap:10px;
+  position:relative; overflow:hidden;
+}
+.section-tag::before {
+  content:''; width:7px; height:7px;
+  background:var(--cyan); box-shadow:0 0 10px var(--cyan);
+  animation:pulse-g2 2s ease-in-out infinite;
+  flex-shrink:0;
+}
+.section-tag::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, transparent 0%, rgba(94,220,244,.08) 50%, transparent 100%);
+  background-size:200% 100%;
+  animation:shimmer 3s linear infinite;
+}
+
+/* Corner brackets */
+.cb { position:absolute; width:32px; height:32px; }
+.cb-tl { border-top:3px solid; border-left:3px solid; }
+.cb-tr { border-top:3px solid; border-right:3px solid; }
+.cb-bl { border-bottom:3px solid; border-left:3px solid; }
+.cb-br { border-bottom:3px solid; border-right:3px solid; }
+.cb-c  { border-color:var(--cyan); filter:drop-shadow(0 0 6px var(--cyan)); }
+.cb-y  { border-color:var(--yellow); filter:drop-shadow(0 0 6px var(--yellow)); }
+.cb-p  { border-color:var(--pink); filter:drop-shadow(0 0 6px var(--pink)); }
+
+/* Progress bar */
+#progress {
+  position:fixed; top:0; left:0; height:3px;
+  background:linear-gradient(90deg, var(--cyan), var(--pink));
+  box-shadow:0 0 16px var(--cyan);
+  transition:width .5s cubic-bezier(.4,0,.2,1); z-index:500;
+}
+
+/* Glow top line */
+.glow-top {
+  position:absolute; top:0; left:0; width:60%; height:3px;
+  background:linear-gradient(90deg, var(--cyan), transparent);
+  box-shadow:0 0 24px var(--cyan);
+  animation:pulse-g 3.5s ease-in-out infinite; z-index:200;
+}
+.glow-right {
+  position:absolute; top:0; right:0; width:3px; height:40%;
+  background:linear-gradient(180deg, var(--cyan), transparent);
+  box-shadow:0 0 24px var(--cyan);
+  animation:pulse-g 4s ease-in-out infinite .5s; z-index:200;
+}
+
+/* ============================================
+   SLIDE 1 — TITLE
+   ============================================ */
+#s1 { background:var(--void); display:flex; flex-direction:row; }
+
+#s1 .main {
+  flex:1; padding:96px 120px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; z-index:1;
+  margin-top:-50px;
+}
+
+#s1 .eyebrow {
+  margin-bottom:48px;
+  display:flex; align-items:center; gap:14px;
+}
+#s1 .eyebrow::before {
+  content:''; width:36px; height:3px;
+  background:linear-gradient(90deg, var(--cyan), rgba(94,220,244,.3));
+  box-shadow:0 0 12px var(--cyan); flex-shrink:0;
+  animation:slide-right .6s .2s both; transform-origin:left;
+}
+
+#s1 h1 {
+  font-family:'Tektur', sans-serif;
+  font-size:172px; font-weight:900;
+  color:var(--white); line-height:.88; letter-spacing:-.03em;
+  text-shadow:6px 6px 0 rgba(94,220,244,.12), 0 0 80px rgba(94,220,244,.08);
+}
+#s1 h1 .hl {
+  color:var(--cyan);
+  text-shadow:4px 4px 0 rgba(0,20,60,.8),
+              0 0 60px rgba(94,220,244,.4),
+              0 0 120px rgba(94,220,244,.15);
+  animation:glow-pulse 3s ease-in-out infinite;
+  display:inline-block;
+}
+
+#s1 .tagline {
+  font-size:34px; font-weight:400; line-height:1.5;
+  color:rgba(226,213,242,.82); margin-top:20px; max-width:780px;
+  border-left:3px solid rgba(94,220,244,.5); padding-left:28px;
+  position:relative;
+}
+#s1 .tagline::before {
+  content:''; position:absolute; left:-3px; top:0; width:3px; height:100%;
+  background:linear-gradient(180deg, var(--cyan), rgba(94,220,244,.2));
+}
+
+#s1 .sub {
+  font-family:'Space Mono', monospace;
+  font-size:13px; letter-spacing:.06em;
+  color:rgba(226,213,242,.38); margin-top:14px; padding-left:27px;
+}
+
+#s1 .bullets {
+  margin-top:48px; display:flex; flex-direction:column; gap:14px;
+}
+#s1 .bullet {
+  font-size:15px; font-weight:400; color:rgba(226,213,242,.6);
+  display:flex; align-items:baseline; gap:16px;
+  padding:10px 16px;
+  background:rgba(94,220,244,.03);
+  border-left:2px solid rgba(94,220,244,.15);
+  transition:background .2s, border-color .2s;
+}
+#s1 .bullet:hover { background:rgba(94,220,244,.07); border-color:rgba(94,220,244,.4); }
+#s1 .bullet::before {
+  content:'▸'; color:var(--cyan); font-size:10px; flex-shrink:0;
+}
+
+#s1 .hud {
+  position:absolute; bottom:60px; left:120px;
+  font-family:'Space Mono', monospace;
+  font-size:11px; color:rgba(94,220,244,.22); letter-spacing:.22em;
+  display:flex; align-items:center; gap:12px;
+}
+#s1 .hud::before {
+  content:''; width:20px; height:1px; background:rgba(94,220,244,.2);
+}
+
+/* Team info */
+#s1 .s1-team {
+  margin-top:16px;
+  padding-top:16px;
+  border-top:1px solid rgba(94,220,244,.15);
+}
+#s1 .s1-team-name {
+  font-family:'Tektur', sans-serif;
+  font-size:22px; font-weight:700;
+  color:var(--cyan); letter-spacing:.04em;
+  margin-bottom:14px;
+}
+#s1 .s1-members {
+  font-family:'Space Mono', monospace;
+  font-size:16px; color:rgba(226,213,242,.55);
+  letter-spacing:.04em; line-height:1.8;
+}
+
+/* Right deco panel */
+#s1 .deco {
+  width:700px; flex-shrink:0;
+  background:linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
+  border-left:2px solid rgba(94,220,244,.1);
+  position:relative; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+#s1 .deco-pg {
+  position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(94,220,244,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94,220,244,.06) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+/* Radial glow behind orbit */
+#s1 .deco-glow {
+  position:absolute; width:600px; height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(94,220,244,.14) 0%, transparent 70%);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  animation:pulse-g 4s ease-in-out infinite;
+}
+
+.orbit-wrap { position:relative; width:540px; height:540px; }
+.orbit-ring {
+  position:absolute; border-radius:50%;
+  top:50%; left:50%; transform:translate(-50%,-50%);
+}
+.or-1 { width:540px; height:540px; border:2px solid rgba(94,220,244,.18); }
+.or-2 { width:400px; height:400px; border:1px dashed rgba(94,220,244,.14); }
+.or-3 { width:260px; height:260px; border:2px solid rgba(240,166,202,.2); }
+.or-4 { width:140px; height:140px; border:2px solid rgba(244,208,63,.2); }
+
+/* Center core */
+.orbit-core {
+  position:absolute; width:44px; height:44px; border-radius:50%;
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  background:radial-gradient(circle, rgba(94,220,244,.7) 0%, rgba(94,220,244,.15) 70%);
+  box-shadow:0 0 40px rgba(94,220,244,.6), 0 0 80px rgba(94,220,244,.3);
+  animation:pulse-g2 2s ease-in-out infinite;
+}
+.orbit-core-ring {
+  position:absolute; width:60px; height:60px; border-radius:50%;
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  border:1px solid rgba(94,220,244,.3);
+  animation:ping 2.5s ease-out infinite;
+}
+
+.orbit-dot {
+  position:absolute; width:16px; height:16px; border-radius:50%;
+  background:var(--cyan); box-shadow:0 0 24px var(--cyan), 0 0 50px rgba(94,220,244,.5);
+  top:calc(50% - 272px); left:calc(50% - 8px);
+  animation:pulse-g2 2.5s ease-in-out infinite;
+}
+.orbit-dot::after {
+  content:''; position:absolute; inset:-4px; border-radius:50%;
+  border:1px solid rgba(94,220,244,.3);
+}
+.orbit-dot2 {
+  position:absolute; width:12px; height:12px; border-radius:50%;
+  background:var(--pink); box-shadow:0 0 20px var(--pink);
+  top:calc(50% + 160px); left:calc(50% + 150px);
+  animation:pulse-g 3.2s ease-in-out infinite .4s;
+}
+.orbit-dot3 {
+  position:absolute; width:10px; height:10px; border-radius:50%;
+  background:var(--yellow); box-shadow:0 0 16px var(--yellow);
+  top:calc(50% + 25px); left:calc(50% - 200px);
+  animation:pulse-g 3s ease-in-out infinite .8s;
+}
+.orbit-dot4 {
+  position:absolute; width:8px; height:8px; border-radius:50%;
+  background:var(--green); box-shadow:0 0 14px var(--green);
+  top:calc(50% - 70px); left:calc(50% + 130px);
+  animation:pulse-g 2.8s ease-in-out infinite 1.2s;
+}
+
+.scan-arm {
+  position:absolute; left:0; width:100%; height:2px;
+  background:linear-gradient(90deg, transparent, rgba(94,220,244,.3), transparent);
+  animation:scan 5s linear infinite;
+}
+#s1 .deco-label {
+  position:absolute; bottom:44px; right:36px;
+  font-family:'Space Mono', monospace;
+  font-size:10px; color:rgba(94,220,244,.2); letter-spacing:.16em; text-transform:uppercase;
+}
+
+/* ============================================
+   SLIDE 2 — PROBLEM
+   ============================================ */
+#s2 { background:var(--void); display:flex; flex-direction:row; }
+
+#s2 .left {
+  width:400px; flex-shrink:0;
+  background:linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
+  border-right:2px solid rgba(94,220,244,.12);
+  padding:60px 48px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; overflow:hidden;
+}
+#s2 .left::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:200px;
+  background:linear-gradient(0deg, rgba(94,220,244,.04), transparent);
+  pointer-events:none;
+}
+#s2 .left .section-tag { margin-bottom:32px; }
+#s2 .left h2 {
+  font-family:'Tektur', sans-serif;
+  font-size:46px; font-weight:800; line-height:1.1;
+  color:var(--white);
+  text-shadow:3px 3px 0 rgba(94,220,244,.15);
+}
+#s2 .left p {
+  margin-top:20px; font-size:17px; font-weight:300; line-height:1.75;
+  color:rgba(226,213,242,.6);
+}
+#s2 .left .stat {
+  margin-top:24px; padding:16px 20px;
+  background:rgba(94,220,244,.06);
+  border:1.5px solid rgba(94,220,244,.2);
+  position:relative;
+}
+#s2 .left .stat-num {
+  font-family:'Tektur', sans-serif;
+  font-size:44px; font-weight:900; color:var(--cyan);
+  line-height:1; text-shadow:0 0 30px rgba(94,220,244,.4);
+}
+#s2 .left .stat-label {
+  font-size:11px; color:rgba(226,213,242,.45); margin-top:4px;
+  font-family:'Space Mono', monospace; letter-spacing:.06em;
+}
+
+#s2 .right {
+  flex:1; min-width:0; padding:48px 64px;
+  display:flex; flex-direction:column; justify-content:center;
+  gap:14px; position:relative;
+}
+.pain-card {
+  background:rgba(15,27,61,.7);
+  border:1.5px solid rgba(94,220,244,.1);
+  padding:16px 22px;
+  display:flex; align-items:flex-start; gap:18px;
+  position:relative; overflow:hidden;
+  transition:border-color .25s, background .25s, transform .2s;
+}
+.pain-card:hover {
+  border-color:rgba(94,220,244,.3);
+  background:rgba(15,27,61,.9);
+  transform:translateX(4px);
+}
+.pain-card::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:rgba(94,220,244,.3);
+}
+.pain-card.pk::before { background:rgba(240,166,202,.4); }
+.pain-card.yw::before { background:rgba(244,208,63,.4); }
+.pain-card.gn::before { background:rgba(6,214,160,.4); }
+.pain-card::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(94,220,244,.03) 0%, transparent 60%);
+  pointer-events:none;
+}
+
+.pain-icon {
+  width:40px; height:40px; flex-shrink:0;
+  background:rgba(94,220,244,.08);
+  border:1.5px solid rgba(94,220,244,.2);
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px; position:relative; z-index:1;
+}
+.pain-icon.pk { background:rgba(240,166,202,.08); border-color:rgba(240,166,202,.2); }
+.pain-icon.yw { background:rgba(244,208,63,.08); border-color:rgba(244,208,63,.2); }
+.pain-icon.gn { background:rgba(6,214,160,.08); border-color:rgba(6,214,160,.2); }
+
+.pain-text { position:relative; z-index:1; }
+.pain-text strong {
+  display:block; font-size:18px; font-weight:700;
+  color:var(--white); margin-bottom:6px; letter-spacing:.01em;
+}
+.pain-text span { font-size:15px; font-weight:300; color:rgba(226,213,242,.55); line-height:1.6; }
+
+/* ============================================
+   SLIDE 3 — SOLUTION / WORKFLOW
+   ============================================ */
+#s3 {
+  background:linear-gradient(135deg, var(--navy2) 0%, var(--navy) 60%, var(--void) 100%);
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  padding:52px 80px;
+  box-sizing:border-box;
+}
+#s3 .top { margin-bottom:40px; flex-shrink:0; }
+#s3 .top .section-tag { margin-bottom:22px; }
+#s3 h2 {
+  font-family:'Tektur', sans-serif;
+  font-size:44px; font-weight:800; color:var(--white);
+  text-shadow:3px 3px 0 rgba(94,220,244,.15);
+}
+#s3 .sub {
+  font-size:18px; font-weight:300; color:rgba(226,213,242,.5); margin-top:12px;
+  font-family:'Space Mono', monospace; letter-spacing:.04em;
+}
+
+.pipeline {
+  display:flex; align-items:stretch; gap:0;
+  flex:1; min-height:0;
+}
+.pipe-step {
+  flex:1; min-width:0;
+  background:rgba(10,14,39,.85);
+  border:1.5px solid rgba(94,220,244,.1);
+  padding:28px 22px;
+  display:flex; flex-direction:column; justify-content:flex-start;
+  position:relative; overflow:hidden;
+  transition:border-color .25s, background .25s;
+}
+.pipe-step:hover {
+  border-color:rgba(94,220,244,.25);
+  background:rgba(10,14,39,.95);
+}
+.pipe-step::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, rgba(94,220,244,.2), transparent);
+}
+.pipe-step.hi-c { background:rgba(94,220,244,.08); border-color:rgba(94,220,244,.3); }
+.pipe-step.hi-c::before { background:linear-gradient(90deg, transparent, var(--cyan), transparent); }
+.pipe-step.hi-g { background:rgba(6,214,160,.06); border-color:rgba(6,214,160,.25); }
+.pipe-step.hi-g::before { background:linear-gradient(90deg, transparent, var(--green), transparent); }
+
+.pipe-num {
+  font-family:'Space Mono', monospace;
+  font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(226,213,242,.2); margin-bottom:12px;
+}
+.pipe-step.hi-c .pipe-num { color:rgba(94,220,244,.5); }
+.pipe-step.hi-g .pipe-num { color:rgba(6,214,160,.5); }
+
+.pipe-icon { font-size:28px; margin-bottom:12px; }
+
+.pipe-title {
+  font-family:'Tektur', sans-serif;
+  font-size:17px; font-weight:700; line-height:1.2;
+  color:var(--white);
+}
+.pipe-step.hi-c .pipe-title { color:var(--cyan); }
+.pipe-step.hi-g .pipe-title { color:var(--green); }
+
+.pipe-desc {
+  font-size:13px; font-weight:300; color:rgba(226,213,242,.45); line-height:1.55;
+  margin-top:8px;
+}
+.pipe-step.hi-c .pipe-desc { color:rgba(94,220,244,.65); }
+.pipe-step.hi-g .pipe-desc { color:rgba(6,214,160,.65); }
+
+.pipe-arrow {
+  width:28px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; color:rgba(94,220,244,.2);
+  font-family:'Space Mono', monospace;
+}
+
+#s3 .footer {
+  margin-top:18px; padding:12px 20px; flex-shrink:0;
+  background:rgba(94,220,244,.04);
+  border:1px solid rgba(94,220,244,.1);
+  font-family:'Space Mono', monospace;
+  font-size:11px; letter-spacing:.07em;
+  color:rgba(226,213,242,.25); text-align:center;
+}
+
+/* ============================================
+   SLIDE 4 — DEMO SCENARIO
+   ============================================ */
+#s4 { background:var(--void); position:absolute; inset:0; display:flex; flex-direction:column; padding:52px 80px; box-sizing:border-box; }
+#s4 .top { margin-bottom:32px; flex-shrink:0; }
+#s4 .top .section-tag { margin-bottom:20px; }
+#s4 h2 {
+  font-family:'Tektur', sans-serif;
+  font-size:42px; font-weight:800; color:var(--white);
+  text-shadow:3px 3px 0 rgba(240,166,202,.15);
+  max-width:1100px;
+}
+
+.demo-body { display:flex; gap:40px; flex:1; min-height:0; align-items:stretch; }
+
+.demo-bullets { flex:1; min-width:0; display:flex; flex-direction:column; justify-content:center; gap:20px; }
+.demo-bullet {
+  display:flex; align-items:flex-start; gap:20px;
+  font-size:18px; color:rgba(226,213,242,.75); line-height:1.6;
+  padding:18px 22px;
+  background:rgba(15,27,61,.5);
+  border:1px solid rgba(226,213,242,.06);
+  transition:border-color .2s, background .2s;
+}
+.demo-bullet:hover { border-color:rgba(94,220,244,.15); background:rgba(15,27,61,.8); }
+.demo-bullet-icon {
+  width:36px; height:36px; flex-shrink:0;
+  background:rgba(94,220,244,.08);
+  border:1px solid rgba(94,220,244,.2);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px;
+}
+.demo-bullet-text strong { color:var(--white); font-weight:600; }
+
+.demo-side { width:480px; flex-shrink:0; display:flex; flex-direction:column; gap:12px; }
+
+.venue-card {
+  flex:1; min-height:0;
+  border:1.5px solid rgba(94,220,244,.15);
+  background:linear-gradient(135deg, rgba(15,27,61,.9) 0%, rgba(10,14,39,.8) 100%);
+  padding:20px 24px;
+  position:relative; overflow:hidden;
+  transition:border-color .25s;
+}
+.venue-card:hover { border-color:rgba(94,220,244,.35); }
+.venue-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, var(--cyan), rgba(94,220,244,.2));
+}
+.venue-card.vb { border-color:rgba(240,166,202,.2); }
+.venue-card.vb::before { background:linear-gradient(90deg, var(--pink), rgba(240,166,202,.2)); }
+.venue-card.vb:hover { border-color:rgba(240,166,202,.4); }
+
+.vc-tag {
+  font-family:'Space Mono', monospace;
+  font-size:10px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(94,220,244,.5); margin-bottom:10px;
+}
+.venue-card.vb .vc-tag { color:rgba(240,166,202,.5); }
+
+.vc-name {
+  font-family:'Tektur', sans-serif;
+  font-size:28px; font-weight:800; color:var(--white); margin-bottom:6px;
+}
+.vc-addr { font-size:15px; color:rgba(226,213,242,.42); margin-bottom:12px; }
+
+.crits { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+.crit {
+  font-family:'Space Mono', monospace;
+  font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+  padding:5px 12px;
+  border:1px solid rgba(94,220,244,.2);
+  color:rgba(94,220,244,.55);
+  background:rgba(94,220,244,.04);
+}
+
+.vs-row {
+  display:flex; align-items:center; justify-content:center;
+  gap:14px; padding:6px 0;
+}
+.vs-badge {
+  width:48px; height:48px;
+  background:linear-gradient(135deg, var(--cyan), rgba(94,220,244,.7));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Tektur', sans-serif;
+  font-size:14px; font-weight:900; color:var(--void);
+  box-shadow:0 0 20px rgba(94,220,244,.4), 3px 3px 0 rgba(94,220,244,.2);
+}
+
+/* ============================================
+   SLIDE 5 — LIVE DEMO
+   ============================================ */
+#s5 { background:var(--void); display:flex; flex-direction:row; }
+
+#s5 .main {
+  flex:1; min-width:0; padding:64px 96px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; z-index:1;
+}
+
+#s5 .section-tag { margin-bottom:28px; }
+
+#s5 h2 {
+  font-family:'Tektur', sans-serif;
+  font-size:62px; font-weight:900; line-height:1.05;
+  color:var(--white); max-width:700px;
+  text-shadow:4px 4px 0 rgba(244,208,63,.1);
+}
+#s5 h2 em {
+  font-style:normal; color:var(--yellow);
+  text-shadow:0 0 40px rgba(244,208,63,.4), 0 0 80px rgba(244,208,63,.15);
+}
+
+.demo-steps { display:flex; flex-direction:column; gap:16px; margin-top:44px; }
+.demo-step {
+  display:flex; align-items:center; gap:24px;
+  padding:16px 20px;
+  background:rgba(15,27,61,.4);
+  border:1px solid rgba(226,213,242,.05);
+  transition:border-color .2s, background .2s, transform .2s;
+}
+.demo-step:hover {
+  border-color:rgba(244,208,63,.15);
+  background:rgba(15,27,61,.7);
+  transform:translateX(6px);
+}
+.step-circle {
+  width:48px; height:48px; flex-shrink:0;
+  border:2px solid rgba(244,208,63,.3);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Space Mono', monospace;
+  font-size:14px; color:rgba(244,208,63,.7); font-weight:700;
+  background:rgba(244,208,63,.06);
+}
+.step-text { font-size:20px; font-weight:300; color:rgba(226,213,242,.7); }
+.step-text strong { color:var(--white); font-weight:600; }
+
+/* Right screen mock */
+#s5 .mock {
+  width:480px; flex-shrink:0;
+  background:linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
+  border-left:2px solid rgba(94,220,244,.1);
+  padding:52px 44px;
+  display:flex; flex-direction:column; gap:10px;
+  position:relative; overflow:hidden;
+}
+#s5 .mock::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(94,220,244,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94,220,244,.04) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+/* Mock window chrome */
+#s5 .mock-chrome {
+  position:absolute; top:0; left:0; right:0; height:36px;
+  background:rgba(10,14,39,.8);
+  border-bottom:1px solid rgba(94,220,244,.08);
+  display:flex; align-items:center; padding:0 16px; gap:8px;
+  z-index:2;
+}
+#s5 .mock-dot { width:10px; height:10px; border-radius:50%; }
+#s5 .mock-dot:nth-child(1) { background:rgba(240,166,202,.5); }
+#s5 .mock-dot:nth-child(2) { background:rgba(244,208,63,.5); }
+#s5 .mock-dot:nth-child(3) { background:rgba(6,214,160,.5); }
+#s5 .mock-title {
+  font-family:'Space Mono', monospace; font-size:9px;
+  color:rgba(94,220,244,.25); letter-spacing:.12em; margin-left:8px;
+}
+
+.mb { height:8px; border-radius:0; background:rgba(226,213,242,.07); position:relative; z-index:1; }
+.mb.w60 { width:60%; }
+.mb.w80 { width:80%; }
+.mb.w45 { width:45%; }
+.mb.w70 { width:70%; }
+.mb.w30 { width:30%; }
+.mb.ac { background:rgba(94,220,244,.45); box-shadow:0 0 10px rgba(94,220,244,.3); }
+.mb.ay { background:rgba(244,208,63,.4); box-shadow:0 0 8px rgba(244,208,63,.2); }
+.mb.ag { background:rgba(6,214,160,.4); }
+.msep { height:1px; background:rgba(226,213,242,.04); position:relative; z-index:1; }
+.mb2 { height:52px; border:1px solid rgba(226,213,242,.05); background:rgba(10,14,39,.5); position:relative; z-index:1; }
+.mb2.hi { border-color:rgba(94,220,244,.15); background:rgba(94,220,244,.05); }
+.mr { display:flex; gap:8px; position:relative; z-index:1; }
+.mock-btn {
+  margin-top:10px; height:44px;
+  background:linear-gradient(90deg, var(--cyan), rgba(94,220,244,.8));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Space Mono', monospace;
+  font-size:11px; font-weight:700; color:var(--void); letter-spacing:.12em;
+  position:relative; z-index:1;
+  box-shadow:0 0 20px rgba(94,220,244,.3), 3px 3px 0 rgba(94,220,244,.2);
+  cursor:pointer; transition:box-shadow .2s;
+}
+.mock-btn:hover { box-shadow:0 0 30px rgba(94,220,244,.5), 3px 3px 0 rgba(94,220,244,.3); }
+
+/* ============================================
+   SLIDE 6 — IMPACT / CLOSING
+   ============================================ */
+#s6 {
+  background:var(--void);
+  position:absolute; inset:0;
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  padding:56px 80px 56px;
+  box-sizing:border-box;
+}
+#s6 .top { margin-bottom:32px; }
+#s6 .top .section-tag { margin-bottom:18px; }
+#s6 h2 {
+  font-family:'Tektur', sans-serif;
+  font-size:42px; font-weight:800; color:var(--white);
+  text-shadow:3px 3px 0 rgba(94,220,244,.15);
+}
+
+/* Main 3-column area */
+.ba {
+  display:grid;
+  grid-template-columns: 1fr 56px 1fr 24px 300px;
+  gap:0;
+  align-items:stretch;
+  min-height:0;
+}
+
+.ba-col {
+  padding:28px 32px;
+  display:flex; flex-direction:column; gap:0;
+  border:1.5px solid rgba(226,213,242,.07);
+  position:relative; overflow:hidden;
+}
+.ba-col::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+}
+.ba-col.before::before { background:linear-gradient(90deg, rgba(240,166,202,.6), transparent); }
+.ba-col.after::before  { background:linear-gradient(90deg, var(--cyan), transparent); }
+.ba-col.before { background:rgba(15,27,61,.6); }
+.ba-col.after  { background:rgba(94,220,244,.06); border-color:rgba(94,220,244,.2); }
+
+.ba-head {
+  font-family:'Space Mono', monospace;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  padding-bottom:14px; margin-bottom:18px;
+  border-bottom:1px solid rgba(226,213,242,.08);
+  flex-shrink:0;
+}
+.before .ba-head { color:rgba(226,213,242,.4); }
+.after  .ba-head { color:var(--cyan); }
+
+.ba-row {
+  display:flex; align-items:center; gap:14px;
+  font-size:16px; line-height:1.5;
+  padding:10px 0;
+  border-bottom:1px solid rgba(226,213,242,.04);
+}
+.ba-row:last-child { border-bottom:none; }
+.before .ba-row { color:rgba(226,213,242,.5); }
+.after  .ba-row { color:rgba(226,213,242,.85); }
+.ba-dot { width:7px; height:7px; flex-shrink:0; border-radius:1px; }
+.before .ba-dot { background:rgba(240,166,202,.5); }
+.after  .ba-dot { background:var(--cyan); box-shadow:0 0 8px var(--cyan); }
+
+/* Arrow column */
+.arr-col {
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Tektur', sans-serif;
+  font-size:40px; color:var(--cyan);
+  text-shadow:0 0 24px rgba(94,220,244,.5);
+}
+
+/* Spacer column */
+.ba-spacer { display:block; }
+
+/* What's next column */
+.future-col {
+  padding:28px 28px;
+  border:1.5px solid rgba(244,208,63,.2);
+  background:rgba(244,208,63,.04);
+  display:flex; flex-direction:column; gap:0;
+  position:relative; overflow:hidden;
+}
+.future-col::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, var(--yellow), transparent);
+}
+.future-head {
+  font-family:'Space Mono', monospace;
+  font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(244,208,63,.6);
+  padding-bottom:14px; margin-bottom:18px;
+  border-bottom:1px solid rgba(244,208,63,.12);
+  flex-shrink:0;
+}
+.future-item {
+  font-size:15px; color:rgba(226,213,242,.6); line-height:1.5;
+  display:flex; gap:12px; align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid rgba(244,208,63,.06);
+}
+.future-item:last-child { border-bottom:none; }
+.future-item::before { content:'⤳'; color:rgba(244,208,63,.5); flex-shrink:0; font-size:14px; }
+
+/* Tagline bar */
+.tagline-bar {
+  margin-top:28px;
+  padding:22px 40px;
+  background:linear-gradient(90deg, var(--cyan), rgba(94,220,244,.85));
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Tektur', sans-serif;
+  font-size:26px; font-weight:900; color:var(--void);
+  letter-spacing:-.01em;
+  box-shadow:0 0 40px rgba(94,220,244,.25);
+  position:relative; overflow:hidden;
+}
+.tagline-bar::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(90deg, transparent 0%, rgba(255,255,255,.12) 50%, transparent 100%);
+  background-size:200% 100%;
+  animation:shimmer 3s linear infinite;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+/* ============================================
+   NAVIGATION — hidden, use keyboard ← →
+   ============================================ */
+#nav { display:none; }
+#nav button {
+  background:none; border:none;
+  color:rgba(94,220,244,.4); font-size:22px; cursor:pointer;
+  padding:0 8px; font-family:'Tektur', sans-serif;
+  transition:color .15s, transform .15s;
+  line-height:1;
+}
+#nav button:hover { color:var(--cyan); transform:scale(1.2); }
+#slide-counter {
+  font-family:'Space Mono', monospace;
+  font-size:11px; color:rgba(94,220,244,.35);
+  min-width:44px; text-align:center; letter-spacing:.12em;
+}
+.dot-row { display:flex; gap:7px; align-items:center; }
+.dot {
+  width:7px; height:7px;
+  background:rgba(94,220,244,.15); cursor:pointer;
+  transition:background .25s, transform .2s, box-shadow .2s;
+  border-radius:1px;
+}
+.dot.active {
+  background:var(--cyan); transform:scale(1.4);
+  box-shadow:0 0 8px var(--cyan);
+}
+.dot:hover:not(.active) { background:rgba(94,220,244,.35); }
+
+/* Slide number indicator — hidden, shown in nav */
+.slide-num-badge { display:none; }
+
+/* Keyboard hint — hidden */
+.key-hint { display:none; }
+
+
+/* ============================================
+   REVISION OVERRIDES — visual evidence + 3-min readability
+   ============================================ */
+/* Slide 1: keep the dynamic right panel, but make the message easier to read */
+#s1 .tagline { font-size:36px; line-height:1.45; max-width:860px; }
+#s1 .s1-team-name { font-size:20px; }
+#s1 .s1-members { font-size:14px; color:rgba(226,213,242,.50); }
+
+/* Slide 2: fewer, larger pain cards for projection readability */
+#s2 .left h2 { font-size:52px; }
+#s2 .left p { font-size:18px; line-height:1.6; }
+#s2 .right { gap:24px !important; padding:76px 60px 76px 40px !important; }
+#s2 .pain-card { padding:30px 34px; gap:26px; min-height:112px; }
+#s2 .pain-icon { width:56px; height:56px; font-size:24px; }
+#s2 .pain-text strong { font-size:25px; margin-bottom:8px; }
+#s2 .pain-text span { font-size:18px; line-height:1.55; }
+
+/* Slide 3: turn the long horizontal pipeline into a clearer architecture diagram */
+#s3 h2 { font-size:52px; max-width:1180px; }
+#s3 .sub { font-size:19px; }
+#s3 .pipeline {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px 54px 230px 54px 150px 54px 150px;
+  gap:0;
+  align-items:center;
+  justify-items:center;
+  flex:1;
+}
+.arch-node {
+  width:520px;
+  min-height:118px;
+  padding:26px 34px;
+  background:rgba(10,14,39,.88);
+  border:1.5px solid rgba(94,220,244,.22);
+  box-shadow:0 0 26px rgba(94,220,244,.07);
+  display:flex;
+  align-items:center;
+  gap:24px;
+  position:relative;
+  overflow:hidden;
+}
+.arch-node::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg, transparent, rgba(94,220,244,.75), transparent);
+}
+.arch-node.agent { border-color:rgba(94,220,244,.38); background:rgba(94,220,244,.08); width:590px; }
+.arch-node.output { border-color:rgba(6,214,160,.34); background:rgba(6,214,160,.07); width:590px; }
+.arch-icon { font-size:34px; flex-shrink:0; }
+.arch-title { font-family:'Tektur', sans-serif; font-size:28px; font-weight:800; color:var(--white); line-height:1.1; }
+.arch-sub { font-size:18px; color:rgba(226,213,242,.58); margin-top:6px; line-height:1.35; }
+.evidence-row { display:grid; grid-template-columns: repeat(3, 1fr); gap:28px; width:100%; }
+.evidence-card {
+  min-height:180px;
+  background:rgba(10,14,39,.82);
+  border:1.5px solid rgba(226,213,242,.08);
+  padding:26px 28px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.evidence-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+.evidence-card.box::before { background:linear-gradient(90deg, var(--cyan), transparent); }
+.evidence-card.apify::before { background:linear-gradient(90deg, var(--green), transparent); }
+.evidence-card.map::before { background:linear-gradient(90deg, var(--pink), transparent); }
+.evidence-kicker { font-family:'Space Mono', monospace; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(226,213,242,.35); margin-bottom:12px; }
+.evidence-title { font-family:'Tektur', sans-serif; font-size:27px; font-weight:800; color:var(--white); }
+.evidence-desc { font-size:17px; line-height:1.45; color:rgba(226,213,242,.55); margin-top:8px; }
+.arch-arrow { font-family:'Tektur', sans-serif; color:rgba(94,220,244,.55); font-size:34px; text-shadow:0 0 20px rgba(94,220,244,.35); }
+#s3 .footer { display:none; }
+
+/* Slide 4: make the venue comparison feel real with map thumbnails */
+#s4 h2 { font-size:48px; line-height:1.15; max-width:1180px; }
+.demo-body { gap:46px; }
+.demo-bullets { flex:1.05; gap:16px; }
+.demo-side { width:680px; gap:10px; }
+.demo-bullet { font-size:21px; padding:21px 24px; }
+.demo-bullet-icon { width:42px; height:42px; font-size:18px; }
+.venue-card { padding:16px 18px 18px; }
+.venue-img {
+  width:100%;
+  height:185px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  margin-bottom:12px;
+  border:1px solid rgba(94,220,244,.22);
+  box-shadow:0 0 22px rgba(94,220,244,.10);
+}
+.venue-card.vb .venue-img { border-color:rgba(240,166,202,.28); box-shadow:0 0 22px rgba(240,166,202,.10); }
+.vc-name { font-size:26px; }
+.vc-addr { font-size:15px; margin-bottom:8px; }
+.crit { font-size:10px; padding:4px 10px; }
+
+/* Slide 5: replace fake skeleton with a real-looking Box output screenshot */
+#s5 .main { padding:64px 56px; }
+#s5 h2 { font-size:48px; max-width:800px; }
+#s5 .mock { width:810px; padding:46px 36px 24px; overflow:hidden; }
+.demo-steps { gap:18px; margin-top:42px; }
+.demo-step { padding:18px 22px; }
+.step-text { font-size:22px; }
+.demo-shot {
+  width:100%;
+  height:auto;
+  max-height:380px;
+  object-fit:contain;
+  display:block;
+  margin-top:8px;
+  border:1px solid rgba(94,220,244,.16);
+  box-shadow:0 0 28px rgba(94,220,244,.12);
+  background:rgba(10,14,39,.4);
+}
+.demo-shot-caption {
+  font-family:'Space Mono', monospace;
+  font-size:11px;
+  color:rgba(94,220,244,.45);
+  letter-spacing:.1em;
+  margin-top:12px;
+  text-transform:uppercase;
+  text-align:center;
+}
+
+/* Slide 6: reduce roadmap dominance and show tangible generated artifacts */
+#s6 h2 { font-size:54px; line-height:1.12; max-width:none; white-space:nowrap; }
+.ba { grid-template-columns: 1fr 56px 1fr 32px 1fr; }
+.ba-col { padding:32px 34px; }
+.ba-head { font-size:20px; }
+.ba-row { font-size:20px; line-height:1.45; padding:14px 0; }
+.future-col { padding:28px; }
+.future-head { font-size:20px; color:rgba(244,208,63,.78); }
+.packet-img {
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  margin-top:16px;
+  border:1px solid rgba(244,208,63,.2);
+  box-shadow:0 0 22px rgba(244,208,63,.10);
+}
+.packet-caption {
+  font-size:15px;
+  line-height:1.45;
+  color:rgba(226,213,242,.62);
+  margin-top:16px;
+}
+.tagline-bar { font-size:30px; padding: 26px 48px; }
+
+
+
+/* ============================================
+   LOCAL-ASSET VERSION OVERRIDES
+   ============================================ */
+/* Keep the main tagline as one complete line on Slide 1. */
+#s1 .tagline {
+  font-size: 32px;
+  line-height: 1.35;
+  max-width: 1120px;
+  white-space: nowrap;
+  padding-left: 26px;
+}
+#s1 .sub, #s1 .s1-members { white-space: nowrap; }
+
+/* The image assets are now read from local files under ./assets/. */
+.venue-img,
+.demo-shot,
+.packet-img {
+  background: rgba(10,14,39,.45);
+}
+
+/* Slide 1 font enlargements (h1 and tagline unchanged) */
+#s1 .eyebrow         { font-size: 20px; }
+#s1 .s1-team-name    { font-size: 28px; }
+#s1 .s1-members      { font-size: 20px; font-weight: 700; }
+#s1 .hud             { font-size: 16px; }
+
+/* ============================================
+   8-BIT ORBIT ENHANCEMENTS
+   ============================================ */
+
+/* Crosshair cursor — arcade cabinet signal */
+.deck-stage { cursor: crosshair; }
+
+/* CRT vignette — radial corner darkening over the whole viewport */
+.deck-viewport::after {
+  content: ''; position: absolute; inset: 0;
+  z-index: 302; pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 42%, rgba(10,14,39,.40) 100%);
+}
+
+/* === SECTION TAG — original glow dot + shimmer restored === */
+.section-tag {
+  background: rgba(94,220,244,.1);
+  border: 1.5px solid rgba(94,220,244,.35);
+  color: var(--cyan);
+  font-size: 18px;
+  letter-spacing: .22em;
+  padding: 10px 22px;
+  box-shadow: none;
+  gap: 10px;
+}
+.section-tag::before {
+  content: ''; display: inline-block;
+  width: 7px; height: 7px;
+  background: var(--cyan); box-shadow: 0 0 10px var(--cyan);
+  animation: pulse-g2 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.section-tag::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(94,220,244,.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+/* Pink variant — Demo Scenario */
+.section-tag.tag-pk {
+  background: rgba(240,166,202,.1);
+  border-color: rgba(240,166,202,.35);
+  color: var(--pink);
+}
+.section-tag.tag-pk::before {
+  background: var(--pink); box-shadow: 0 0 10px var(--pink);
+}
+.section-tag.tag-pk::after {
+  background: linear-gradient(90deg, transparent 0%, rgba(240,166,202,.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+}
+
+/* === CORNER BRACKETS → 24×24 / 4px stroke (8-Bit pixel unit) === */
+.cb { width: 24px; height: 24px; }
+.cb-tl { border-top-width: 4px; border-left-width: 4px; }
+.cb-tr { border-top-width: 4px; border-right-width: 4px; }
+.cb-bl { border-bottom-width: 4px; border-left-width: 4px; }
+.cb-br { border-bottom-width: 4px; border-right-width: 4px; }
+
+/* === HERO H1 — PIXEL TEXT-SHADOW === */
+/* White "Site" gets subtle navy shadow; cyan "Lens" gets yellow+navy pixel cascade */
+#s1 h1     { text-shadow: 4px 4px 0 rgba(15,27,61,.7); }
+#s1 h1 .hl {
+  text-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 var(--navy),
+               0 0 60px rgba(94,220,244,.45), 0 0 120px rgba(94,220,244,.18);
+  animation: glow-pulse 3s ease-in-out infinite; /* glow-pulse box-shadow + pixel text-shadow */
+}
+
+/* === SECTION HEADINGS → CYAN + PIXEL SHADOW ON DARK SLIDES === */
+#s2 .left h2 { color: var(--cyan); text-shadow: none; }
+#s3 h2       { color: var(--cyan); text-shadow: none; }
+#s4 h2       { color: var(--cyan); text-shadow: none; }
+#s5 h2       {                      text-shadow: none; }
+#s5 h2 em    {                      text-shadow: none; }
+#s6 h2       { color: var(--cyan); text-shadow: none; }
+
+/* === CARDS — HARD PIXEL BOX-SHADOWS === */
+
+/* Pain cards: lift hover (card moves up-left, shadow grows) */
+.pain-card {
+  box-shadow: 6px 6px 0 rgba(15,27,61,.8);
+  transition: transform .12s, box-shadow .12s, background .2s, border-color .2s;
+}
+.pain-card:hover     { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 var(--cyan); }
+.pain-card.pk:hover  { box-shadow: 8px 8px 0 var(--pink); }
+.pain-card.yw:hover  { box-shadow: 8px 8px 0 var(--yellow); }
+
+/* Architecture nodes */
+.arch-node        { box-shadow: 6px 6px 0 rgba(15,27,61,.9); }
+.arch-node.agent  { box-shadow: 6px 6px 0 rgba(94,220,244,.35); }
+.arch-node.output { box-shadow: 6px 6px 0 rgba(6,214,160,.28); }
+
+/* Evidence + venue cards */
+.evidence-card    { box-shadow: 6px 6px 0 rgba(15,27,61,.8); }
+.venue-card       { box-shadow: 6px 6px 0 rgba(15,27,61,.8); }
+.venue-card.vb    { box-shadow: 6px 6px 0 rgba(240,166,202,.3); }
+
+/* Demo bullets */
+.demo-bullet { box-shadow: 4px 4px 0 rgba(15,27,61,.6); }
+
+/* Demo steps — pixel lift hover (overrides existing translateX) */
+.demo-step { box-shadow: 4px 4px 0 rgba(15,27,61,.6); }
+.demo-step:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--yellow); }
+
+/* === MOCK BUTTON → SIX-STEP PIXEL STACKED SHADOW === */
+/* Key-press animation on hover: button moves into shadow */
+.mock-btn {
+  box-shadow:
+    4px 0 0 0 var(--navy), 0 4px 0 0 var(--navy), 4px 4px 0 0 var(--navy),
+    8px 4px 0 0 var(--yellow), 4px 8px 0 0 var(--yellow), 8px 8px 0 0 var(--yellow);
+  transition: transform .1s, box-shadow .1s;
+}
+.mock-btn:hover {
+  transform: translate(2px,2px);
+  box-shadow: 4px 0 0 0 var(--navy), 0 4px 0 0 var(--navy), 4px 4px 0 0 var(--navy);
+}
+
+/* VS badge */
+.vs-badge { box-shadow: 4px 4px 0 var(--yellow), 8px 8px 0 var(--navy); }
+
+/* Before/after columns */
+.ba-col.after { box-shadow: 6px 6px 0 rgba(94,220,244,.2); }
+.future-col   { box-shadow: 6px 6px 0 rgba(244,208,63,.18); }
+
+/* Tagline bar */
+.tagline-bar { box-shadow: 8px 8px 0 var(--yellow); }
+.tagline-bar::after { display: none; } /* remove shimmer */
+
+/* === NAVIGATION DOTS → SQUARE HOLLOW PIPS === */
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 0;
+  border: 2px solid rgba(94,220,244,.3);
+  background: transparent;
+}
+.dot.active {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  transform: none;
+  box-shadow: 0 0 6px var(--cyan);
+}
+.dot:hover:not(.active) {
+  border-color: rgba(94,220,244,.6);
+  background: rgba(94,220,244,.15);
+}
+
+/* ============================================
+   SLIDE 3 OVERRIDES
+   ============================================ */
+#s3 { background: var(--void); padding: 52px 24px 20px; }
+#s3 .top { margin-bottom: 0; position: relative; z-index: 2; }
+#s3 .top .section-tag { margin-bottom: 8px; }
+#s3 h2 { font-size: 46px; white-space: nowrap; }
+.s3-img {
+  flex: 1; min-height: 0;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 0;
+  margin-top: -50px;
+}
+.arch-img {
+  max-width: 1500px;
+  width: 90%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border: 1px solid rgba(94,220,244,.12);
+  box-shadow: 0 0 30px rgba(94,220,244,.08);
+}
+
+/* ============================================
+   SLIDE 4 OVERRIDES
+   ============================================ */
+
+/* h2 now lives inside .demo-bullets (left column), wraps to 2 lines */
+#s4 h2 { font-size: 52px; max-width: none; margin-bottom: 48px; padding-left: 40px; }
+
+/* Align bullets to top so h2 sits at top of left column */
+.demo-bullets { justify-content: flex-start; padding-top: 4px; }
+
+/* Larger bullet text */
+.demo-bullet      { font-size: 25px; }
+.demo-bullet-text { font-size: 25px; }
+
+/* Venue images: fill card width, crop height to fit */
+.venue-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid rgba(94,220,244,.22);
+  box-shadow: 0 0 22px rgba(94,220,244,.10);
+}
+.venue-card.vb .venue-img {
+  border-color: rgba(240,166,202,.28);
+  box-shadow: 0 0 22px rgba(240,166,202,.10);
+}
+
+/* Highlight last bullet (Generated output) */
+.demo-bullet-highlight {
+  border-color: rgba(94,220,244,.3);
+  background: rgba(94,220,244,.08);
+}
+.demo-bullet-highlight .demo-bullet-icon {
+  background: rgba(244,208,63,.12);
+  border-color: rgba(244,208,63,.35);
+}
+
+/* ============================================
+   SLIDE 5 OVERRIDES
+   ============================================ */
+.step-text { font-size: 28px; }
+.step-circle { width: 48px; height: 48px; font-size: 20px; }
+.demo-step { padding: 22px 28px; gap: 20px; }
+
+/* Results page screenshot — inside mock, below box_output */
+.s5-results {
+  margin-top: 4px;
+}
+
+/* Labels above each screenshot in mock panel */
+.mock-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(94,220,244,.5);
+  margin-bottom: 8px;
+  padding-left: 2px;
+}
+
+/* Page number HUD on slides 2-6 */
+.slide-hud {
+  position: absolute; bottom: 60px; left: 120px;
+  font-family: 'Space Mono', monospace;
+  font-size: 16px; color: rgba(94,220,244,.22); letter-spacing: .22em;
+  display: flex; align-items: center; gap: 12px;
+  z-index: 10;
+}
+.slide-hud::before {
+  content: ''; width: 20px; height: 1px; background: rgba(94,220,244,.2);
+}
+
+/* ============================================
+   SLIDE 2 OVERRIDES
+   ============================================ */
+#s2 .left { width: 740px; padding: 60px 56px; }
+#s2 .left h2 { font-size: 54px; }
+#s2 .left p { font-size: 26px; line-height: 1.7; }
+#s2 .pain-text strong { font-size: 28px; }
+#s2 .pain-text span   { font-size: 22px; }
+</style>
+</head>
+<body>
+&lt;!-- Local image assets are referenced from ./assets/. Replace those PNGs to update the deck images. --&gt;
+
+<div id="progress"></div>
+<div class="slide-num-badge" id="slide-num-badge">01 / 06</div>
+<div class="key-hint">← → to navigate</div>
+<div class="deck-viewport">
+<div class="deck-stage">
+<div class="pg"></div>
+<!-- === SLIDE 1 — TITLE === -->
+<div class="slide active" id="s1">
+<div class="glow-top"></div>
+<div class="glow-right"></div>
+<div class="main">
+<div class="cb cb-tl cb-c anim-1" style="top:110px;left:60px;"></div>
+<div class="cb cb-br cb-c anim-1" style="bottom:60px;right:50px;"></div>
+<div class="eyebrow anim-2">Cascadia AI Hackathon 2026</div>
+<h1 class="anim-3">Site<span class="hl">Lens</span></h1>
+<p class="tagline anim-4">Turn any event venue into an evidence-backed planning packet.</p>
+<div class="s1-team anim-5">
+<div class="s1-team-name">Team SiteLens</div>
+<div class="s1-members">Jingyi Xu  ·  Simin Ji  ·  Kehan Huang  ·  Phohanh Tran</div>
+</div>
+<div class="hud anim-6">01 // 06  ·  SiteLens v1.0</div>
+</div>
+<div class="deco">
+<div class="deco-pg"></div>
+<div class="deco-glow"></div>
+<div class="orbit-wrap">
+<div class="orbit-ring or-1"></div>
+<div class="orbit-ring or-2"></div>
+<div class="orbit-ring or-3"></div>
+<div class="orbit-ring or-4"></div>
+<div class="orbit-core-ring"></div>
+<div class="orbit-core"></div>
+<div class="orbit-dot"></div>
+<div class="orbit-dot2"></div>
+<div class="orbit-dot3"></div>
+<div class="orbit-dot4"></div>
+</div>
+<div class="scan-arm"></div>
+<div class="deco-label">SiteLens · v1.0</div>
+</div>
+</div><!-- /s1 -->
+<!-- === SLIDE 2 — PROBLEM === -->
+<div class="slide" id="s2">
+<div class="left">
+<div class="cb cb-tl cb-c anim-1" style="top:48px;left:48px;"></div>
+<div class="section-tag anim-2">The Problem</div>
+<h2 class="anim-3">Venue planning is still<br>scattered and manual</h2>
+<p class="anim-4">Organizers juggle maps, checklists, and email drafts across disconnected tools.</p>
+</div>
+<div class="right" style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px;">
+<div class="pg"></div>
+<div class="pain-card anim-2">
+<div class="pain-icon">🗺️</div>
+<div class="pain-text">
+<strong>Scattered venue research</strong>
+<span>Maps, restaurants, parking, hotels, transit, and reviews are checked across separate tabs.</span>
+</div>
+</div>
+<div class="pain-card pk anim-3">
+<div class="pain-icon pk">📋</div>
+<div class="pain-text">
+<strong>Disconnected planning standards</strong>
+<span>Internal event checklists live separately from the venue data organizers are evaluating.</span>
+</div>
+</div>
+<div class="pain-card yw anim-4">
+<div class="pain-icon yw">✍️</div>
+<div class="pain-text">
+<strong>Manual rewriting into artifacts</strong>
+<span>Findings still need to become reports, organizer action items, and attendee logistics emails.</span>
+</div>
+</div>
+</div>
+<div class="slide-hud">02 // 06</div>
+</div><!-- /s2 -->
+<!-- === SLIDE 3 — SOLUTION / WORKFLOW === -->
+<div class="slide" id="s3">
+<div class="pg"></div>
+<div class="top">
+<div class="section-tag anim-1">Solution</div>
+<h2 class="anim-2">One agent workflow</h2>
+</div>
+<div class="s3-img anim-3"><img src="assets/architecture.png" class="arch-img" alt="SiteLens architecture diagram"/></div>
+<div class="slide-hud">03 // 06</div>
+</div><!-- /s3 -->
+<!-- === SLIDE 4 — DEMO SCENARIO === -->
+<div class="slide" id="s4">
+<div class="pg"></div>
+<div class="top">
+<div class="section-tag tag-pk anim-1">Demo Scenario</div>
+</div>
+<div class="demo-body">
+<div class="demo-bullets">
+<h2 class="anim-2">Choosing a venue for a 100-person<br>AI developer event</h2>
+<div class="demo-bullet anim-2">
+<div class="demo-bullet-icon">🚇</div>
+<div class="demo-bullet-text"><strong>Arrival &amp; transit</strong> — can attendees get there easily?</div>
+</div>
+<div class="demo-bullet anim-3">
+<div class="demo-bullet-icon">☕</div>
+<div class="demo-bullet-text"><strong>Nearby amenities</strong> — food, coffee, hotels, and after-party options</div>
+</div>
+<div class="demo-bullet anim-4">
+<div class="demo-bullet-icon">⚠️</div>
+<div class="demo-bullet-text"><strong>Logistics risk</strong> — parking, rideshare, and communication needs</div>
+</div>
+<div class="demo-bullet demo-bullet-highlight anim-5">
+<div class="demo-bullet-icon">📦</div>
+<div class="demo-bullet-text"><strong>Generated output</strong> — recommendation, checklist, attendee email, and Box packet</div>
+</div>
+</div>
+<div class="demo-side anim-3">
+<div class="venue-card">
+<img alt="Venue A map and satellite visual evidence" class="venue-img" src="assets/venue_a.png"/>
+<div class="vc-tag">Candidate A</div>
+<div class="vc-name">thinkspace Seattle</div>
+<div class="vc-addr">1700 Westlake Ave N · South Lake Union</div>
+<div class="crits">
+<div class="crit">Waterfront</div>
+<div class="crit">Commercial Office</div>
+</div>
+</div>
+<div class="vs-row">
+<div style="flex:1;height:1px;background:rgba(94,220,244,.1);"></div>
+<div class="vs-badge">VS</div>
+<div style="flex:1;height:1px;background:rgba(94,220,244,.1);"></div>
+</div>
+<div class="venue-card vb">
+<img alt="Venue B map and satellite visual evidence" class="venue-img" src="assets/venue_b.png"/>
+<div class="vc-tag">Candidate B</div>
+<div class="vc-name">CIC Seattle</div>
+<div class="vc-addr">325 Eastlake Ave E · Capitol Hill</div>
+<div class="crits">
+<div class="crit" style="border-color:rgba(240,166,202,.2);color:rgba(240,166,202,.55);background:rgba(240,166,202,.04);">Mixed-Use</div>
+<div class="crit" style="border-color:rgba(240,166,202,.2);color:rgba(240,166,202,.55);background:rgba(240,166,202,.04);">Dense Urban</div>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-hud">04 // 06</div>
+</div><!-- /s4 -->
+<!-- === SLIDE 5 — LIVE DEMO === -->
+<div class="slide" id="s5">
+<div class="main">
+<div class="cb cb-tl cb-y anim-1" style="top:56px;left:64px;"></div>
+<div class="section-tag anim-2" style="margin-bottom:36px;">Live Demo</div>
+<h2 class="anim-3">Generate a venue packet,<br>then open it in <em>Box</em>.</h2>
+<div class="demo-steps">
+<div class="demo-step anim-3">
+<div class="step-circle">01</div>
+<div class="step-text">Enter <strong>venues</strong> and event goals</div>
+</div>
+<div class="demo-step anim-4">
+<div class="step-circle">02</div>
+<div class="step-text">Generate the <strong>venue comparison</strong></div>
+</div>
+<div class="demo-step anim-5">
+<div class="step-circle">03</div>
+<div class="step-text">Open the <strong>planning packet</strong> saved in Box</div>
+</div>
+</div>
+</div>
+<div class="mock anim-2">
+<div class="mock-chrome">
+<div class="mock-dot"></div>
+<div class="mock-dot"></div>
+<div class="mock-dot"></div>
+<span class="mock-title">SiteLens · Box Output</span>
+</div>
+<div style="height:16px;"></div>
+<div class="mock-label anim-3">Box Output Folder</div>
+<img alt="Generated SiteLens Box output folder" class="demo-shot" src="assets/box_output.png"/>
+<div class="mock-label anim-4" style="margin-top:16px;">Generated Venue Analysis</div>
+<img class="demo-shot s5-results anim-5" src="assets/results_page.png" alt="SiteLens results page"/>
+</div>
+<div class="slide-hud">05 // 06</div>
+</div><!-- /s5 -->
+<!-- === SLIDE 6 — IMPACT / CLOSING === -->
+<div class="slide" id="s6">
+<div class="pg"></div>
+<div class="top">
+<div class="section-tag anim-1">Impact</div>
+<h2 class="anim-2">From hours of manual work to minutes of agent output</h2>
+</div>
+<div class="ba anim-3">
+<div class="ba-col before">
+<div class="ba-head">Before SiteLens</div>
+<div class="ba-row"><div class="ba-dot"></div>Scattered tabs, manual map research</div>
+<div class="ba-row"><div class="ba-dot"></div>Checklist stored separately from research</div>
+<div class="ba-row"><div class="ba-dot"></div>Emails and action items written by hand</div>
+<div class="ba-row"><div class="ba-dot"></div>Slow sign-off, higher logistics risk</div>
+</div>
+<div class="arr-col">→</div>
+<div class="ba-col after">
+<div class="ba-head">After SiteLens</div>
+<div class="ba-row"><div class="ba-dot"></div>One agent run, fully automated</div>
+<div class="ba-row"><div class="ba-dot"></div>Box checklist integrated into reasoning</div>
+<div class="ba-row"><div class="ba-dot"></div>Ready-to-send email &amp; report generated</div>
+<div class="ba-row"><div class="ba-dot"></div>Evidence-backed decision, faster sign-off</div>
+</div>
+<div class="ba-spacer"></div>
+<div class="future-col">
+<div class="future-head">Generated Packet</div>
+<img alt="Planning packet generated outputs preview" class="packet-img" src="assets/planning_packet.png"/>
+<div class="packet-caption">A shareable artifact set: comparison report, organizer checklist, attendee logistics email, and nearby places summary.</div>
+</div>
+</div>
+<div class="tagline-bar anim-5">SiteLens turns venue research into reusable planning packets.</div>
+<div class="slide-hud">06 // 06</div>
+</div><!-- /s6 -->
+</div><!-- /deck-stage -->
+</div><!-- /deck-viewport -->
+<!-- Navigation -->
+<div id="nav">
+<button onclick="go(-1)" title="Previous (←)">‹</button>
+<div class="dot-row" id="dots"></div>
+<div id="slide-counter">1 / 6</div>
+<button onclick="go(1)" title="Next (→)">›</button>
+</div>
+<script>
+/* === SLIDE SYSTEM === */
+const slides  = document.querySelectorAll('.slide');
+const dotsEl  = document.getElementById('dots');
+const counter = document.getElementById('slide-counter');
+const badge   = document.getElementById('slide-num-badge');
+const bar     = document.getElementById('progress');
+let cur = 0;
+
+// Build dots
+slides.forEach((_, i) => {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i === 0 ? ' active' : '');
+  d.onclick = () => goTo(i);
+  dotsEl.appendChild(d);
+});
+
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function updateUI() {
+  bar.style.width = ((cur + 1) / slides.length * 100) + '%';
+  counter.textContent = (cur + 1) + ' / ' + slides.length;
+  badge.textContent = pad(cur + 1) + ' / ' + pad(slides.length);
+  dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+}
+
+function goTo(next) {
+  if (next === cur || next < 0 || next >= slides.length) return;
+
+  slides[cur].classList.remove('active');
+  cur = next;
+  slides[cur].classList.add('active');
+  updateUI();
+}
+
+function go(d) { goTo(cur + d); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); go(1); }
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                     { e.preventDefault(); go(-1); }
+  if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+  if (e.key === 'End')  { e.preventDefault(); goTo(slides.length - 1); }
+});
+
+/* Touch swipe */
+let tx0 = 0;
+document.addEventListener('touchstart', e => { tx0 = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend',   e => {
+  const dx = e.changedTouches[0].clientX - tx0;
+  if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+}, { passive: true });
+
+/* === FIXED STAGE SCALING === */
+function scale() {
+  const stage = document.querySelector('.deck-stage');
+  const s  = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  const tx = (window.innerWidth  - 1920 * s) / 2;
+  const ty = (window.innerHeight - 1080 * s) / 2;
+  stage.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`;
+}
+scale();
+window.addEventListener('resize', scale);
+updateUI();
+
+/* === 8-BIT ORBIT PIXEL STARFIELD === */
+/* Animated pixel squares (cyan, yellow, pink, white) layered behind slide content */
+(function() {
+  const cols = ['#5EDCF4','#F4D03F','#F0A6CA','rgba(255,255,255,.55)'];
+  const szs  = [2,2,2,4,4];
+  function addStars(id, n) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    for (let i = 0; i < n; i++) {
+      const px  = szs[i % szs.length];
+      const col = cols[Math.floor(Math.random() * cols.length)];
+      const dur = (2 + Math.random() * 3).toFixed(1);
+      const del = (Math.random() * 5).toFixed(1);
+      const d = document.createElement('div');
+      d.style.cssText =
+        `position:absolute;width:${px}px;height:${px}px;background:${col};` +
+        `left:${(2+Math.random()*93).toFixed(1)}%;top:${(2+Math.random()*93).toFixed(1)}%;` +
+        `animation:twinkle ${dur}s ${del}s ease-in-out infinite alternate;` +
+        `z-index:2;pointer-events:none;`;
+      el.appendChild(d);
+    }
+  }
+  addStars('s1', 60);
+  addStars('s2', 32);
+  addStars('s5', 44);
+  addStars('s6', 38);
+})();
+</script>
+</body>
+</html>
