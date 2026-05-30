@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AddressSearchField } from "./AddressSearchField";
 import { analyzeVenues, ApiError } from "@/lib/api";
 import type { AnalyzeVenuesResponse, VenueAnalysis, VenueInput } from "@/lib/types";
 
@@ -113,12 +114,11 @@ function VenueInputCard({
         onChange={(e) => onUpdate(venue.id, "name", e.target.value)}
         placeholder={placeholders.name}
       />
-      <Field
+      <AddressSearchField
         id={`${venue.id}-address`}
         label="Address"
-        name="address"
         value={venue.address}
-        onChange={(e) => onUpdate(venue.id, "address", e.target.value)}
+        onChange={(address) => onUpdate(venue.id, "address", address)}
         placeholder={placeholders.address}
       />
     </div>
