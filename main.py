@@ -228,17 +228,15 @@ def _build_summary(geo: dict) -> str:
 
 def _load_poi(venue_key: str) -> dict:
     """
-    Load Kone's cached Apify scrape and aggregate it via poi_aggregator.
+    Load Apify scrape and aggregate it via poi_aggregator.
+
+    scrape_and_store() is called earlier in analyze_venues() and
+    automatically produces per-venue files (venue_a_scraped.json, etc.).
 
     Tries, in order:
-      1. apify_data/<venue_key>_scraped.json   (per-venue, e.g. venue_a_scraped.json)
-      2. apify_data/venue_scraped.json         (Kone's default single-venue output)
+      1. apify_data/<venue_key>_scraped.json   (per-venue, created by scrape_and_store)
+      2. apify_data/venue_scraped.json         (legacy single-venue fallback)
     Falls back to mock POI when neither exists.
-
-    NOTE: for a real two-venue comparison Kone should produce BOTH
-    venue_a_scraped.json and venue_b_scraped.json (scraper supports
-    `--key venue_a/--key venue_b`); otherwise both venues share the same
-    venue_scraped.json and the comparison is meaningless.
     """
     candidates = [
         APIFY_DATA_DIR / f"{venue_key}_scraped.json",
