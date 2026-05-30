@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { AnalysisResults } from "@/app/components/analysis/AnalysisResults";
 import { AddressSearchField } from "./AddressSearchField";
 import { analyzeVenues, ApiError } from "@/lib/api";
-import type { AnalyzeVenuesResponse, VenueAnalysis, VenueInput } from "@/lib/types";
+import type { AnalyzeVenuesResponse, VenueInput } from "@/lib/types";
 
 // user input data
 type Venue = VenueInput;
@@ -125,40 +126,6 @@ function VenueInputCard({
   );
 }
 
-function VenueComparisonCard({
-  venue,
-  index,
-  analysis,
-  className = "min-w-0",
-}: {
-  venue: Venue;
-  index: number;
-  analysis?: VenueAnalysis;
-  className?: string;
-}) {
-  const displayName = venue.name.trim() || analysis?.name || `Venue ${index + 1}`;
-  const displayDescription =
-    analysis?.summary?.trim() ||
-    "Comparison summary will appear here after generation.";
-
-  return (
-    <div className={`${venueCardClassName} ${className}`}>
-      <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        Venue {index + 1}
-      </p>
-      <p className="text-sm text-zinc-800 dark:text-zinc-200">{displayName}</p>
-      <p className="text-xs text-zinc-500 dark:text-zinc-400">{displayDescription}</p>
-      {analysis?.map_url ? (
-        <img
-          src={analysis.map_url}
-          alt={`Map preview for ${displayName}`}
-          className="mt-3 w-full rounded-lg border border-zinc-200 object-cover dark:border-zinc-700"
-        />
-      ) : null}
-    </div>
-  );
-}
-
 export default function VenueForm() {
   const [eventName, setEventName] = useState("");
   const [useCase, setUseCase] = useState("");
@@ -225,7 +192,9 @@ export default function VenueForm() {
   };
   return (
     <div className="min-h-full bg-zinc-50 px-4 py-10 dark:bg-zinc-950 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl">
+      <div
+        className={`mx-auto ${comparisonResult ? "max-w-5xl" : "max-w-3xl"}`}
+      >
         <header className="mb-8 text-center sm:text-left">
           <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
             SiteLens
@@ -318,49 +287,23 @@ export default function VenueForm() {
             {error ? (
               <p
                 role="alert"
-                className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-200"
+                className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900/50 dark:bg-red-950/40 dark:text-red-200"
               >
                 {error}
               </p>
-            ) : null}
-
-            {comparisonResult?.overall_recommendation ? (
-              <p className="mb-4 rounded-lg border border-emerald-100 bg-emerald-50/80 px-4 py-3 text-sm text-emerald-900 dark:border-emerald-900/40 dark:bg-emerald-950/30 dark:text-emerald-100">
-                {comparisonResult.overall_recommendation}
+            ) : isLoading ? (
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                Analyzing venues — geocoding maps, scraping nearby places, and
+                running the decision agent…
               </p>
-            ) : null}
-
-            {isLoading ? (
-              <p className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
-                Analyzing venues — geocoding maps and building evidence…
+            ) : comparisonResult ? (
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                Analysis complete. Scroll down for the full planning packet.
               </p>
-            ) : null}
-
-            {useScrollLayout ? (
-              <div className="overflow-x-auto pb-2">
-                <div className="flex w-max gap-4">
-                  {venues.map((venue, index) => (
-                    <VenueComparisonCard
-                      key={venue.id}
-                      venue={venue}
-                      index={index}
-                      analysis={comparisonResult?.venues[index]}
-                      className="w-72 shrink-0"
-                    />
-                  ))}
-                </div>
-              </div>
             ) : (
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {venues.map((venue, index) => (
-                  <VenueComparisonCard
-                    key={venue.id}
-                    venue={venue}
-                    index={index}
-                    analysis={comparisonResult?.venues[index]}
-                  />
-                ))}
-              </div>
+              <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                Submit the form to generate an evidence-backed venue comparison.
+              </p>
             )}
           </section>
 
@@ -379,6 +322,10 @@ export default function VenueForm() {
             ) : null}
           </div>
         </form>
+
+        {comparisonResult ? (
+          <AnalysisResults result={comparisonResult} eventName={eventName} />
+        ) : null}
       </div>
     </div>
   );

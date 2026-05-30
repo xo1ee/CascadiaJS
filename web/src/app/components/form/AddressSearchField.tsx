@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
-import type { SearchBoxRetrieveResponse } from "@mapbox/search-js-react";
+import type { SearchBoxRetrieveResponse } from "@mapbox/search-js-core";
 import { FormField, inputClassName, labelClassName } from "./FormField";
 import { getMapboxToken } from "@/lib/mapbox";
 
@@ -54,12 +54,12 @@ function formatRetrievedAddress(res: SearchBoxRetrieveResponse): string {
   const feature = res.features?.[0];
   if (!feature) return "";
 
-  const props = feature.properties as Record<string, string | undefined>;
+  const { full_address, name, place_formatted } = feature.properties;
   return (
-    props.full_address ??
-    [props.name, props.place_formatted].filter(Boolean).join(", ") ??
-    props.place_formatted ??
-    props.name ??
+    full_address ??
+    [name, place_formatted].filter(Boolean).join(", ") ??
+    place_formatted ??
+    name ??
     ""
   );
 }
