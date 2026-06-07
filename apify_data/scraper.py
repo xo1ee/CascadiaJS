@@ -77,7 +77,7 @@ USE_MOCK_DATA = os.getenv("USE_MOCK_DATA", "true").lower() == "true"
 
 # Fallback input — used only if input.json is missing. The real, hand-editable
 # input lives in input.json (official Apify format).
-DEFAULT_SEARCH_TERMS = ["parking lot", "bus stop"]
+DEFAULT_SEARCH_TERMS = ["parking lot", "bus stop", "coffee", "bars", "restaurant", "hotel", "grocery"]
 DEFAULT_RADIUS_KM = 1
 DEFAULT_MAX_PER_SEARCH = 50
 DEFAULT_LANGUAGE = "en"

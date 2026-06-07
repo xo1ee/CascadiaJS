@@ -22,8 +22,8 @@ const VENUE_PLACEHOLDERS: Pick<Venue, "name" | "address">[] = [
 
 // default compares 2 venues (user can add more)
 const DEFAULT_VENUES: Venue[] = [
-  { id: "venue-1", name: "", address: "" },
-  { id: "venue-2", name: "", address: "" },
+  { id: "venue-1", name: "thinkspace Seattle", address: "1700 Westlake Ave N #200, Seattle, WA 98109" },
+  { id: "venue-2", name: "Impact Hub Seattle", address: "220 2nd Ave S, Seattle, WA 98104" },
 ];
 
 const inputClassName =
@@ -127,8 +127,8 @@ function VenueInputCard({
 }
 
 export default function VenueForm() {
-  const [eventName, setEventName] = useState("");
-  const [useCase, setUseCase] = useState("");
+  const [eventName, setEventName] = useState("CascadiaJS 2026");
+  const [useCase, setUseCase] = useState("100-person AI developer event");
   const [venues, setVenues] = useState<Venue[]>(DEFAULT_VENUES);
   const [comparisonResult, setComparisonResult] =
     useState<AnalyzeVenuesResponse | null>(null);
